@@ -7,6 +7,18 @@
       name="description"
       content="Get the most comfotable outdoor clothing to fit any activity."
     />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+
     <title>RainyDays | Home</title>
   </head>
   <body>
@@ -16,45 +28,50 @@
           <img src="/images/logo.png" alt="RainyDays Logo" />
         </a>
         <ul>
+          <li><a class="active" href="/index.html">Home</a></li>
           <li><a href="/womens.html">Women's</a></li>
           <li><a href="/mens.html">Men's</a></li>
           <li><a href="/about.html">About</a></li>
         </ul>
       </nav>
 
-      <section>
-        <a href="/womens.html">Shop Women's</a>
+      <section class="hero">
+        <div class="cta womens">
+          <a class="cta-button" href="/womens.html">Shop Women's</a>
+        </div>
+        <div class="cta mens">
+          <a class="cta-button" href="/mens.html">Shop Mens</a>
+        </div>
+        <h1>Pushing the comfort zone</h1>
+        <img
+          src="/images/slogan.png"
+          alt="RainyDays Slogan, Pushing the Comfort Zone"
+        />
       </section>
-      <section>
-        <a href="/mens.html">Shop Mens</a>
-      </section>
-      <img
-        src="/images/slogan.png"
-        alt="RainyDays Slogan, Pushing the Comfort Zone"
-      />
     </header>
     <main>
-      <section>
-        <h2>Winter is on the way</h2>
-        <p>
+      <section class="cta winter-banner">
+        <h2 class="white-text">Winter is on the way</h2>
+        <p class="white-text">
           Be prepared! Find the right gear to keep you comfortably warm on your
           winter adventures.
         </p>
-        <a href="">Shop Winter</a>
+        <a class="cta-button" href="">Shop Winter</a>
       </section>
 
       <section>
-        <div>
+        <div class="cta-border">
           <h2>New Arrivals</h2>
           <p>
             Take a look at the latest lotus jacket. A great all round jacket!
           </p>
-          <a href="">Discover</a>
+          <a class="cta-button" href="">Discover</a>
+          <img src="images/jacket-green-small.jpg" alt="Green lotus jacket" />
         </div>
-        <div>
+        <div class="cta-border yellow-border">
           <h2>10% off your first order</h2>
           <p>When you sign up to our email list. Enter email address below:</p>
-          <a href="">Sign Up</a>
+          <a class="cta-button yellow-background" href="">Sign Up</a>
         </div>
       </section>
     </main>
@@ -63,7 +80,7 @@
       <section>
         <h3>Be informed</h3>
         <p>Enter you email below for the latest updates and exclusive offers</p>
-        <a href="">Sign up</a>
+        <a class="cta-button yellow-background" href="">Sign up</a>
       </section>
       <section>
         <p>Copyright RainyDays &copy;</p>
@@ -71,9 +88,9 @@
         <a href="">Facebook</a>
         <a href="">Twitter</a>
       </section>
-      <section>
+      <section class="footer-links">
         <div>
-          <h4>Customer Services</h4>
+          <h3>Customer Services</h3>
           <ul>
             <li><a href="/contact.html">Contact</a></li>
             <li><a href="">FAQ</a></li>
@@ -82,7 +99,7 @@
           </ul>
         </div>
         <div>
-          <h4>About RainyDays</h4>
+          <h3>About RainyDays</h3>
           <ul>
             <li><a href="/about.html">About Us</a></li>
             <li><a href="">Sustainability</a></li>
@@ -91,7 +108,7 @@
           </ul>
         </div>
         <div>
-          <h4>Legal</h4>
+          <h3>Legal</h3>
           <ul>
             <li><a href="">Terms & Conditions</a></li>
             <li><a href="">Privacy Policy</a></li>

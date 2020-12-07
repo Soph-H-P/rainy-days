@@ -1,0 +1,133 @@
+body {
+  font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1,
+h2,
+h3,
+nav a {
+  font-family: "Roboto Slab", Georgia, "Times New Roman", Times, serif;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #d94344;
+}
+
+h2 {
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.125rem;
+}
+
+h2,
+.cta-button,
+nav a {
+  font-size: 1.75rem;
+}
+
+p,
+a {
+  font-size: 1.3rem;
+}
+
+p {
+  color: #112735;
+  font-weight: 400;
+}
+
+a {
+  color: #1e7297;
+  font-weight: 500;
+}
+
+nav a {
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+nav a:hover,
+.active {
+  text-decoration: underline;
+}
+
+.active {
+  font-size: 2.25rem;
+}
+
+nav li {
+  display: inline-block;
+}
+
+.white-text {
+  color: #fff;
+}
+
+.cta {
+  padding: 25%;
+  background-repeat: none;
+  background-position: bottom;
+  background-size: cover;
+}
+
+.womens {
+  background-image: url("/images/activity-woman-hiking-small.jpg");
+}
+
+.mens {
+  background-image: url("/images/activity-man-hiking-small.jpg");
+}
+
+.cta-button {
+  background-color: #d94344;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.5rem;
+}
+
+.yellow-background {
+  background-color: #ffa808;
+}
+
+.winter-banner {
+  background-image: url("/images/activity-skiing.jpg");
+}
+
+.cta-border {
+  border: 0.3rem solid #d94344;
+}
+
+.yellow-border {
+  border: 0.3rem solid #ffa808;
+}
+
+footer {
+  background-color: #112735;
+}
+
+footer a {
+  color: #fff;
+}
+
+footer h3 {
+  color: #ffa808;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+.footer-links a {
+  font-size: 1.125rem;
+}
+
+.arrow::after {
+  content: " > ";
+  color: #d94344;
+  text-decoration: none;
+}
