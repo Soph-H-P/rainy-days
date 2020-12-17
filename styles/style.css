@@ -243,6 +243,11 @@ div.hero-cta.cta-mens {
     ),
     url("/images/activity-man-hiking-small.jpg");
 }
+
+.slogan-wrapper {
+  text-align: center;
+}
+
 .slogan-header {
   display: none;
 }
@@ -280,6 +285,7 @@ div.hero-cta.cta-mens {
 .new-arrivals_signup__section {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .cta-new-arivals,
@@ -366,6 +372,11 @@ div.hero-cta.cta-mens {
     padding-bottom: 200px;
   }
 
+  .slogan {
+    width: 70%;
+    margin: 50px 0;
+  }
+
   .new-arrivals_signup__section {
     flex-direction: row;
   }
@@ -417,6 +428,11 @@ div.hero-cta.cta-mens {
   }
   .logo {
     max-width: 200px;
+  }
+
+  .slogan {
+    width: 50%;
+    margin: 50px 0;
   }
 
   footer {
