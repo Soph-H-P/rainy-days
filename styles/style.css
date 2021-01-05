@@ -249,8 +249,21 @@ div.hero-cta.cta-mens {
 }
 
 .slogan-header {
-  display: none;
+  font-family: "Roboto Condensed", Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 400;
+  color: #024059;
+  font-size: 3.2em;
+  text-transform: capitalize;
 }
+
+.slogan-header::before {
+  content: url('/images/red-cross.png');
+}
+
+.slogan-header::after {
+  content: url('/images/red-cross.png');
+}
+
 .slogan {
   width: 100%;
   margin: 50px 0;
