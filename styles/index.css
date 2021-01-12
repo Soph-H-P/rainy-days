@@ -1,0 +1,153 @@
+/*------------------------HOME PAGE------------------------*/
+
+/*HERO SECTION*/
+
+.hero-wrapper {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
+  text-align: center;
+  width: 100%;
+}
+
+.hero-cta {
+  background-repeat: none;
+  background-position: bottom;
+  background-size: cover;
+  display: inline-block;
+}
+
+.hero-cta a {
+  min-width: 200px;
+}
+
+div.hero-cta.cta-womens,
+div.hero-cta.cta-mens {
+  padding-top: 100px;
+  padding-bottom: 150px;
+  display: flex;
+  justify-content: space-around;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.cta-womens {
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("/images/activity-woman-hiking-small.jpg");
+}
+
+.cta-mens {
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("/images/activity-man-hiking-small.jpg");
+}
+
+.slogan-wrapper {
+  text-align: center;
+}
+
+.slogan-header {
+  font-family: "Roboto Condensed", Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 400;
+  color: #024059;
+  font-size: 1.3em;
+  text-transform: capitalize;
+}
+
+.slogan-header::before,
+.slogan-header::after {
+  content: "";
+  background: url("/images/red-cross.png") no-repeat;
+  background-size: cover;
+  margin: 0.2em;
+  padding: 0em 0.6em;
+}
+
+.slogan {
+  width: 100%;
+  margin: 50px 0;
+}
+
+/*WINTER BANNER*/
+
+.winter-banner {
+  background-image: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("/images/activity-skiing.jpg");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 20vh;
+  padding: 5%;
+}
+
+.winter-banner div {
+  text-align: center;
+}
+
+.winter-banner p {
+  margin-bottom: 3rem;
+}
+
+/*NEW ARRIVALS AND SIGN UP*/
+
+.new-arrivals_signup__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cta-new-arivals,
+.cta-signup {
+  border: 0.3rem solid #d94344;
+  text-align: center;
+  padding: 5%;
+  margin: 10% 5%;
+}
+/*NEW ARRIVALS*/
+.cta-new-arivals__image-wrapper {
+  width: 100%;
+}
+
+.cta-new-arivals__image {
+  max-width: 100%;
+  padding: 10px;
+}
+
+/*CTA SIGN UP*/
+.cta-signup {
+  border: 0.3rem solid #ffa808;
+  text-align: left;
+}
+
+.email-signup__form {
+  margin: auto;
+}
+
+.signup-wrapper {
+  display: grid;
+  grid-template: 1fr / 2fr 1fr;
+  max-width: 50%;
+  margin-top: 2rem;
+}
+
+/* .cta-signup-wrapper {
+    margin: auto;
+  }  */
+
+.signup-wrapper label {
+  grid-column: -1/1;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+

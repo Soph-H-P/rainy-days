@@ -7,9 +7,14 @@
       name="description"
       content="Get the most comfortable outdoor clothing to fit any activity."
     />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto+Slab:wght@300;400;600;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto+Slab:wght@300;400;600;800&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/media_queries.css" />
     <script
       src="https://kit.fontawesome.com/297ba3a9d9.js"
       crossorigin="anonymous"
@@ -21,36 +26,68 @@
       <a href="/index.html">
         <img class="logo" src="/images/logo.png" alt="RainyDays Logo" />
       </a>
-      <i class="fas fa-shopping-basket fa-2x"></i>
-      <label for="hamburger-menu"><i class="fas fa-bars fa-2x"></i></label>
-      <input type="checkbox" id="hamburger-menu" />
-      <nav>
-        <ul>
-          <li><a class="active" href="/index.html">Home</a></li>
-          <li><a href="/womens.html">Women's</a></li>
-          <li><a href="/mens.html">Men's</a></li>
-          <li><a href="/about.html">About</a></li>
-        </ul>
-      </nav>
+      <div class="nav-container">
+        <label class="hamburger-label" for="hamburger-menu"
+          ><i class="fas fa-bars fa-2x"></i
+        ></label>
+        <input type="checkbox" id="hamburger-menu" />
+        <nav>
+          <ul>
+            <li><a class="active" href="/index.html">Home</a></li>
+            <li><a href="/womens.html">Women's</a></li>
+            <li><a href="/mens.html">Men's</a></li>
+            <li><a href="/about.html">About</a></li>
+          </ul>
+        </nav>
+        <div class="search-container">
+          <label class="search-label" for="search-box"
+            ><i class="fas fa-search fa-2x"></i
+          ></label>
+          <input type="checkbox" id="search-box" />
+          <div class="search-input">
+            <input type="text" />
+          </div>
+        </div>
+        <div class="shopping-basket-container">
+          <label class="basket-label" for="basket-icon"
+          ><i class="fas fa-shopping-basket fa-2x"></i
+        ></label>
+        <input type="checkbox" id="basket-icon" />
+          
+          <section class="basket-items">
+            <h3 class="number-items">1 item in basket:</h3>
+            <img
+              class="product-thumbnail"
+              src="images/jacket-green-xsmall.jpg"
+              alt="Small thumbnail of green lotus jacket"
+            />
+            <div class="selection">
+              <p >Colour: Lime green</p>
+            <p >Size: M</p>
+            </div>
+
+            
+            <h3 class="total-price">Total: £150</h3>
+            <div class="cta-checkout button__wrapper">
+              <a class="cta-button" href="checkout.html">Proceed to checkout</a>
+            </div>
+          </section>
+        </div>
+      </div>
     </header>
 
     <main>
       <section class="hero">
         <div class="hero-wrapper">
           <div class="hero-cta cta-womens button__wrapper">
-            <a class="cta-button" href="/womens.html">Shop Women's</a>
+            <a class="cta-button" href="womens.html">Shop Women's</a>
           </div>
           <div class="hero-cta cta-mens button__wrapper">
-            <a class="cta-button" href="/mens.html">Shop Mens</a>
+            <a class="cta-button" href="mens.html">Shop Mens</a>
           </div>
         </div>
         <div class="slogan-wrapper">
           <h1 class="slogan-header">Pushing the comfort zone</h1>
-          <img
-            class="slogan"
-            src="/images/slogan.png"
-            alt="RainyDays Slogan, Pushing the Comfort Zone"
-          />
         </div>
       </section>
 

@@ -1,0 +1,138 @@
+/*------------------------MEDIA QUERIES------------------------*/
+
+@media (min-width: 400px) {
+  .hero-wrapper {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    width: 100%;
+  }
+
+  .slogan-header {
+    font-size: 1.6em;
+  }
+}
+
+@media (min-width: 600px) {
+  div.hero-cta.cta-womens,
+  div.hero-cta.cta-mens {
+    padding-top: 150px;
+    padding-bottom: 200px;
+  }
+
+  .slogan-header {
+    font-size: 2em;
+  }
+
+  .new-arrivals_signup__section {
+    flex-direction: row;
+  }
+
+  .new-arrivals_signup__section > * {
+    margin: 50px 20px;
+  }
+
+  .winter-banner p {
+    margin-bottom: 3rem;
+    max-width: 60%;
+  }
+}
+
+@media (min-width: 800px) {
+  body {
+    padding-top: 116.75px;
+  }
+
+  nav {
+    display: block;
+    position: static;
+    height: auto;
+  }
+
+  .nav-container {
+    padding: 1em;
+  }
+
+  .search-input {
+    top: 119px;
+  }
+
+  .hamburger-label {
+    display: none;
+  }
+
+  nav li {
+    display: inline-block;
+    padding: 0;
+  }
+
+  nav li a {
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0rem;
+
+    font-size: 1.5em;
+  }
+
+  div.hero-cta.cta-womens,
+  div.hero-cta.cta-mens {
+    padding-top: 200px;
+    padding-bottom: 300px;
+  }
+  .logo {
+    max-width: 200px;
+  }
+
+  .slogan-header {
+    font-size: 3.2em;
+  }
+
+  footer {
+    background-color: #112735;
+    padding: 10px;
+    margin-bottom: 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-gap: 10px;
+  }
+
+  .footer-links {
+    display: flex;
+  }
+
+  p,
+  a {
+    font-size: 1.3rem;
+  }
+
+  .cta-button {
+    font-size: 1.75rem;
+  }
+
+  .signup-button {
+    font-size: 1.75rem;
+  }
+
+  .hero-cta a {
+    min-width: 300px;
+  }
+
+  .winter-banner {
+    background-image: linear-gradient(
+        to left,
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.6)
+      ),
+      url("/images/activity-skiing.jpg");
+    background-position: right;
+    min-height: 35vh;
+    padding: 5%;
+  }
+}
+
+@media (min-width: 960px) {
+  nav li a {
+    font-size: 1.75rem;
+  }
+}

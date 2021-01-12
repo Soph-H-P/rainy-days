@@ -1,0 +1,8 @@
+
+/*------------------------ABOUT PAGE------------------------*/
+.arrow::after {
+    content: " > ";
+    color: #d94344;
+    text-decoration: none;
+  }
+  
