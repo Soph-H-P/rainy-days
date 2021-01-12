@@ -5,52 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Get the most comfotable outdoor clothing to fit any activity."
+      content="Browse our range of women's outdoor jackets."
     />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;600;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto+Slab:wght@300;400;600;800&family=Roboto:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles/style.css" />
-    <link rel="stylesheet" href="styles/womens.css">
-    <link rel="stylesheet" href="styles/media_queries.css">
-    <title>RainyDays | Woman's</title>
+    <link rel="stylesheet" href="styles/womens.css" />
+    <link rel="stylesheet" href="styles/media_queries.css" />
+    <script
+      src="https://kit.fontawesome.com/297ba3a9d9.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>RainyDays | Women's</title>
   </head>
   <body>
     <header>
-      <nav>
+      <div class="nav-container">
         <a href="/index.html">
           <img class="logo" src="/images/logo.png" alt="RainyDays Logo" />
         </a>
-        <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li><a class="active" href="/womens.html">Women's</a></li>
-          <li><a href="/mens.html">Men's</a></li>
-          <li><a href="/about.html">About</a></li>
-        </ul>
-      </nav>
+        <label class="hamburger-label" for="hamburger-menu"
+          ><i class="fas fa-bars fa-2x"></i
+        ></label>
+        <input type="checkbox" id="hamburger-menu" />
+        <nav>
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a class="active" href="/womens.html">Women's</a></li>
+            <li><a href="/mens.html">Men's</a></li>
+            <li><a href="/about.html">About</a></li>
+          </ul>
+        </nav>
+        <div class="search-container">
+          <label class="search-label" for="search-box"
+            ><i class="fas fa-search fa-2x"></i
+          ></label>
+          <input type="checkbox" id="search-box" />
+          <div class="search-input">
+            <input type="text" />
+          </div>
+        </div>
+        <div class="heart-container"><i class="fas fa-heart fa-2x"></i></div>
 
-      <h1>Rainy Days</h1>
-      <p>Pushing the Comfort Zone</p>
+        <div class="shopping-basket-container">
+          <label class="basket-label" for="basket-icon"
+            ><i class="fas fa-shopping-basket fa-2x"></i
+          ></label>
+          <input type="checkbox" id="basket-icon" />
+          <section class="basket-items">
+            <h3 class="number-items">1 item in basket:</h3>
+            <img
+              class="product-thumbnail"
+              src="images/jacket-green-xsmall.jpg"
+              alt="Small thumbnail of green lotus jacket"
+            />
+            <div class="selection">
+              <p>Colour: Lime green</p>
+              <p>Size: M</p>
+            </div>
+
+            <h3 class="total-price">Total: £150.00</h3>
+            <div class="cta-checkout button__wrapper">
+              <a class="cta-button" href="checkout.html">Proceed to checkout</a>
+            </div>
+          </section>
+        </div>
+      </div>
     </header>
+
     <main></main>
 
     <footer>
       <section>
         <h3>Be informed</h3>
-        <p>Enter you email below for the latest updates and exclusive offers</p>
-        <a class="cta-button yellow-background" href="">Sign up</a>
+        <p>For the latest updates and exclusive offers</p>
+        <form action="" class="email-signup__form">
+          <div class="signup-wrapper">
+            <label class="footer-signup__label" for="signup"
+              >Enter email address:</label
+            >
+            <input type="email" id="signup" />
+            <input type="submit" value="sign up" class="signup-button" />
+          </div>
+        </form>
       </section>
-      <section>
+      <section class="social-media__section">
         <p>Copyright RainyDays &copy;</p>
-        <a href="">Instagram</a>
-        <a href="">Facebook</a>
-        <a href="">Twitter</a>
+        <span class="footer-icons__social-media">
+          <a href=""><i class="fab fa-instagram-square fa-3x"></i></a>
+          <a href=""><i class="fab fa-facebook-square fa-3x"></i></a>
+          <a href=""><i class="fab fa-twitter-square fa-3x"></i></a>
+        </span>
       </section>
       <section class="footer-links">
         <div>
@@ -72,7 +120,7 @@
           </ul>
         </div>
         <div>
-          <h3>Legal</h3>
+          <h3>Legal Info</h3>
           <ul>
             <li><a href="">Terms & Conditions</a></li>
             <li><a href="">Privacy Policy</a></li>

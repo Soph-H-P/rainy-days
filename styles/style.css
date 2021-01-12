@@ -1,4 +1,6 @@
 /*------------------------GLOBAL STYLES------------------------*/
+@import "./imports/variables.css";
+
 html {
   min-width: 315px;
 }
@@ -8,6 +10,11 @@ body {
   margin: 0;
   box-sizing: border-box;
   padding-top: 64.88px;
+}
+
+body * {
+  border: black solid 1px;
+  background: rgba(120, 0, 120, 0.2);
 }
 
 main {
@@ -25,7 +32,7 @@ nav a {
 h1 {
   font-size: 3rem;
   font-weight: 800;
-  color: #d94344;
+  color: var(--mid-button-color);
 }
 
 h2 {
@@ -51,7 +58,7 @@ a {
 }
 
 p {
-  color: #112735;
+  color: var(--dark-font-color);
   font-weight: 400;
 }
 
@@ -79,8 +86,8 @@ input:focus {
 }
 
 header {
-  display: flex;
-  align-items: center;
+  /* display: flex;
+  align-items: center; */
   justify-content: space-between;
   position: fixed;
   top: 0px;
@@ -99,7 +106,6 @@ nav {
 }
 
 .nav-container {
-  min-width: 55%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -131,8 +137,12 @@ nav a:hover,
 
 header label,
 nav i {
-  color: #112735;
+  color: var(--dark-font-color);
   padding-right: 30px;
+}
+
+.fas {
+  color: var(--dark-font-color);
 }
 
 /*search bar ---------------- */
@@ -144,7 +154,7 @@ nav i {
   width: 90vw;
   background-color: #fff;
   padding: 0.5rem;
-  border: 0.3rem solid #112735;
+  border: 0.3rem solid var(--dark-font-color);
   z-index: 2000;
 }
 
@@ -156,7 +166,12 @@ nav i {
   display: none;
 }
 
-/*shopping basket*/
+/*heart icon --------------------*/
+.fa-heart {
+  padding-right: 1em;
+}
+
+/*shopping basket----------------*/
 
 #basket-icon:checked ~ .basket-items {
   display: grid;
@@ -167,17 +182,16 @@ nav i {
 }
 
 .basket-items {
-  display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr auto 1fr;
   display: none;
   position: fixed;
   top: 100px;
   right: 0px;
-  max-width: 90%;
+  max-width: 50%;
   background-color: #fff;
   padding: 2rem;
-  border: 0.3rem solid #112735;
+  border: 0.5rem solid var(--light-button-color);
 }
 
 .number-items {
@@ -209,32 +223,6 @@ nav i {
   font-size: 0.5rem;
 }
 
-/*   <div class="shopping-basket-container">
-          <label class="basket-label" for="basket-icon"
-          ><i class="fas fa-shopping-basket fa-2x"></i
-        ></label>
-        <input type="checkbox" id="basket-icon" />
-          
-          <section class="basket-items">
-            <h3 class="number-items">1 item in basket:</h3>
-            <img
-              class="product-thumbnail"
-              src="images/jacket-green-xsmall.jpg"
-              alt="Small thumbnail of green lotus jacket"
-            />
-            <div class="selection">
-              <p >Colour: Lime green</p>
-            <p >Size: M</p>
-            </div>
-
-            
-            <h3 class="total-price">Total: £150</h3>
-            <div class="cta-checkout button__wrapper">
-              <a class="cta-button" href="checkout.html">Proceed to checkout</a>
-            </div>
-          </section>
-        </div>*/
-
 /*hamburger menu*/
 
 .hamburger-label {
@@ -259,7 +247,7 @@ nav i {
 }
 
 footer {
-  background-color: #112735;
+  background-color: var(--dark-font-color);
   padding: 10px;
   margin-bottom: 0;
   display: grid;
@@ -275,7 +263,7 @@ footer p,
 }
 
 footer h3 {
-  color: #ffa808;
+  color: var(--light-button-color);
   text-transform: uppercase;
 }
 
@@ -308,7 +296,7 @@ footer ul {
 /*CTA BUTTON STYLING*/
 
 .cta-button {
-  background-color: #d94344;
+  background-color: var(--mid-button-color);
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
@@ -323,11 +311,11 @@ footer ul {
 
 #signup {
   height: 42px;
-  border: 0.3rem solid #ffa808;
+  border: 0.3rem solid var(--light-button-color);
 }
 
 .signup-button {
-  background-color: #ffa808;
+  background-color: var(--light-button-color);
   border: none;
   color: #fff;
   text-decoration: none;

@@ -23,10 +23,10 @@
   </head>
   <body>
     <header>
-      <a href="/index.html">
-        <img class="logo" src="/images/logo.png" alt="RainyDays Logo" />
-      </a>
       <div class="nav-container">
+        <a href="/index.html">
+          <img class="logo" src="/images/logo.png" alt="RainyDays Logo" />
+        </a>
         <label class="hamburger-label" for="hamburger-menu"
           ><i class="fas fa-bars fa-2x"></i
         ></label>
@@ -48,12 +48,13 @@
             <input type="text" />
           </div>
         </div>
+        <div class="heart-container"><i class="fas fa-heart fa-2x"></i></div>
+
         <div class="shopping-basket-container">
           <label class="basket-label" for="basket-icon"
-          ><i class="fas fa-shopping-basket fa-2x"></i
-        ></label>
-        <input type="checkbox" id="basket-icon" />
-          
+            ><i class="fas fa-shopping-basket fa-2x"></i
+          ></label>
+          <input type="checkbox" id="basket-icon" />
           <section class="basket-items">
             <h3 class="number-items">1 item in basket:</h3>
             <img
@@ -62,12 +63,11 @@
               alt="Small thumbnail of green lotus jacket"
             />
             <div class="selection">
-              <p >Colour: Lime green</p>
-            <p >Size: M</p>
+              <p>Colour: Lime green</p>
+              <p>Size: M</p>
             </div>
 
-            
-            <h3 class="total-price">Total: £150</h3>
+            <h3 class="total-price">Total: £150.00</h3>
             <div class="cta-checkout button__wrapper">
               <a class="cta-button" href="checkout.html">Proceed to checkout</a>
             </div>
@@ -104,17 +104,17 @@
       </section>
 
       <section class="new-arrivals_signup__section">
-        <div class="cta-new-arivals">
+        <div class="cta-new-arrivals">
           <h2>New Arrivals</h2>
-          <div class="cta-new-arivals__image-wrapper">
+          <div class="cta-new-arrivals__image-wrapper">
             <img
-              class="cta-new-arivals__image"
+              class="cta-new-arrivals__image"
               src="images/jacket-green-xsmall.jpg"
               alt="Green lotus jacket"
             />
           </div>
 
-          <p>
+          <p class="cta-new-arrivals__paragraph">
             Take a look at the latest lotus jacket. A great all round jacket!
           </p>
           <div class="button__wrapper">
@@ -125,8 +125,8 @@
           <h2>10% off your first order</h2>
           <p>When you sign up to our email list. Enter email address below:</p>
           <form action="" class="email-signup__form">
+            <label for="signup">Enter email address:</label>
             <div class="signup-wrapper cta-signup-wrapper">
-              <label for="signup">Enter email address:</label>
               <input type="email" id="signup" />
               <input type="submit" value="sign up" class="signup-button" />
             </div>

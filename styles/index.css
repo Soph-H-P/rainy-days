@@ -103,29 +103,40 @@ div.hero-cta.cta-mens {
 .new-arrivals_signup__section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
-.cta-new-arivals,
+.cta-new-arrivals h2 {
+  color: var(--mid-button-color);
+}
+
 .cta-signup {
-  border: 0.3rem solid #d94344;
+  color: var(--light-button-color);
+}
+
+.cta-new-arrivals,
+.cta-signup {
+  border: 0.3rem solid var(--mid-button-color);
   text-align: center;
   padding: 5%;
   margin: 10% 5%;
 }
 /*NEW ARRIVALS*/
-.cta-new-arivals__image-wrapper {
+.cta-new-arrivals__image-wrapper {
   width: 100%;
 }
 
-.cta-new-arivals__image {
+.cta-new-arrivals__paragraph {
+  text-align: left;
+}
+
+.cta-new-arrivals__image {
   max-width: 100%;
   padding: 10px;
 }
 
 /*CTA SIGN UP*/
 .cta-signup {
-  border: 0.3rem solid #ffa808;
+  border: 0.3rem solid var(--light-button-color);
   text-align: left;
 }
 
@@ -135,9 +146,7 @@ div.hero-cta.cta-mens {
 
 .signup-wrapper {
   display: grid;
-  grid-template: 1fr / 2fr 1fr;
-  max-width: 50%;
-  margin-top: 2rem;
+  grid-template-columns: 2fr 1fr;
 }
 
 /* .cta-signup-wrapper {
@@ -150,4 +159,16 @@ div.hero-cta.cta-mens {
   margin-bottom: 5px;
 }
 
+#signup {
+  height: 42px;
+  border: 0.3rem solid var(--light-button-color);
+}
 
+.signup-button {
+  background-color: var(--light-button-color);
+  border: none;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.5rem;
+}
