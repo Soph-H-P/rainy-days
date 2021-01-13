@@ -37,6 +37,10 @@
     margin-bottom: 3rem;
     max-width: 60%;
   }
+
+  h1 {
+    font-size: 3rem;
+  }
 }
 
 @media (min-width: 800px) {

@@ -15,7 +15,7 @@ body {
 body * {
   border: black solid 1px;
   background: rgba(120, 0, 120, 0.2);
-}
+} 
 
 main {
   max-width: 1500px;
@@ -30,7 +30,7 @@ nav a {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 800;
   color: var(--mid-button-color);
 }
@@ -141,7 +141,7 @@ nav i {
   padding-right: 30px;
 }
 
-.fas {
+header .fas {
   color: var(--dark-font-color);
 }
 
@@ -307,6 +307,11 @@ footer ul {
 .button__wrapper {
   display: flex;
   justify-content: space-around;
+}
+
+.signup-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
 }
 
 #signup {

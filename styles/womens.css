@@ -1,0 +1,91 @@
+@import "./imports/variables.css";
+
+/*SEARCH FILTERS---------------*/
+.fa-sliders-h {
+  color: #ffffff;
+}
+/*
+<section class="filters_sortby__section">
+        <div class="filters-container">
+          <label class="signup-button filters" for="filter-menu"
+          >Filters  <i class="fas fa-sliders-h fa-1x"></i
+        ></label>
+        <input type="checkbox" id="filter-menu" />
+        <div class="filters-menu">
+          <p>filter content here</p>
+        </div>
+        </div>
+        
+      </section>
+*/
+.filters-menu {
+  display: none;
+  position: fixed;
+  right: 0px;
+  display: none;
+  top: 65px;
+  background-color: #fff;
+  height: 100vh;
+  z-index: 900;
+}
+
+#filter-menu:checked ~ .filters-menu {
+  display: inline-block;
+}
+
+#filter-menu {
+  display: none;
+}
+
+/*PRODUCT CARD*/
+.product-image-wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20px 3fr 1fr;
+   
+}
+
+.product-card-image {
+    width: 60vw;
+    justify-self: center;
+}
+
+.selector-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.current-selection {
+    border: 3px solid var(--dark-font-color);
+}
+
+.circle {
+  padding: 10px;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.green-selector {
+  background-color: #c5ea42;
+}
+
+.blue-selector {
+  background-color: #68abfd;
+}
+
+.pink-selector {
+  background-color: #fd8096;
+}
+
+.customer-rating {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.stars {
+    align-self: center;
+    color: var(--light-button-color);
+}
