@@ -1,1 +1,101 @@
 @import "./imports/variables.css";
+
+.product-view__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  padding: 0 5%;
+}
+
+.main-product__image {
+  grid-column: 1 / 4;
+}
+
+.green-thumbnail {
+  grid-column: 1 / 1;
+  grid-row: 2 / 3;
+  width: 100%;
+}
+
+.blue-thumbnail {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  width: 100%;
+}
+
+.pink-thumbnail {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+  width: 100%;
+}
+
+.main-product__image {
+  width: 100%;
+}
+
+.current-selection {
+  border: var(--dark-font-color) 3px solid;
+}
+
+.size-selection {
+  display: flex;
+  justify-content: center;
+}
+
+.size {
+  min-width: 2em;
+  min-height: 2em;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 50%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.selection-summary {
+  border: var(--light-button-color) solid 3px;
+  padding: 10%;
+  margin: 10%;
+}
+
+.selection-summary div {
+  margin: 0 auto;
+}
+.selection-summary div h2,
+.selection-summary div p {
+  display: inline-block;
+  font-size: 1em;
+}
+
+/* 
+   
+*/
+/*ACORDIAN MENU*/
+#plus-icon-overview:checked ~ .accordian-content-overview,
+#plus-icon-tech-spec:checked ~ .accordian-content-tech-spec,
+#plus-icon-weather:checked ~ .accordian-content-weather,
+#plus-icon-size:checked ~ .accordian-content-size,
+#plus-icon-reviews:checked ~ .accordian-content-reviews {
+  display: grid;
+}
+
+#plus-icon-overview,
+#plus-icon-tech-spec,
+#plus-icon-weather,
+#plus-icon-size,
+#plus-icon-reviews {
+  display: none;
+}
+
+.accordian-content-overview,
+.accordian-content-tech-spec,
+.accordian-content-weather,
+.accordian-content-size,
+.accordian-content-reviews {
+  display: none;
+}
+
+/*TECH SPEC TAB*/
+.lotus-image-accordian {
+  width: 100%;
+}

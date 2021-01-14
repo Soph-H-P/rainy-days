@@ -1,6 +1,20 @@
 /*------------------------MEDIA QUERIES------------------------*/
 
 @media (min-width: 400px) {
+  body * {
+    border: black solid 1px;
+    background: rgba(0, 120, 120, 0.2);
+  }
+  /*-------WOMENS-----------*/
+  /*PRODUCT GRID*/
+  .view-products-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 10%;
+  }
+
+  /*-------HOME-----------*/
+
   .hero-wrapper {
     display: grid;
     grid-template-rows: 1fr;
@@ -19,6 +33,11 @@
   div.hero-cta.cta-mens {
     padding-top: 150px;
     padding-bottom: 200px;
+  }
+
+  body * {
+    border: black solid 1px;
+    background: rgba(120, 120, 0, 0.2);
   }
 
   .slogan-header {
@@ -41,12 +60,29 @@
   h1 {
     font-size: 3rem;
   }
+
+  /*PRODUCT GRID*/
+  .view-products-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (min-width: 800px) {
   /*GLOBAL*/
   body {
     padding-top: 116.75px;
+  }
+
+  body * {
+    border: black solid 1px;
+    background: rgba(0, 0, 120, 0.2);
+  }
+
+  .back-button {
+    display: none;
+  }
+  .breadcrumb {
+    display: inline-block;
   }
 
   nav {
@@ -135,10 +171,21 @@
     min-height: 35vh;
     padding: 5%;
   }
+  /*----------WOMENS JACKET PAGE--------------*/
+  /*PRODUCT GRID*/
+  .view-products-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0;
+  }
 }
 
 @media (min-width: 960px) {
   nav li a {
     font-size: 1.75rem;
+  }
+
+  /*PRODUCT GRID*/
+  .view-products-grid {
+    gap: 30px;
   }
 }

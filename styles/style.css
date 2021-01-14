@@ -1,6 +1,10 @@
 /*------------------------GLOBAL STYLES------------------------*/
 @import "./imports/variables.css";
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   min-width: 315px;
 }
@@ -8,14 +12,14 @@ html {
 body {
   font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
   margin: 0;
-  box-sizing: border-box;
+
   padding-top: 64.88px;
 }
 
 body * {
   border: black solid 1px;
   background: rgba(120, 0, 120, 0.2);
-} 
+}
 
 main {
   max-width: 1500px;
@@ -326,4 +330,37 @@ footer ul {
   text-decoration: none;
   text-transform: uppercase;
   padding: 0.5rem;
+}
+
+/*back button*/
+
+.back-button__wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.back-button::before {
+  content: url(../images/back-arrow.png);
+}
+
+/*BREADCRUMB trail*/
+
+.breadcrumb {
+  display: none;
+}
+
+.breadcrumb::after {
+  content: url(../images/forward-arrow.png);
+}
+
+
+/*-------customer rating stars--------*/
+.customer-rating {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.stars {
+  align-self: center;
+  color: var(--light-button-color);
 }
