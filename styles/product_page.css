@@ -105,7 +105,6 @@
 .accordian-content-reviews {
   display: none;
   padding: 5%;
-  justify-items: center;
 }
 
 /*TECH SPEC TAB*/
@@ -146,10 +145,18 @@ td {
   border: solid var(--light-button-color) 3px;
 }
 
+.send-button__wrapper {
+  text-align: right;
+}
+
+.customer-review-form a {
+  display: inline-block;
+}
+
 #comment-box-review {
   background: var(--input-background-color);
   font-size: 1em;
   font-family: var(--paragraph-font);
   width: 100%;
-  margin: 5px auto;
+  margin: 0;
 }

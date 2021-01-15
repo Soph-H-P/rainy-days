@@ -16,10 +16,10 @@ body {
 }
 
 /*COLOUR FOR STYLING HELP*/
-  body * {
+/* body * {
   border: black solid 1px;
   background: rgba(120, 0, 120, 0.2);
-}  
+} */
 
 main {
   max-width: 1500px;
@@ -77,7 +77,6 @@ a {
   width: 100%;
   font-size: 1em;
 }
-
 
 /*HEADER AND FOOTER*/
 /*header*/
@@ -177,8 +176,6 @@ fieldset {
   display: none;
 }
 
-
-
 /*heart icon --------------------*/
 
 .favourites-popup {
@@ -190,13 +187,11 @@ fieldset {
   padding: 1rem;
   border: 0.3rem solid var(--dark-font-color);
   z-index: 2000;
-  
 }
 
 .favourites-popup a {
   display: flex;
   margin-bottom: 1rem;
-  
 }
 
 #fav-box:checked ~ .favourites-popup {
@@ -341,9 +336,6 @@ footer ul {
   justify-content: space-around;
   text-align: center;
 }
-
-
-
 
 .signup-wrapper {
   display: grid;

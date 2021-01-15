@@ -1,7 +1,6 @@
 /*------------------------MEDIA QUERIES------------------------*/
 @import "./imports/variables.css";
 @media (min-width: 400px) {
-
   /*------checkout----------*/
   #delivery-address-label {
     display: inline;
@@ -32,7 +31,6 @@
 }
 
 @media (min-width: 600px) {
-
   .basket-summary__wrapper {
     display: flex;
     flex-direction: row;
@@ -47,18 +45,13 @@
   }
 
   .favourites-popup {
-
     top: 100px;
-   
-    
   }
 
   .checkout-page__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-
-
 
   .accordian-content-tech-spec,
   .accordian-content-weather {
@@ -83,8 +76,6 @@
     padding-top: 150px;
     padding-bottom: 200px;
   }
-
- 
 
   .slogan-header {
     font-size: 2em;
@@ -132,8 +123,6 @@
   body {
     padding-top: 116.75px;
   }
-
- 
 
   .back-button {
     display: none;
@@ -269,9 +258,9 @@
     grid-template-columns: 1fr 1fr 2fr;
   }
 
-nav li {
-  padding: 0 10px;
-}
+  nav li {
+    padding: 0 10px;
+  }
 
   nav li a {
     font-size: 1.75rem;
