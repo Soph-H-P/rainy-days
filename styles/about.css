@@ -1,8 +1,50 @@
+@import "./imports/variables.css";
 
-/*------------------------ABOUT PAGE------------------------*/
-.arrow::after {
-    content: " > ";
-    color: #d94344;
-    text-decoration: none;
-  }
-  
+.slogan-logo__wrapper {
+  display: flex;
+  max-width: 400px;
+  margin: 10px auto;
+}
+
+.slogan-logo__wrapper img {
+  width: 100%;
+}
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-section p {
+  line-height: 2em;
+}
+
+.about-section h2,
+.about-section p {
+  color: #fff;
+  padding: 20px;
+}
+
+.dark-image-overlay {
+  background: var(--dark-overlay-color);
+  max-width: 450px;
+}
+
+.ethics__wrapper {
+  background: url(../images/about-factory.jpg) center no-repeat;
+  background-size: cover;
+}
+
+.tech__wrapper {
+  background: url(../images/about-lotus.jpg) center no-repeat;
+  background-size: cover;
+}
+
+.tech-overlay {
+  margin-left: auto;
+}
+
+.comfort__wrapper {
+  background: url(../images/about-hammocks.jpg) center no-repeat;
+  background-size: cover;
+}

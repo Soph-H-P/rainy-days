@@ -1,0 +1,48 @@
+@import "./imports/variables.css";
+
+.contact-hero {
+    background: url(../images/activity-canoeing.jpg);
+}
+
+.contact-page__wrapper h3,
+.contact-page__wrapper p {
+    color: #fff;
+}
+
+.contact-page__wrapper h3 {
+    font-family: var(--paragraph-font) Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+
+.contact-page__wrapper {
+  padding: 20px;
+  max-width: 400px;
+
+}
+
+.contact-email-form {
+    padding: 25px;
+}
+
+.contact-email-form label {
+  display: inline-block;
+  background-color: var(--link-color);
+  color: #fff;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+.contact-email-form input,
+.contact-email-form textarea {
+  display: flex;
+  flex-direction: column;
+  font-size: 1em;
+  padding: 5px;
+}
+
+
+
+.contact-page__wrapper i {
+    color: #fff;
+}

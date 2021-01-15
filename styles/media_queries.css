@@ -1,10 +1,16 @@
 /*------------------------MEDIA QUERIES------------------------*/
-
+@import "./imports/variables.css";
 @media (min-width: 400px) {
   body * {
     border: black solid 1px;
     background: rgba(0, 120, 120, 0.2);
   }
+  /*------checkout----------*/
+  #delivery-address-label {
+    display: inline;
+    font-size: 1em;
+  }
+
   /*-------WOMENS-----------*/
   /*PRODUCT GRID*/
   .view-products-grid {
@@ -29,6 +35,29 @@
 }
 
 @media (min-width: 600px) {
+  .checkout-page__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .accordian-content-tech-spec,
+  .accordian-content-weather {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .image-wrapper-accordian {
+    grid-column-end: span 2;
+  }
+
+  .content-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .jacket-specs__accordian-menu {
+    grid-column-start: span 2;
+    margin: 0 10%;
+  }
+
   div.hero-cta.cta-womens,
   div.hero-cta.cta-mens {
     padding-top: 150px;
@@ -65,6 +94,10 @@
   .view-products-grid {
     grid-template-columns: 1fr 1fr;
   }
+  .order-received {
+    justify-content: space-around;
+    flex-direction: row;
+  }
 }
 
 @media (min-width: 800px) {
@@ -80,9 +113,6 @@
 
   .back-button {
     display: none;
-  }
-  .breadcrumb {
-    display: inline-block;
   }
 
   nav {
@@ -147,6 +177,13 @@
     font-size: 1.3rem;
   }
 
+  /*PAYMENT*/
+  .checkout-page__wrapper {
+    gap: 100px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
   /*HOME PAGE*/
   .cta-button {
     font-size: 1.75rem;
@@ -171,15 +208,43 @@
     min-height: 35vh;
     padding: 5%;
   }
-  /*----------WOMENS JACKET PAGE--------------*/
+
   /*PRODUCT GRID*/
   .view-products-grid {
     grid-template-columns: 1fr 1fr 1fr;
     margin: 0;
   }
+
+  .other-interesting-items {
+    grid-template-columns: 1fr;
+    font-size: 1em;
+  }
+
+  .interesting-products__wrapper {
+    padding: 10px;
+  }
+
+  .order-confirmation-wrapper {
+    flex-direction: row;
+  }
+
+  /*about page*/
+
+  .dark-image-overlay {
+    max-width: 550px;
+  }
 }
 
 @media (min-width: 960px) {
+  .jacket-specs__accordian-menu {
+    grid-column: span 1;
+    margin: 0;
+  }
+
+  .content-wrapper {
+    grid-template-columns: 1fr 1fr 2fr;
+  }
+
   nav li a {
     font-size: 1.75rem;
   }

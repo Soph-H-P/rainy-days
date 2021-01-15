@@ -76,7 +76,245 @@
       </div>
     </header>
 
-    <main></main>
+    <main>
+      <div class="back-button__wrapper">
+        <a class="back-button" href="index.html">Back</a>
+      </div>
+
+      <h1>Payment</h1>
+      <div class="checkout-page__wrapper">
+        <div class="payment-info">
+          <form action="">
+            <section class="delivery-options__wrapper">
+              <h2>Delivery options</h2>
+              <fieldset>
+                <label id="delivery-address-label" for="delivery-option-free">
+                  <input
+                    type="radio"
+                    id="delivery-option-free"
+                    name="delivery"
+                    value="standard-delivery"
+                  />
+
+                  Standard delivery (3-5 working days) - Free
+                </label>
+
+                <label
+                  id="delivery-address-label"
+                  for="delivery-option-express"
+                >
+                  <input
+                    type="radio"
+                    id="delivery-option-express"
+                    name="delivery"
+                    value="express-delivery"
+                  />
+                  Express delivery (1-2 working days) - £4.50
+                </label>
+              </fieldset>
+            </section>
+            <section class="payment-method__wrapper">
+              <h2>Choose payment method</h2>
+              <fieldset>
+                <div class="choose-payment">
+                  <label for="credit-card">
+                    <input
+                      type="radio"
+                      value="card"
+                      id="credit-card"
+                      name="payment"
+                      class="payment__radio-button"
+                    />
+                    <img
+                      class="payment-method__image"
+                      src="images/card.png"
+                      alt="visa and mastercard logo"
+                    />
+                  </label>
+                  <label for="paypal">
+                    <input
+                      type="radio"
+                      value="paypal"
+                      id="paypal"
+                      name="payment"
+                      class="payment__radio-button"
+                    />
+                    <img
+                      class="payment-method__image"
+                      src="images/paypal.png"
+                      alt="paypal logo"
+                    />
+                  </label>
+                  <label for="vipps">
+                    <input
+                      type="radio"
+                      value="vipps"
+                      id="vipps"
+                      name="payment"
+                      class="payment__radio-button"
+                    />
+                    <img
+                      class="payment-method__image"
+                      src="images/vipps.png"
+                      alt="vipps logo"
+                    />
+                  </label>
+                </div>
+              </fieldset>
+            </section>
+            <section class="billing-address__wrapper">
+              <h2>Billing Address</h2>
+              <fieldset>
+                <div class="name-wrapper">
+                  <label for="name">Full name</label>
+                  <input type="text" name="name" id="name" required />
+                </div>
+                <div class="email-wrapper">
+                  <label for="email">Email address</label>
+                  <input type="email" name="email" id="email" required />
+                </div>
+                <div class="address-wrapper">
+                  <label for="address">Address</label>
+                  <input type="text" name="address" id="address" required />
+                </div>
+                <div class="city-postcode-wrapper city-postcode">
+                  <label for="city">City</label>
+                  <input type="text" name="city" id="city" required />
+                  <label for="post-code">Post code</label>
+                  <input type="text" name="post-code" id="post-code" required />
+                </div>
+                <div class="country-wrapper">
+                  <label for="country">Country</label>
+                  <select name="country" id="country">
+                    <option value="Norway">Norway</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="Ireland">Ireland</option>
+                  </select>
+                </div>
+              </fieldset>
+              <div class="delivery-address-wrapper">
+                <h2>Delivery Address</h2>
+                <label id="delivery-address-label" for="address"
+                  >My billing and delivery address are the same</label
+                >
+                <input type="checkbox" id="delivery-address-checkbox" checked />
+                <div class="delivery-address-form">
+                  <fieldset>
+                    <div class="delivery-name-wrapper">
+                      <label for="delivery-name">Full name</label>
+                      <input
+                        type="text"
+                        name="delivery-name"
+                        id="delivery-name"
+                      />
+                    </div>
+                    <div class="delivery-email-wrapper">
+                      <label for="delivery-email">Email address</label>
+                      <input
+                        type="email"
+                        name="delivery-email"
+                        id="delivery-email"
+                      />
+                    </div>
+                    <div class="delivery-address-wrapper">
+                      <label for="delivery-address">Address</label>
+                      <input
+                        type="text"
+                        name="delivery-address"
+                        id="delivery-address"
+                      />
+                    </div>
+                    <div class="delivery-city-postcode-wrapper city-postcode">
+                      <label for="delivery-city">City</label>
+                      <input
+                        type="text"
+                        name="delivery-city"
+                        id="delivery-city"
+                      />
+                      <label for="delivery-post-code">Post code</label>
+                      <input
+                        type="text"
+                        name="delivery-post-code"
+                        id="delivery-post-code"
+                      />
+                    </div>
+                    <div class="country-wrapper">
+                      <label for="delivery-country">Country</label>
+                      <select name="delivery-country" id="delivery-country">
+                        <option value="Norway">Norway</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                        <option value="Ireland">Ireland</option>
+                      </select>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+            </section>
+            <section class="card-details__wrapper">
+              <h2>Credit card details</h2>
+              <fieldset>
+                <div class="card-number-wrapper">
+                  <label for="card-number">Card number</label>
+                  <input
+                    type="tel"
+                    name="card-number"
+                    id="card-number"
+                    required
+                  />
+                </div>
+                <div class="card-name-wrapper">
+                  <label for="card-name">Card holder name</label>
+                  <input type="text" name="card-name" id="card-name" required />
+                </div>
+                <div class="expiry-wrapper">
+                  <label for="expiry">Expiry date</label>
+                  <input type="tel" name="expiry" id="expiry" required />
+                </div>
+                <div class="cvv-wrapper">
+                  <label for="cvv">cvv</label>
+                  <input type="text" name="cvv" id="cvv" required />
+                </div>
+              </fieldset>
+            </section>
+            <section class="discounts__wrapper">
+              <h2>Discounts</h2>
+              <fieldset>
+                <div class="promo-wrapper">
+                  <label for="promo">Promo code</label>
+                  <input type="text" name="promo" id="promo" />
+                </div>
+              </fieldset>
+            </section>
+          </form>
+        </div>
+        <div class="order-summary-info">
+          <section class="order-summary__wrapper">
+            <h2 class="order-summary">Order summary</h2>
+            <div class="summary-image-wrapper">
+              <img
+                src="images/jacket-green-xsmall.jpg"
+                alt="Green lotus jacket"
+              />
+            </div>
+            <div class="order-summary-details">
+              <p>Colour: Lime green</p>
+              <p>Size: M</p>
+              <p>Quantity: 1</p>
+              <p>Delivery: Free standard delivery</p>
+              <div class="summary-total">
+                <h3>Total: £150.00</h3>
+                <i class="fas fa-trash fa-2x"></i>
+              </div>
+            </div>
+            <div class="button__wrapper">
+              <a href="order_confirmation.html" class="payment-button cta-button">
+                Pay £150.00 <i class="fas fa-lock"></i
+              ></a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
 
     <footer>
       <section>

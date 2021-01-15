@@ -1,0 +1,47 @@
+@import "./imports/variables.css";
+
+main {
+  width: 100%;
+}
+
+.order-confirmation-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  margin: 10px auto;
+}
+
+.order-confirmation {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto 1fr;
+  background-color: #fff;
+  padding: 2rem;
+  margin: 2rem;
+  border: 0.5rem solid var(--light-button-color);
+  max-width: 600px;
+}
+
+.order-received {
+  display: flex;
+  flex-direction: column;
+}
+
+.confirmation-info__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.check-mark {
+  text-align: center;
+}
+
+.fa-check {
+  padding: 20px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: var(--light-button-color);
+}
+
+.other-interesting-items {
+  gap: 10px;
+}

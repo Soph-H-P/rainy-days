@@ -1,5 +1,12 @@
 @import "./imports/variables.css";
 
+.content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 2%;
+  gap: 15px 0;
+}
+
 .product-view__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -56,6 +63,8 @@
   border: var(--light-button-color) solid 3px;
   padding: 10%;
   margin: 10%;
+
+  align-self: center;
 }
 
 .selection-summary div {
@@ -67,10 +76,12 @@
   font-size: 1em;
 }
 
-/* 
-   
-*/
+.selection-summary a {
+  font-size: 1em;
+}
+
 /*ACORDIAN MENU*/
+
 #plus-icon-overview:checked ~ .accordian-content-overview,
 #plus-icon-tech-spec:checked ~ .accordian-content-tech-spec,
 #plus-icon-weather:checked ~ .accordian-content-weather,
@@ -93,9 +104,52 @@
 .accordian-content-size,
 .accordian-content-reviews {
   display: none;
+  padding: 5%;
+  justify-items: center;
 }
 
 /*TECH SPEC TAB*/
+
+.accordian-content-tech-spec {
+  grid-template-columns: 1fr;
+}
+
+.image-wrapper-accordian {
+  grid-column-end: span 1;
+}
+
 .lotus-image-accordian {
   width: 100%;
+}
+
+/*SIZE GUIDE TAB*/
+.accordian-content-size {
+  grid-template-columns: 1fr 2fr;
+}
+
+table {
+  display: inline;
+  align-self: center;
+}
+
+th,
+td {
+  padding-left: 20px;
+}
+
+td {
+  text-transform: uppercase;
+}
+
+/*CUSTOMER REVIEWS TAB*/
+.customer-review-form {
+  border: solid var(--light-button-color) 3px;
+}
+
+#comment-box-review {
+  background: var(--input-background-color);
+  font-size: 1em;
+  font-family: var(--paragraph-font);
+  width: 100%;
+  margin: 5px auto;
 }

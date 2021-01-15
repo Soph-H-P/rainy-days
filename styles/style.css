@@ -1,6 +1,5 @@
 /*------------------------GLOBAL STYLES------------------------*/
 @import "./imports/variables.css";
-
 * {
   box-sizing: border-box;
 }
@@ -10,7 +9,7 @@ html {
 }
 
 body {
-  font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
+  font-family: var(--paragraph-font), Verdana, Geneva, Tahoma, sans-serif;
   margin: 0;
 
   padding-top: 64.88px;
@@ -30,7 +29,8 @@ h1,
 h2,
 h3,
 nav a {
-  font-family: "Roboto Slab", Georgia, "Times New Roman", Times, serif;
+  font-family: var(--heading-font), Georgia, "Times New Roman", Times, serif;
+  color: var(--dark-font-color);
 }
 
 h1 {
@@ -67,11 +67,11 @@ p {
 }
 
 a {
-  color: #1e7297;
+  color: var(--link-color);
   font-weight: 500;
 }
 
-input {
+.search-container input {
   border: none;
   width: 100%;
 }
@@ -109,6 +109,10 @@ nav {
   height: 100vh;
 }
 
+nav a {
+  color: var(--link-color);
+}
+
 .nav-container {
   display: flex;
   align-items: center;
@@ -132,7 +136,7 @@ nav a {
 
 nav a:hover,
 .active {
-  border-bottom: #1e7297 5px solid;
+  border-bottom: var(--link-color) 5px solid;
 }
 
 .active {
@@ -199,14 +203,11 @@ header .fas {
 }
 
 .number-items {
-  grid-column-start: 1;
-  grid-column-end: 4;
+  grid-column-start: span 2;
 }
 
 .product-thumbnail {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  max-width: 70%;
+  width: 100%;
 }
 
 .selection {
@@ -214,17 +215,13 @@ header .fas {
   align-self: center;
 }
 
-.total-price {
-  grid-column-start: 1;
-  grid-column-end: 2;
-}
-
 .cta-checkout {
   margin: 10px;
   justify-self: center;
-  grid-column-start: 3;
-  grid-column-end: 4;
-  font-size: 0.5rem;
+}
+
+.cta-checkout a {
+  font-size: 1rem;
 }
 
 /*hamburger menu*/
@@ -311,6 +308,7 @@ footer ul {
 .button__wrapper {
   display: flex;
   justify-content: space-around;
+  text-align: center;
 }
 
 .signup-wrapper {
@@ -346,13 +344,12 @@ footer ul {
 /*BREADCRUMB trail*/
 
 .breadcrumb {
-  display: none;
+  display: inline;
 }
 
 .breadcrumb::after {
   content: url(../images/forward-arrow.png);
 }
-
 
 /*-------customer rating stars--------*/
 .customer-rating {
@@ -363,4 +360,53 @@ footer ul {
 .stars {
   align-self: center;
   color: var(--light-button-color);
+}
+
+/*PRODUCT CARD*/
+.product-image-wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 20px 3fr 1fr;
+  gap: 1px;
+}
+
+.product-card-image {
+  justify-self: center;
+}
+
+.selector-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  align-items: center;
+  margin: 0 auto;
+  z-index: 800;
+}
+
+.current-selection {
+  border: 3px solid var(--dark-font-color);
+}
+
+.view-product__button-wrapper {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.circle {
+  padding: 10px;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.green-selector {
+  background-color: #c5ea42;
+}
+
+.blue-selector {
+  background-color: #68abfd;
+}
+
+.pink-selector {
+  background-color: #fd8096;
 }
