@@ -19,6 +19,10 @@
   flex-direction: column;
 }
 
+.payment-info {
+  padding: 1em;
+}
+
 .delivery-options__wrapper fieldset {
   display: flex;
   flex-direction: column;
@@ -27,6 +31,7 @@
 #delivery-address-label {
   display: inline;
   font-size: 0.85em;
+  margin: 10px auto;
 }
 
 form label:not(#delivery-address-label) {
@@ -44,6 +49,7 @@ form select {
 }
 
 /*PAYMENT METHOD*/
+
 .choose-payment {
   display: flex;
   justify-content: space-around;
@@ -69,6 +75,10 @@ form select {
 
 #delivery-address-checkbox:checked ~ .delivery-address-form {
   display: none;
+}
+
+.details__wrapper {
+  margin: 10px auto;
 }
 
 /*ORDER SUMMARY*/

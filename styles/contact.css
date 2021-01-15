@@ -1,28 +1,43 @@
 @import "./imports/variables.css";
 
 .contact-hero {
-    background: url(../images/activity-canoeing.jpg);
+  background: url(../images/activity-canoeing-small.jpg) no-repeat center left;
+  background-size: cover;
+  color: #fff;
+  min-height: 50%;
 }
 
 .contact-page__wrapper h3,
-.contact-page__wrapper p {
-    color: #fff;
+.contact-page__wrapper p,
+.contact-hero h1,
+.contact-hero h2 {
+  color: #fff;
 }
 
 .contact-page__wrapper h3 {
-    font-family: var(--paragraph-font) Arial, Helvetica, sans-serif;
-    text-transform: uppercase;
-    font-size: 1.5em;
+  font-family: var(--paragraph-font) Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-size: 1.5em;
 }
 
 .contact-page__wrapper {
   padding: 20px;
   max-width: 400px;
+  margin: 10px auto;
+}
 
+.contact-email-section,
+.contact-details-section {
+  background-color: var(--dark-overlay-color);
+}
+
+.contact-methods {
+  display: flex;
+  flex-direction: column;
 }
 
 .contact-email-form {
-    padding: 25px;
+  padding: 25px;
 }
 
 .contact-email-form label {
@@ -39,10 +54,14 @@
   flex-direction: column;
   font-size: 1em;
   padding: 5px;
+  margin-bottom: 1em;
+  background-color: var(--input-background-color);
 }
 
-
+#submit {
+  background-color: var(--light-button-color);
+}
 
 .contact-page__wrapper i {
-    color: #fff;
+  color: #fff;
 }

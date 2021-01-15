@@ -1,10 +1,7 @@
 /*------------------------MEDIA QUERIES------------------------*/
 @import "./imports/variables.css";
 @media (min-width: 400px) {
-  body * {
-    border: black solid 1px;
-    background: rgba(0, 120, 120, 0.2);
-  }
+
   /*------checkout----------*/
   #delivery-address-label {
     display: inline;
@@ -35,10 +32,33 @@
 }
 
 @media (min-width: 600px) {
+
+  .basket-summary__wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .basket-items {
+    top: 100px;
+    right: 0px;
+    background-color: #fff;
+    padding: 0 2rem;
+    border: 0.5rem solid var(--light-button-color);
+  }
+
+  .favourites-popup {
+
+    top: 100px;
+   
+    
+  }
+
   .checkout-page__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+
+
 
   .accordian-content-tech-spec,
   .accordian-content-weather {
@@ -64,10 +84,7 @@
     padding-bottom: 200px;
   }
 
-  body * {
-    border: black solid 1px;
-    background: rgba(120, 120, 0, 0.2);
-  }
+ 
 
   .slogan-header {
     font-size: 2em;
@@ -98,6 +115,16 @@
     justify-content: space-around;
     flex-direction: row;
   }
+  .contact-hero {
+    background: none;
+    background-color: var(--dark-font-color);
+    padding: 20px;
+  }
+  .contact-methods {
+    flex-direction: row;
+    background: url(../images/activity-canoeing.jpg) no-repeat center left;
+    background-size: cover;
+  }
 }
 
 @media (min-width: 800px) {
@@ -106,10 +133,7 @@
     padding-top: 116.75px;
   }
 
-  body * {
-    border: black solid 1px;
-    background: rgba(0, 0, 120, 0.2);
-  }
+ 
 
   .back-button {
     display: none;
@@ -135,7 +159,7 @@
 
   nav li {
     display: inline-block;
-    padding: 0 10px;
+    padding: 0 5px;
   }
 
   nav li a {
@@ -179,8 +203,8 @@
 
   /*PAYMENT*/
   .checkout-page__wrapper {
-    gap: 100px;
-    max-width: 800px;
+    gap: 50px;
+    max-width: 1000px;
     margin: 0 auto;
   }
 
@@ -190,7 +214,7 @@
   }
 
   .signup-button {
-    font-size: 1.75rem;
+    font-size: 1rem;
   }
 
   .hero-cta a {
@@ -244,6 +268,10 @@
   .content-wrapper {
     grid-template-columns: 1fr 1fr 2fr;
   }
+
+nav li {
+  padding: 0 10px;
+}
 
   nav li a {
     font-size: 1.75rem;

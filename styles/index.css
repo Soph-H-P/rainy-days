@@ -109,20 +109,20 @@ div.hero-cta.cta-mens {
   color: var(--mid-button-color);
 }
 
-.cta-signup {
+.cta-signup h2 {
   color: var(--light-button-color);
 }
 
 .cta-new-arrivals,
 .cta-signup {
   border: 0.3rem solid var(--mid-button-color);
-  text-align: center;
-  padding: 5%;
-  margin: 10% 5%;
+  padding: 30px;
+  margin: 20px;
 }
 /*NEW ARRIVALS*/
 .cta-new-arrivals__image-wrapper {
   width: 100%;
+  text-align: center;
 }
 
 .cta-new-arrivals__paragraph {
@@ -137,38 +137,14 @@ div.hero-cta.cta-mens {
 /*CTA SIGN UP*/
 .cta-signup {
   border: 0.3rem solid var(--light-button-color);
-  text-align: left;
 }
 
-.email-signup__form {
-  margin: auto;
-}
+/*<div class="signup-wrapper cta-signup-wrapper">
+              <input type="email" id="signup" />
+              <input type="submit" value="sign up" class="signup-button" />
+            </div>*/
 
-.signup-wrapper {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-}
-
-/* .cta-signup-wrapper {
-    margin: auto;
-  }  */
-
-.signup-wrapper label {
-  grid-column: -1/1;
-  text-align: left;
-  margin-bottom: 5px;
-}
-
-#signup {
-  height: 42px;
-  border: 0.3rem solid var(--light-button-color);
-}
-
-.signup-button {
-  background-color: var(--light-button-color);
-  border: none;
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  padding: 0.5rem;
+.cta-signup-wrapper {
+  display: flex;
+  flex-wrap: wrap;
 }
