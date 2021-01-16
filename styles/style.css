@@ -115,6 +115,7 @@ nav a {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 2px 2px 5px var(--input-background-color);
 }
 
 nav ul {
@@ -368,7 +369,7 @@ footer ul {
 
 .back-button__wrapper {
   display: flex;
-  align-items: center;
+  padding: 10px;
 }
 
 .back-button::before {
@@ -379,6 +380,7 @@ footer ul {
 
 .breadcrumb {
   display: inline;
+  margin: 20px;
 }
 
 .breadcrumb::after {
@@ -397,11 +399,20 @@ footer ul {
 }
 
 /*PRODUCT CARD*/
+.product-card {
+  box-shadow: 2px 2px 5px var(--input-background-color);
+  padding: 20px;
+}
+
 .product-image-wrapper {
   width: 100%;
   display: grid;
   grid-template-columns: 20px 3fr 1fr;
   gap: 1px;
+}
+
+.product-image-wrapper i {
+  margin-top: 20px;
 }
 
 .product-card-image {
