@@ -63,8 +63,7 @@
   border: var(--light-button-color) solid 3px;
   padding: 10%;
   margin: 10%;
-
-  align-self: center;
+  align-self: self-start;
 }
 
 .selection-summary div {
@@ -81,6 +80,25 @@
 }
 
 /*ACORDIAN MENU*/
+.jacket-specs__accordian-menu {
+  padding: 10px 30px;
+}
+
+.jacket-specs__accordian-menu div {
+  padding: 10px 0;
+}
+
+.plus-label {
+  font-size: 1.5em;
+}
+
+.fa-plus {
+  font-size: 1.5em;
+  margin-right: 1rem;
+  rotate: 0deg;
+  transition-property: rotate;
+  transition-duration: 0.5s;
+}
 
 #plus-icon-overview:checked ~ .accordian-content-overview,
 #plus-icon-tech-spec:checked ~ .accordian-content-tech-spec,
@@ -88,6 +106,25 @@
 #plus-icon-size:checked ~ .accordian-content-size,
 #plus-icon-reviews:checked ~ .accordian-content-reviews {
   display: grid;
+}
+
+#plus-icon-overview:checked + label,
+#plus-icon-tech-spec:checked + label,
+#plus-icon-weather:checked + label,
+#plus-icon-size:checked + label,
+#plus-icon-reviews:checked + label {
+  color: var(--light-button-color);
+  font-family: var(--heading-font), Georgia, "Times New Roman", Times, serif;
+}
+
+#plus-icon-overview:checked + label .fa-plus,
+#plus-icon-tech-spec:checked + label .fa-plus,
+#plus-icon-weather:checked + label .fa-plus,
+#plus-icon-size:checked + label .fa-plus,
+#plus-icon-reviews:checked + label .fa-plus {
+  rotate: 45deg;
+  transition-property: rotate;
+  transition-duration: 1s;
 }
 
 #plus-icon-overview,
@@ -155,6 +192,7 @@ td {
 
 #comment-box-review {
   background: var(--input-background-color);
+  outline: none;
   font-size: 1em;
   font-family: var(--paragraph-font);
   width: 100%;

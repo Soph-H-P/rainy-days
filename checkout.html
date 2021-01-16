@@ -71,19 +71,28 @@
           <input type="checkbox" id="basket-icon" />
           <section class="basket-items">
             <h3 class="number-items">1 item in basket:</h3>
-            <img
-              class="product-thumbnail"
-              src="images/jacket-green-xsmall.jpg"
-              alt="Small thumbnail of green lotus jacket"
-            />
-            <div class="selection">
-              <p>Colour: Lime green</p>
-              <p>Size: M</p>
-            </div>
+            <div class="basket-summary__wrapper">
+              <div>
+                <a href="product_page.html">
+                  <img
+                    class="product-thumbnail"
+                    src="images/jacket-green-xsmall.jpg"
+                    alt="Small thumbnail of green lotus jacket"
+                  />
+                </a>
+              </div>
 
+              <div class="selection">
+                <p>Product: Lotus</p>
+                <p>Colour: Lime green</p>
+                <p>Size: M</p>
+              </div>
+            </div>
             <h3 class="total-price">Total: £150.00</h3>
             <div class="cta-checkout button__wrapper">
-              <a class="cta-button" href="checkout.html">Proceed to checkout</a>
+              <a class="cta-button checkout-button" href="checkout.html"
+                >Proceed to checkout</a
+              >
             </div>
           </section>
         </div>
@@ -300,6 +309,14 @@
                   <input type="text" name="promo" id="promo" />
                 </div>
               </fieldset>
+              <div class="button__wrapper pay-now">
+                <a
+                  href="order_confirmation.html"
+                  class="payment-button cta-button"
+                >
+                  Pay £150.00 <i class="fas fa-lock"></i
+                ></a>
+              </div>
             </section>
           </form>
         </div>
@@ -321,14 +338,6 @@
                 <h3>Total: £150.00</h3>
                 <i class="fas fa-trash fa-2x"></i>
               </div>
-            </div>
-            <div class="button__wrapper">
-              <a
-                href="order_confirmation.html"
-                class="payment-button cta-button"
-              >
-                Pay £150.00 <i class="fas fa-lock"></i
-              ></a>
             </div>
           </section>
         </div>

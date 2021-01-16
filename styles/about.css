@@ -3,7 +3,7 @@
 .slogan-logo__wrapper {
   display: flex;
   max-width: 400px;
-  margin: 10px auto;
+  margin: 10px auto 30px auto;
 }
 
 .slogan-logo__wrapper img {

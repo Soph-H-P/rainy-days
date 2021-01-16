@@ -2,10 +2,6 @@
 
 /*SEARCH FILTERS---------------*/
 
-h1 {
-  margin-left: 20px;
-}
-
 .filters-container {
   display: flex;
   padding: 20px;
@@ -33,12 +29,11 @@ h1 {
 }
 
 .filters-menu label {
-  margin: 10px 0;
+  margin: 5px 0;
 }
 
 .filters-menu label input {
   margin: 0 1em 0 0;
-
   height: 20px;
   width: 20px;
   background-color: #eee;
@@ -121,4 +116,12 @@ h1 {
 .load-more__button {
   text-align: center;
   padding: 30px 0px;
+}
+
+/*media queries specific to page*/
+
+@media (min-width: 800px) {
+  main {
+    margin-left: 200px;
+  }
 }

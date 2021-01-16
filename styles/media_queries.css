@@ -1,22 +1,8 @@
 /*------------------------MEDIA QUERIES------------------------*/
 @import "./imports/variables.css";
+
 @media (min-width: 400px) {
-  /*------checkout----------*/
-  #delivery-address-label {
-    display: inline;
-    font-size: 1em;
-  }
-
-  /*-------WOMENS-----------*/
-  /*PRODUCT GRID*/
-  .view-products-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    /* margin: 10px auto; */
-  }
-
   /*-------HOME-----------*/
-
   .hero-wrapper {
     display: grid;
     grid-template-rows: 1fr;
@@ -28,6 +14,18 @@
   .slogan-header {
     font-size: 1.6em;
   }
+
+  /*-------WOMENS-----------*/
+  .view-products-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  /*------CHECKOUT----------*/
+  #delivery-address-label {
+    display: inline;
+    font-size: 1em;
+  }
 }
 
 @media (min-width: 400px) and (max-width: 600px) {
@@ -36,7 +34,19 @@
   }
 }
 
+@media (min-width: 600px) and (max-width: 700px) {
+  .cta-signup {
+    padding: 5px;
+  }
+}
+
 @media (min-width: 600px) {
+  /*GLOBAL*/
+
+  h1 {
+    font-size: 3rem;
+  }
+
   .basket-summary__wrapper {
     display: flex;
     flex-direction: row;
@@ -54,29 +64,7 @@
     top: 100px;
   }
 
-  .checkout-page__wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .accordian-content-tech-spec,
-  .accordian-content-weather {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .image-wrapper-accordian {
-    grid-column-end: span 2;
-  }
-
-  .content-wrapper {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .jacket-specs__accordian-menu {
-    grid-column-start: span 2;
-    margin: 0 20px;
-  }
-
+  /*HOME PAGE*/
   div.hero-cta.cta-womens,
   div.hero-cta.cta-mens {
     padding-top: 150px;
@@ -89,6 +77,7 @@
 
   .new-arrivals_signup__section {
     flex-direction: row;
+    justify-content: space-around;
   }
 
   .new-arrivals_signup__section > * {
@@ -98,10 +87,6 @@
   .winter-banner p {
     margin-bottom: 3rem;
     max-width: 60%;
-  }
-
-  h1 {
-    font-size: 3rem;
   }
 
   /*PRODUCT GRID*/
@@ -122,6 +107,36 @@
     background: url(../images/activity-canoeing.jpg) no-repeat center left;
     background-size: cover;
   }
+
+  /*PRODUCT PAGES*/
+
+  .accordian-content-tech-spec,
+  .accordian-content-weather {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .image-wrapper-accordian {
+    grid-column-end: span 2;
+  }
+
+  .content-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .jacket-specs__accordian-menu {
+    grid-column-start: span 2;
+    margin: 0 20px;
+  }
+
+  /*CHECKOUT*/
+  .checkout-page__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .payment-info {
+    order: 0;
+  }
 }
 
 @media (min-width: 800px) {
@@ -130,12 +145,9 @@
     padding-top: 150px;
   }
 
-  main {
-    margin-left: 200px;
-  }
-
-  .back-button {
-    display: none;
+  p,
+  a {
+    font-size: 1.3rem;
   }
 
   nav {
@@ -169,19 +181,15 @@
     font-size: 1.5em;
   }
 
-  div.hero-cta.cta-womens,
-  div.hero-cta.cta-mens {
-    padding-top: 200px;
-    padding-bottom: 300px;
+  .back-button {
+    display: none;
   }
+
   .logo {
     max-width: 200px;
   }
 
-  .slogan-header {
-    font-size: 3.2em;
-  }
-
+  /*FOOTER*/
   footer {
     background-color: #112735;
     padding: 10px;
@@ -195,12 +203,8 @@
     display: flex;
   }
 
-  p,
-  a {
-    font-size: 1.3rem;
-  }
-  .filters {
-    opacity: 0;
+  .select-wrapper {
+    order: 2;
   }
 
   .filters-menu {
@@ -209,14 +213,17 @@
     flex-direction: column;
   }
 
-  /*PAYMENT*/
-  .checkout-page__wrapper {
-    gap: 50px;
-    max-width: 1000px;
-    margin: 0 auto;
+  /*HOME PAGE*/
+  div.hero-cta.cta-womens,
+  div.hero-cta.cta-mens {
+    padding-top: 200px;
+    padding-bottom: 300px;
   }
 
-  /*HOME PAGE*/
+  .slogan-header {
+    font-size: 3.2em;
+  }
+
   .cta-button {
     font-size: 1rem;
     padding: 10px 15px;
@@ -242,25 +249,26 @@
     padding: 5%;
   }
 
+  /*PAYMENT*/
+  .checkout-page__wrapper {
+    gap: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
   /*PRODUCT GRID*/
   .view-products-grid {
     margin: 20px 50px;
-  }
-
-  .other-interesting-items {
-    grid-template-columns: 1fr;
-    font-size: 1em;
   }
 
   .interesting-products__wrapper {
     padding: 10px;
   }
 
-  .order-confirmation-wrapper {
-    flex-direction: row;
+  .filters {
+    opacity: 0;
   }
-
-  /*about page*/
+  /*ABOUT PAGE*/
 
   .dark-image-overlay {
     max-width: 550px;
@@ -268,20 +276,7 @@
 }
 
 @media (min-width: 960px) {
-  .view-products-grid {
-    grid-template-columns: 1fr 1fr;
-    margin: 20px auto;
-    max-width: 1000px;
-  }
-
-  .jacket-specs__accordian-menu {
-    grid-column: span 1;
-    margin: 0;
-  }
-
-  .content-wrapper {
-    grid-template-columns: 1fr 1fr 2fr;
-  }
+  /*GLOBAL*/
 
   nav li {
     padding: 0 10px;
@@ -295,6 +290,23 @@
   .view-products-grid {
     gap: 30px;
   }
+
+  .view-products-grid {
+    grid-template-columns: 1fr 1fr;
+    margin: 20px auto;
+    max-width: 1000px;
+  }
+
+  /*PRODUCT PAGE*/
+
+  .content-wrapper {
+    grid-template-columns: 1fr 1fr 2fr;
+  }
+
+  .jacket-specs__accordian-menu {
+    grid-column: span 1;
+    margin: 0;
+  }
 }
 
 @media (min-width: 1250px) {
@@ -302,5 +314,10 @@
     grid-template-columns: 1fr 1fr 1fr;
     margin: 20px auto;
     max-width: 1000px;
+  }
+
+  .other-interesting-items {
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
   }
 }

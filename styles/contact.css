@@ -26,6 +26,15 @@
   margin: 10px auto;
 }
 
+.contact-details-section div {
+  margin-bottom: 3em;
+}
+
+.icon__wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
 .contact-email-section,
 .contact-details-section {
   background-color: var(--dark-overlay-color);
@@ -54,12 +63,14 @@
   flex-direction: column;
   font-size: 1em;
   padding: 5px;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   background-color: var(--input-background-color);
 }
 
 #submit {
   background-color: var(--light-button-color);
+  padding: 10px;
+  margin: 0 auto;
 }
 
 .contact-page__wrapper i {

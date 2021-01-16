@@ -71,20 +71,31 @@
           <input type="checkbox" id="basket-icon" />
           <section class="basket-items">
             <h3 class="number-items">1 item in basket:</h3>
-            <img
-              class="product-thumbnail"
-              src="images/jacket-green-xsmall.jpg"
-              alt="Small thumbnail of green lotus jacket"
-            />
-            <div class="selection">
-              <p>Colour: Lime green</p>
-              <p>Size: M</p>
-            </div>
+            <div class="basket-summary__wrapper">
+              <div>
+                <a href="product_page.html">
+                  <img
+                    class="product-thumbnail"
+                    src="images/jacket-green-xsmall.jpg"
+                    alt="Small thumbnail of green lotus jacket"
+                  />
+                </a>
+              </div>
 
+              <div class="selection">
+                <p>Product: Lotus</p>
+                <p>Colour: Lime green</p>
+                <p>Size: M</p>
+              </div>
+            </div>
             <h3 class="total-price">Total: £150.00</h3>
             <div class="cta-checkout button__wrapper">
-              <a class="cta-button" href="checkout.html">Proceed to checkout</a>
+              <a class="cta-button checkout-button" href="checkout.html"
+                >Proceed to checkout</a
+              >
             </div>
+          </section>
+        </div>
           </section>
         </div>
       </div>
@@ -157,7 +168,7 @@
             <h2>Price:</h2>
             <p>£150.00</p>
           </div>
-          <div class="button__wrapper">
+          <div class="button__wrapper add-to-cart">
             <a href="" class="signup-button">Add to cart</a>
           </div>
         </section>
@@ -165,10 +176,11 @@
         <section class="jacket-specs__accordian-menu">
           <!------OVERVIEW TAB-------->
           <div class="overview-tab">
+            <input checked type="checkbox" id="plus-icon-overview" />
             <label class="plus-label" for="plus-icon-overview"
-              ><i class="fas fa-plus fa-2x"></i>Overview</label
+              ><i class="fas fa-plus"></i>Overview</label
             >
-            <input type="checkbox" id="plus-icon-overview" />
+
             <section class="accordian-content-overview">
               <p>
                 The Lotus Jacket comes in 3 beautiful different colours and is
@@ -188,10 +200,12 @@
           <!------OVERVIEW TAB-------->
           <!------TECH AND SPECS-------->
           <div class="tech-spec-tab">
-            <label class="plus-label" for="plus-icon-tech-spec"
-              ><i class="fas fa-plus fa-2x"></i>tech-spec</label
+            <input type="checkbox" id="plus-icon-tech-spec" /><label
+              class="plus-label"
+              for="plus-icon-tech-spec"
+              ><i class="fas fa-plus"></i>tech-spec</label
             >
-            <input type="checkbox" id="plus-icon-tech-spec" />
+
             <section class="accordian-content-tech-spec">
               <img
                 src="images/membrane.png"
@@ -214,10 +228,12 @@
           <!------TECH AND SPECS-------->
           <!------WEATHER CONDITIONS-------->
           <div class="weather-tab">
-            <label class="plus-label" for="plus-icon-weather"
-              ><i class="fas fa-plus fa-2x"></i>Weather conditions</label
+            <input type="checkbox" id="plus-icon-weather" /><label
+              class="plus-label"
+              for="plus-icon-weather"
+              ><i class="fas fa-plus"></i>Weather conditions</label
             >
-            <input type="checkbox" id="plus-icon-weather" />
+
             <section class="accordian-content-weather">
               <img src="images/weather-symbol.png" alt="" />
               <p>
@@ -230,10 +246,12 @@
           <!------WEATHER CONDITIONS-------->
           <!------SIZE GUIDE-------->
           <div class="size-tab">
-            <label class="plus-label" for="plus-icon-size"
-              ><i class="fas fa-plus fa-2x"></i>Size guide</label
+            <input type="checkbox" id="plus-icon-size" /><label
+              class="plus-label"
+              for="plus-icon-size"
+              ><i class="fas fa-plus"></i>Size guide</label
             >
-            <input type="checkbox" id="plus-icon-size" />
+
             <section class="accordian-content-size">
               <img src="images/size-guide.png" alt="Chest size diagram" />
               <table>
@@ -271,10 +289,12 @@
           <!------SIZE GUIDE-------->
           <!------REVIEWS-------->
           <div class="reviews-tab">
-            <label class="plus-label" for="plus-icon-reviews"
-              ><i class="fas fa-plus fa-2x"></i>Customer reviews</label
+            <input type="checkbox" id="plus-icon-reviews" /><label
+              class="plus-label"
+              for="plus-icon-reviews"
+              ><i class="fas fa-plus"></i>Customer reviews</label
             >
-            <input type="checkbox" id="plus-icon-reviews" />
+
             <section class="accordian-content-reviews">
               <p>Other customers who have this jacket said this about it…</p>
               <div class="review-1 customer-review">

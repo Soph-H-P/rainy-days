@@ -2,6 +2,10 @@
 @import "./imports/variables.css";
 /*HERO SECTION*/
 
+h1 {
+  margin-left: 0px;
+}
+
 .hero-wrapper {
   display: grid;
   grid-template-rows: 1fr 1fr;
@@ -139,10 +143,9 @@ div.hero-cta.cta-mens {
   border: 0.3rem solid var(--light-button-color);
 }
 
-/*<div class="signup-wrapper cta-signup-wrapper">
-              <input type="email" id="signup" />
-              <input type="submit" value="sign up" class="signup-button" />
-            </div>*/
+.email-us {
+  margin: 100px 0 0 0;
+}
 
 .cta-signup-wrapper {
   display: flex;
