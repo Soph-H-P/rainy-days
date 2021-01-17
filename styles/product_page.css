@@ -1,5 +1,9 @@
 @import "./imports/variables.css";
 
+main {
+  min-height: 70vh;
+}
+
 .content-wrapper {
   display: grid;
   grid-template-columns: 1fr;

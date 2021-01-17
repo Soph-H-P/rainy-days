@@ -273,9 +273,9 @@ footer {
   background-color: var(--dark-font-color);
   width: 100%;
   padding: 10px;
-  bottom: 0px;
+  bottom: 0%;
   display: grid;
-  position: absolute;
+  position: relative;
   grid-template-columns: 1fr;
   z-index: 3000;
 }
