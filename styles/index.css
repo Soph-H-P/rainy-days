@@ -109,12 +109,9 @@ div.hero-cta.cta-mens {
   flex-direction: column;
 }
 
-.cta-new-arrivals h2 {
-  color: var(--mid-button-color);
-}
-
+.cta-new-arrivals h2,
 .cta-signup h2 {
-  color: var(--light-button-color);
+  color: var(--dark-font-color);
 }
 
 .cta-new-arrivals,

@@ -99,9 +99,10 @@ main {
 .fa-plus {
   font-size: 1.5em;
   margin-right: 1rem;
+  padding: 3px;
   rotate: 0deg;
-  transition-property: rotate;
-  transition-duration: 0.5s;
+  transition-property: rotate, background-color;
+  transition-duration: 1s, 2s;
 }
 
 #plus-icon-overview:checked ~ .accordian-content-overview,
@@ -118,6 +119,7 @@ main {
 #plus-icon-size + label,
 #plus-icon-reviews + label {
   text-transform: capitalize;
+  display: block;
 }
 
 #plus-icon-overview:checked + label,
@@ -127,6 +129,10 @@ main {
 #plus-icon-reviews:checked + label {
   color: var(--light-button-color);
   font-family: var(--heading-font), Georgia, "Times New Roman", Times, serif;
+  background-color: var(--dark-font-color);
+  padding-bottom: 3px;
+  transition-property: rotate, background-color;
+  transition-duration: 1s;
 }
 
 #plus-icon-overview:checked + label .fa-plus,
