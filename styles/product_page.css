@@ -112,6 +112,14 @@ main {
   display: grid;
 }
 
+#plus-icon-overview + label,
+#plus-icon-tech-spec + label,
+#plus-icon-weather + label,
+#plus-icon-size + label,
+#plus-icon-reviews + label {
+  text-transform: capitalize;
+}
+
 #plus-icon-overview:checked + label,
 #plus-icon-tech-spec:checked + label,
 #plus-icon-weather:checked + label,

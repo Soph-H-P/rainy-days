@@ -4,6 +4,10 @@ main {
   width: 100%;
 }
 
+h1 {
+  color: var(--confirmation-color);
+}
+
 .order-confirmation-wrapper {
   display: flex;
   flex-direction: column;
@@ -17,7 +21,7 @@ main {
   background-color: #fff;
   padding: 2rem;
   margin: 2rem auto;
-  border: 0.5rem solid var(--light-button-color);
+  border: 0.5rem solid var(--confirmation-color);
   max-width: 600px;
 }
 
@@ -39,7 +43,7 @@ main {
   padding: 20px;
   border-radius: 50%;
   color: #fff;
-  background-color: var(--light-button-color);
+  background-color: var(--confirmation-color);
 }
 
 .other-interesting-items {

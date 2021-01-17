@@ -43,25 +43,23 @@
   margin: 20px auto;
 }
 
-.fa-sliders-h {
-  color: #ffffff;
-}
+
 
 .filters-menu {
-  display: none;
+  display: flex;
+  flex-direction: column;
   position: fixed;
-  left: 0px;
+  left: -250px;
   top: 65px;
   bottom: 0%;
   background-color: #fff;
-  /* height: 90vh;  */
   z-index: 900;
   overflow-y: scroll;
+  transition: left 1s;
 }
 
 #filter-menu:checked ~ .filters-menu {
-  display: flex;
-  flex-direction: column;
+  left: 0px;
 }
 
 #filter-menu {
