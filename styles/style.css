@@ -378,6 +378,7 @@ footer ul {
 
 .signup-button:hover {
   background-color: var(--light-button-hover);
+  cursor: pointer;
 }
 
 .email-signup__form {
