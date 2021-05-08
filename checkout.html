@@ -3,22 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Checkout here and purchase the jacket of a lifetime."
-    />
+    <meta name="description" content="Checkout here and purchase the jacket of a lifetime." />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto+Slab:wght@300;400;600;800&family=Roboto:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto+Slab:wght@300;400;600;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/checkout.css" />
     <link rel="stylesheet" href="styles/media_queries.css" />
-    <script
-      src="https://kit.fontawesome.com/297ba3a9d9.js"
-      crossorigin="anonymous"
-    ></script>
+    <!-- Hotjar Tracking Code for https://gallant-jackson-73c723.netlify.app/ -->
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 2390584, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
+    <script src="https://kit.fontawesome.com/297ba3a9d9.js" crossorigin="anonymous"></script>
     <title>RainyDays | Checkout</title>
   </head>
   <body>
@@ -27,9 +34,7 @@
         <a href="index.html">
           <img class="logo" src="images/logo.png" alt="RainyDays Logo" />
         </a>
-        <label class="hamburger-label" for="hamburger-menu"
-          ><i class="fas fa-bars fa-2x"></i
-        ></label>
+        <label class="hamburger-label" for="hamburger-menu"><i class="fas fa-bars fa-2x"></i></label>
         <input type="checkbox" id="hamburger-menu" />
         <nav>
           <ul>
@@ -40,18 +45,14 @@
           </ul>
         </nav>
         <div class="search-container">
-          <label class="search-label" for="search-box"
-            ><i class="fas fa-search fa-2x"></i
-          ></label>
+          <label class="search-label" for="search-box"><i class="fas fa-search fa-2x"></i></label>
           <input type="checkbox" id="search-box" />
           <div class="search-input">
             <input type="text" />
           </div>
         </div>
         <div class="heart-container">
-          <label class="fav-box" for="fav-box"
-            ><i class="fas fa-heart fa-2x"></i
-          ></label>
+          <label class="fav-box" for="fav-box"><i class="fas fa-heart fa-2x"></i></label>
           <input type="checkbox" id="fav-box" />
           <div class="favourites-popup">
             <p>You haven't got any favourites yet!</p>
@@ -65,20 +66,14 @@
         </div>
 
         <div class="shopping-basket-container">
-          <label class="basket-label" for="basket-icon"
-            ><i class="fas fa-shopping-basket fa-2x"></i
-          ></label>
+          <label class="basket-label" for="basket-icon"><i class="fas fa-shopping-basket fa-2x"></i></label>
           <input type="checkbox" id="basket-icon" />
           <section class="basket-items">
             <h3 class="number-items">1 item in basket:</h3>
             <div class="basket-summary__wrapper">
               <div>
                 <a href="product_page.html">
-                  <img
-                    class="product-thumbnail"
-                    src="images/jacket-green-xsmall.jpg"
-                    alt="Small thumbnail of green lotus jacket"
-                  />
+                  <img class="product-thumbnail" src="images/jacket-green-xsmall.jpg" alt="Small thumbnail of green lotus jacket" />
                 </a>
               </div>
 
@@ -90,9 +85,7 @@
             </div>
             <h3 class="total-price">Total: £150.00</h3>
             <div class="cta-checkout button__wrapper">
-              <a class="cta-button checkout-button" href="checkout.html"
-                >Proceed to checkout</a
-              >
+              <a class="cta-button checkout-button" href="checkout.html">Proceed to checkout</a>
             </div>
           </section>
         </div>
@@ -112,26 +105,13 @@
               <h2>Delivery options</h2>
               <fieldset>
                 <label id="delivery-address-label" for="delivery-option-free">
-                  <input
-                    type="radio"
-                    id="delivery-option-free"
-                    name="delivery"
-                    value="standard-delivery"
-                  />
+                  <input type="radio" id="delivery-option-free" name="delivery" value="standard-delivery" />
 
                   Standard delivery (3-5 working days) - Free
                 </label>
 
-                <label
-                  id="delivery-address-label"
-                  for="delivery-option-express"
-                >
-                  <input
-                    type="radio"
-                    id="delivery-option-express"
-                    name="delivery"
-                    value="express-delivery"
-                  />
+                <label id="delivery-address-label" for="delivery-option-express">
+                  <input type="radio" id="delivery-option-express" name="delivery" value="express-delivery" />
                   Express delivery (1-2 working days) - £4.50
                 </label>
               </fieldset>
@@ -141,46 +121,16 @@
               <fieldset>
                 <div class="choose-payment">
                   <label for="credit-card">
-                    <input
-                      type="radio"
-                      value="card"
-                      id="credit-card"
-                      name="payment"
-                      class="payment__radio-button"
-                    />
-                    <img
-                      class="payment-method__image"
-                      src="images/card.png"
-                      alt="visa and mastercard logo"
-                    />
+                    <input type="radio" value="card" id="credit-card" name="payment" class="payment__radio-button" />
+                    <img class="payment-method__image" src="images/card.png" alt="visa and mastercard logo" />
                   </label>
                   <label for="paypal">
-                    <input
-                      type="radio"
-                      value="paypal"
-                      id="paypal"
-                      name="payment"
-                      class="payment__radio-button"
-                    />
-                    <img
-                      class="payment-method__image"
-                      src="images/paypal.png"
-                      alt="paypal logo"
-                    />
+                    <input type="radio" value="paypal" id="paypal" name="payment" class="payment__radio-button" />
+                    <img class="payment-method__image" src="images/paypal.png" alt="paypal logo" />
                   </label>
                   <label for="vipps">
-                    <input
-                      type="radio"
-                      value="vipps"
-                      id="vipps"
-                      name="payment"
-                      class="payment__radio-button"
-                    />
-                    <img
-                      class="payment-method__image"
-                      src="images/vipps.png"
-                      alt="vipps logo"
-                    />
+                    <input type="radio" value="vipps" id="vipps" name="payment" class="payment__radio-button" />
+                    <img class="payment-method__image" src="images/vipps.png" alt="vipps logo" />
                   </label>
                 </div>
               </fieldset>
@@ -217,51 +167,27 @@
               </fieldset>
               <div class="delivery-address-wrapper">
                 <h2>Delivery Address</h2>
-                <label id="delivery-address-label" for="address"
-                  >My billing and delivery address are the same</label
-                >
+                <label id="delivery-address-label" for="address">My billing and delivery address are the same</label>
                 <input type="checkbox" id="delivery-address-checkbox" checked />
                 <div class="delivery-address-form">
                   <fieldset>
                     <div class="delivery-name-wrapper details__wrapper">
                       <label for="delivery-name">Full name</label>
-                      <input
-                        type="text"
-                        name="delivery-name"
-                        id="delivery-name"
-                      />
+                      <input type="text" name="delivery-name" id="delivery-name" />
                     </div>
                     <div class="delivery-email-wrapper details__wrapper">
                       <label for="delivery-email">Email address</label>
-                      <input
-                        type="email"
-                        name="delivery-email"
-                        id="delivery-email"
-                      />
+                      <input type="email" name="delivery-email" id="delivery-email" />
                     </div>
                     <div class="delivery-address-wrapper details__wrapper">
                       <label for="delivery-address">Address</label>
-                      <input
-                        type="text"
-                        name="delivery-address"
-                        id="delivery-address"
-                      />
+                      <input type="text" name="delivery-address" id="delivery-address" />
                     </div>
-                    <div
-                      class="delivery-city-postcode-wrapper details__wrapper"
-                    >
+                    <div class="delivery-city-postcode-wrapper details__wrapper">
                       <label for="delivery-city">City</label>
-                      <input
-                        type="text"
-                        name="delivery-city"
-                        id="delivery-city"
-                      />
+                      <input type="text" name="delivery-city" id="delivery-city" />
                       <label for="delivery-post-code">Post code</label>
-                      <input
-                        type="text"
-                        name="delivery-post-code"
-                        id="delivery-post-code"
-                      />
+                      <input type="text" name="delivery-post-code" id="delivery-post-code" />
                     </div>
                     <div class="country-wrapper details__wrapper">
                       <label for="delivery-country">Country</label>
@@ -280,12 +206,7 @@
               <fieldset>
                 <div class="card-number-wrapper details__wrapper">
                   <label for="card-number">Card number</label>
-                  <input
-                    type="tel"
-                    name="card-number"
-                    id="card-number"
-                    required
-                  />
+                  <input type="tel" name="card-number" id="card-number" required />
                 </div>
                 <div class="card-name-wrapper details__wrapper">
                   <label for="card-name">Card holder name</label>
@@ -310,12 +231,7 @@
                 </div>
               </fieldset>
               <div class="button__wrapper pay-now">
-                <a
-                  href="order_confirmation.html"
-                  class="payment-button cta-button"
-                >
-                  Pay £150.00 <i class="fas fa-lock"></i
-                ></a>
+                <a href="order_confirmation.html" class="payment-button cta-button"> Pay £150.00 <i class="fas fa-lock"></i></a>
               </div>
             </section>
           </form>
@@ -324,10 +240,7 @@
           <section class="order-summary__wrapper">
             <h2 class="order-summary">Order summary</h2>
             <div class="summary-image-wrapper">
-              <img
-                src="images/jacket-green-xsmall.jpg"
-                alt="Green lotus jacket"
-              />
+              <img src="images/jacket-green-xsmall.jpg" alt="Green lotus jacket" />
             </div>
             <div class="order-summary-details">
               <p>Colour: Lime green</p>
@@ -349,9 +262,7 @@
         <h3>Be informed</h3>
         <p>For the latest updates and exclusive offers</p>
         <form action="" class="email-signup__form">
-          <label class="footer-signup__label" for="signup"
-            >Enter email address:</label
-          >
+          <label class="footer-signup__label" for="signup">Enter email address:</label>
           <div class="signup-wrapper">
             <input type="email" id="signup" />
             <input type="submit" value="sign up" class="signup-button" />
