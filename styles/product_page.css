@@ -129,6 +129,8 @@ main {
 #plus-icon-reviews:checked + label {
   color: var(--light-button-color);
   font-family: var(--heading-font), Georgia, "Times New Roman", Times, serif;
+  letter-spacing: 4px;
+  font-weight: 200;
   background-color: var(--dark-font-color);
   padding-bottom: 3px;
   transition-property: rotate, background-color;

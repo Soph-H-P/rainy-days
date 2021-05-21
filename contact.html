@@ -26,7 +26,7 @@
       })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
     </script>
     <script src="https://kit.fontawesome.com/297ba3a9d9.js" crossorigin="anonymous"></script>
-    <title>RainyDays | Contact</title>
+    <title>Contact | RainyDays</title>
   </head>
   <body>
     <header>
@@ -102,18 +102,18 @@
           <section class="contact-page__wrapper contact-email-section">
             <h3>Email us</h3>
             <form class="contact-email-form" action="">
-              <label for="name">Name</label>
-              <input type="text" id="name" required />
+              <p class="success-message"><i class="far fa-check-circle"></i>Your message has been sent. Typical response time is 1-2 working days. </p>
+              <label for="name">Name<input type="text" id="name" placeholder="John Doe" /></label>
+              <p class="error-message" id="name-error"><i class="fas fa-exclamation-circle"></i>Please enter your name</p>
 
-              <label for="email">Email</label>
-              <input type="email" id="email" required />
+              <label for="email">Email<input type="email" id="email" placeholder="johndoe@example.com" /></label>
+              <p class="error-message" id="email-error"><i class="fas fa-exclamation-circle"></i>Please enter a valid email</p>
 
-              <label for="comment">Comment</label>
-              <textarea name="comment" id="comment" cols="29" rows="10" required></textarea>
+              <label for="comment">Comment<textarea name="comment" id="comment" cols="29" rows="10"></textarea></label>
 
-              <input type="submit" name="submit" class="signup-button" id="submit" value="Send" />
+              <input type="submit" name="submit" class="signup-button" id="submit" value="Send" disabled="true" />
 
-              <p>(Typical response time 1-2 working days)</p>
+              
             </form>
           </section>
           <section class="contact-page__wrapper contact-details-section">
@@ -199,5 +199,6 @@
         </div>
       </section>
     </footer>
+    <script src="js/contact.js"></script>
   </body>
 </html>
