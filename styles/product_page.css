@@ -218,3 +218,40 @@ td {
   width: 100%;
   margin: 0;
 }
+
+.item-number {
+  position: fixed;
+  display: flex;
+  opacity: 0;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: var(--mid-button-color);
+  justify-content: center;
+  z-index: -20;
+  transition-property: top, left;
+  transition-duration: 3s;
+}
+
+.shopping-basket-container {
+  position: relative;
+}
+
+.item-number p,
+.basket-number p {
+  color: #fff;
+  font-weight: 600;
+  align-self: center;
+}
+
+.basket-number {
+  position: absolute;
+  display: flex;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: var(--mid-button-color);
+  justify-content: center;
+  top: -10px;
+  left: 20px;
+}

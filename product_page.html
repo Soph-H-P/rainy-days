@@ -86,30 +86,7 @@
           ></label>
           <input type="checkbox" id="basket-icon" />
           <section class="basket-items">
-            <h3 class="number-items">1 item in basket:</h3>
-            <div class="basket-summary__wrapper">
-              <div>
-                <a href="product_page.html">
-                  <img
-                    class="product-thumbnail"
-                    src="images/jacket-green-xsmall.jpg"
-                    alt="Small thumbnail of green lotus jacket"
-                  />
-                </a>
-              </div>
-
-              <div class="selection">
-                <p>Product: Lotus</p>
-                <p>Colour: Lime green</p>
-                <p>Size: M</p>
-              </div>
-            </div>
-            <h3 class="total-price">Total: £150.00</h3>
-            <div class="cta-checkout button__wrapper">
-              <a class="cta-button checkout-button" href="checkout.html"
-                >Proceed to checkout</a
-              >
-            </div>
+           
           </section>
         </div>
           </section>
@@ -172,6 +149,16 @@
         </section>
 
         <section class="selection-summary">
+          <div class="selection-summary-quantity">
+            <h2>Quantity:</h2>
+            
+              <select name="quantity" id="user-input-quantity">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+          </div>
           <div class="selection-summary-color">
             <h2>Colour:</h2>
             <p>Lime green</p>
@@ -182,10 +169,11 @@
           </div>
           <div class="selection-summary-price">
             <h2>Price:</h2>
-            <p>£150.00</p>
+            <p>£<span class="price">150.00</span></p>
           </div>
           <div class="button__wrapper add-to-cart">
-            <a href="" class="signup-button">Add to cart</a>
+            <button class="signup-button" id="add-to-basket__button">Add to basket</button>
+            <div class="item-number"></div>
           </div>
         </section>
 
@@ -439,5 +427,7 @@
         </div>
       </section>
     </footer>
+    <script src="js/script.js"></script>
+    <script src="js/product_page.js"></script>
   </body>
 </html>
