@@ -22,30 +22,25 @@ main {
   grid-column: 1 / 4;
 }
 
-.green-thumbnail {
-  grid-column: 1 / 1;
-  grid-row: 2 / 3;
+.thumbnail {
   width: 100%;
+  cursor: pointer;
 }
 
-.blue-thumbnail {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
-  width: 100%;
-}
 
-.pink-thumbnail {
-  grid-column: 3 / 4;
-  grid-row: 2 / 3;
-  width: 100%;
-}
+
 
 .main-product__image {
   width: 100%;
 }
 
-.current-selection {
+#current-selection {
   border: var(--dark-font-color) 3px solid;
+}
+
+.thumbnail:hover,
+.size:hover {
+  border: var(--link-color) 3px solid;
 }
 
 .size-selection {
@@ -61,6 +56,7 @@ main {
   border-radius: 50%;
   text-align: center;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .selection-summary {
@@ -197,6 +193,12 @@ td {
   text-transform: uppercase;
 }
 
+/*WEATHER TAB*/
+#weather-icon {
+  width: 150px;
+}
+
+
 /*CUSTOMER REVIEWS TAB*/
 .customer-review-form {
   border: solid var(--light-button-color) 3px;
@@ -242,6 +244,11 @@ td {
   color: #fff;
   font-weight: 600;
   align-self: center;
+}
+
+.basket-summary__wrapper {
+  
+  background: red;
 }
 
 .basket-number {

@@ -3,20 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Detailed information about the lotus jacket."
-    />
+    <meta name="description" content="Detailed information about the lotus jacket." />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto+Slab:wght@300;400;600;800&family=Roboto:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto+Slab:wght@300;400;600;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/product_page.css" />
     <link rel="stylesheet" href="styles/media_queries.css" />
-     <!-- Hotjar Tracking Code for https://gallant-jackson-73c723.netlify.app/ -->
-     <script>
+    <!-- Hotjar Tracking Code for https://gallant-jackson-73c723.netlify.app/ -->
+    <script>
       (function (h, o, t, j, a, r) {
         h.hj =
           h.hj ||
@@ -31,10 +25,7 @@
         a.appendChild(r);
       })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
     </script>
-    <script
-      src="https://kit.fontawesome.com/297ba3a9d9.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/297ba3a9d9.js" crossorigin="anonymous"></script>
     <title>Lotus Jacket | RainyDays</title>
   </head>
   <body>
@@ -43,9 +34,7 @@
         <a href="index.html">
           <img class="logo" src="images/logo.png" alt="RainyDays Logo" />
         </a>
-        <label class="hamburger-label" for="hamburger-menu"
-          ><i class="fas fa-bars fa-2x"></i
-        ></label>
+        <label class="hamburger-label" for="hamburger-menu"><i class="fas fa-bars fa-2x"></i></label>
         <input type="checkbox" id="hamburger-menu" />
         <nav>
           <ul>
@@ -56,18 +45,14 @@
           </ul>
         </nav>
         <div class="search-container">
-          <label class="search-label" for="search-box"
-            ><i class="fas fa-search fa-2x"></i
-          ></label>
+          <label class="search-label" for="search-box"><i class="fas fa-search fa-2x"></i></label>
           <input type="checkbox" id="search-box" />
           <div class="search-input">
             <input type="text" />
           </div>
         </div>
         <div class="heart-container">
-          <label class="fav-box" for="fav-box"
-            ><i class="fas fa-heart fa-2x"></i
-          ></label>
+          <label class="fav-box" for="fav-box"><i class="fas fa-heart fa-2x"></i></label>
           <input type="checkbox" id="fav-box" />
           <div class="favourites-popup">
             <p>You haven't got any favourites yet!</p>
@@ -81,14 +66,24 @@
         </div>
 
         <div class="shopping-basket-container">
-          <label class="basket-label" for="basket-icon"
-            ><i class="fas fa-shopping-basket fa-2x"></i
-          ></label>
-          <input type="checkbox" id="basket-icon" />
+          <div class="basket-number">
+            <p id="items-in-basket"></p>
+          </div>
+          <i class="basket-label fas fa-shopping-basket fa-2x"></i>
           <section class="basket-items">
-           
-          </section>
-        </div>
+            <div class="basket-summary__wrapper">
+              <div>
+                <a href="product_page.html">
+                  <img class="product-thumbnail" src="images/jacket-green-xsmall.jpg" alt="Small thumbnail of green lotus jacket" />
+                </a>
+              </div>
+
+              <div class="selection">
+                <p id="product-name">Product: Lotus</p>
+                <p id="product-color">Colour: Lime green</p>
+                <p id="product-size">Size: M</p>
+              </div>
+            </div>
           </section>
         </div>
       </div>
@@ -99,34 +94,13 @@
         <a class="back-button" href="index.html">Back</a>
       </div>
 
-      <h1>The Lotus Jacket</h1>
+      <h1></h1>
       <a href="index.html" class="breadcrumb">Home </a>
       <a href="womens.html" class="breadcrumb">Women's Jackets </a>
-      <a href="product_page.html" class="breadcrumb">The lotus jacket </a>
+      <a href="product_page.html" class="breadcrumb" id="product-name-breadcrumb"></a>
       <div class="content-wrapper">
         <section class="product-view__product-page">
-          <div class="product-view__wrapper">
-            <img
-              class="main-product__image"
-              src="images/jacket-green-small.jpg"
-              alt="Green Lotus Jacket"
-            />
-            <img
-              class="green-thumbnail current-selection"
-              src="images/jacket-green-xsmall.jpg"
-              alt="Green Lotus Jacket"
-            />
-            <img
-              class="blue-thumbnail"
-              src="images/jacket-blue-xsmall.jpg"
-              alt="Blue Lotus Jacket"
-            />
-            <img
-              class="pink-thumbnail"
-              src="images/jacket-pink-xsmall.jpg"
-              alt="Pink Lotus Jacket"
-            />
-          </div>
+          <div class="product-view__wrapper"></div>
 
           <div class="customer-rating">
             <p>Customer rating:</p>
@@ -142,7 +116,7 @@
           <div class="size-selection">
             <p class="size xs">xs</p>
             <p class="size s">s</p>
-            <p class="current-selection size m">m</p>
+            <p id="current-selection" class="size m">m</p>
             <p class="size l">l</p>
             <p class="size xl">xl</p>
           </div>
@@ -151,25 +125,25 @@
         <section class="selection-summary">
           <div class="selection-summary-quantity">
             <h2>Quantity:</h2>
-            
-              <select name="quantity" id="user-input-quantity">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-              </select>
+
+            <select name="quantity" id="user-input-quantity">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
           </div>
           <div class="selection-summary-color">
             <h2>Colour:</h2>
-            <p>Lime green</p>
+            <p id="product-colour"></p>
           </div>
           <div class="selection-summary-size">
             <h2>Size:</h2>
-            <p>Medium</p>
+            <p id="product-size">Medium</p>
           </div>
           <div class="selection-summary-price">
             <h2>Price:</h2>
-            <p>£<span class="price">150.00</span></p>
+            <p>£<span id="price">150.00</span></p>
           </div>
           <div class="button__wrapper add-to-cart">
             <button class="signup-button" id="add-to-basket__button">Add to basket</button>
@@ -181,80 +155,32 @@
           <!------OVERVIEW TAB-------->
           <div class="overview-tab">
             <input checked type="checkbox" id="plus-icon-overview" />
-            <label class="plus-label" for="plus-icon-overview"
-              ><i class="fas fa-plus"></i>Overview</label
-            >
+            <label class="plus-label" for="plus-icon-overview"><i class="fas fa-plus"></i>Overview</label>
 
             <section class="accordian-content-overview">
-              <p>
-                The Lotus Jacket comes in 3 beautiful different colours and is
-                suitable for even the most windy and rainy weather.
-              </p>
-              <p>
-                The hood is designed for maximum comfort with soft inner lining
-                that won’t effect your ability to hear the beautiful nature
-                around you.
-              </p>
-              <p>
-                The large pockets are designed with all you adventure needs in
-                mind, large enough to hold a map and fully waterproof.
-              </p>
+              <p>The Lotus Jacket comes in 3 beautiful different colours and is suitable for even the most windy and rainy weather.</p>
+              <p>The hood is designed for maximum comfort with soft inner lining that won’t effect your ability to hear the beautiful nature around you.</p>
+              <p>The large pockets are designed with all you adventure needs in mind, large enough to hold a map and fully waterproof.</p>
             </section>
           </div>
           <!------OVERVIEW TAB-------->
           <!------TECH AND SPECS-------->
           <div class="tech-spec-tab">
-            <input type="checkbox" id="plus-icon-tech-spec" /><label
-              class="plus-label"
-              for="plus-icon-tech-spec"
-              ><i class="fas fa-plus"></i>Tech & specs</label
-            >
+            <input type="checkbox" id="plus-icon-tech-spec" /><label class="plus-label" for="plus-icon-tech-spec"><i class="fas fa-plus"></i>Tech & specs</label>
 
-            <section class="accordian-content-tech-spec">
-              <img
-                src="images/membrane.png"
-                alt="Diagram of lotus jacket membrane technology"
-              />
-              <p>
-                Inspired by nature our unique waterproof fabric is both
-                extremely water repellent and breathable. Like the lotus leaf,
-                beads of water will simply run away from you.
-              </p>
-              <div class="image-wrapper-accordian">
-                <img
-                  class="lotus-image-accordian"
-                  src="images/about-lotus-small.jpg"
-                  alt="Lotus leaf with water droplets"
-                />
-              </div>
-            </section>
+            <section class="accordian-content-tech-spec"></section>
           </div>
           <!------TECH AND SPECS-------->
           <!------WEATHER CONDITIONS-------->
           <div class="weather-tab">
-            <input type="checkbox" id="plus-icon-weather" /><label
-              class="plus-label"
-              for="plus-icon-weather"
-              ><i class="fas fa-plus"></i>Weather conditions</label
-            >
+            <input type="checkbox" id="plus-icon-weather" /><label class="plus-label" for="plus-icon-weather"><i class="fas fa-plus"></i>Weather conditions</label>
 
-            <section class="accordian-content-weather">
-              <img src="images/weather-symbol.png" alt="" />
-              <p>
-                This jacket is what we like to call an all round jacket.
-                Suitable for rain, wind and breathable enough that it is even
-                comfortable while the sun is shining.
-              </p>
-            </section>
+            <section class="accordian-content-weather"></section>
           </div>
           <!------WEATHER CONDITIONS-------->
           <!------SIZE GUIDE-------->
           <div class="size-tab">
-            <input type="checkbox" id="plus-icon-size" /><label
-              class="plus-label"
-              for="plus-icon-size"
-              ><i class="fas fa-plus"></i>Size guide</label
-            >
+            <input type="checkbox" id="plus-icon-size" /><label class="plus-label" for="plus-icon-size"><i class="fas fa-plus"></i>Size guide</label>
 
             <section class="accordian-content-size">
               <img src="images/size-guide.png" alt="Chest size diagram" />
@@ -293,79 +219,15 @@
           <!------SIZE GUIDE-------->
           <!------REVIEWS-------->
           <div class="reviews-tab">
-            <input type="checkbox" id="plus-icon-reviews" /><label
-              class="plus-label"
-              for="plus-icon-reviews"
-              ><i class="fas fa-plus"></i>Customer reviews</label
-            >
+            <input type="checkbox" id="plus-icon-reviews" /><label class="plus-label" for="plus-icon-reviews"><i class="fas fa-plus"></i>Customer reviews</label>
 
             <section class="accordian-content-reviews">
-              <p>Other customers who have this jacket said this about it…</p>
-              <div class="review-1 customer-review">
-                <h4>Best coat I have ever had!</h4>
-                <p>
-                  This is actually the second coat I have bought from here. I
-                  loved it so much I had to get another. Never get too cold in
-                  the wind.
-                </p>
-                <div class="customer-rating">
-                  <p>Customer rating:</p>
-                  <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-                  <p>(5/5)</p>
-                </div>
-              </div>
-
-              <div class="review-2 customer-review">
-                <h4>Need more colour options</h4>
-                <p>
-                  I love this coat functionally it is great, but I would love to
-                  see some new colours, specifically something a bit darker.
-                </p>
-                <div class="customer-rating">
-                  <p>Customer rating:</p>
-                  <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                  </div>
-                  <p>(3/5)</p>
-                </div>
-              </div>
-
-              <div class="review-3 customer-review">
-                <h4>Love this coat</h4>
-                <p>
-                  I take it everywhere with me, always prepared for any weather
-                </p>
-                <div class="customer-rating">
-                  <p>Customer rating:</p>
-                  <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                  </div>
-                  <p>(4/5)</p>
-                </div>
-              </div>
+              <p id="other-reviews-title">Other customers who have this jacket said this about it…</p>
+              <div class="customer-reviews"></div>
 
               <form class="customer-review-form" action="">
                 <label for="comment-box-review">Leave a review...</label>
-                <textarea
-                  id="comment-box-review"
-                  name="comment-box-review"
-                  rows="3"
-                  cols=""
-                ></textarea>
+                <textarea id="comment-box-review" name="comment-box-review" rows="3" cols=""></textarea>
                 <div class="send-button__wrapper">
                   <a class="signup-button" href="product_page.html">Send</a>
                 </div>
@@ -382,9 +244,7 @@
         <h3>Be informed</h3>
         <p>For the latest updates and exclusive offers</p>
         <form action="" class="email-signup__form">
-          <label class="footer-signup__label" for="signup"
-            >Enter email address:</label
-          >
+          <label class="footer-signup__label" for="signup">Enter email address:</label>
           <div class="signup-wrapper">
             <input type="email" id="signup" />
             <input type="submit" value="sign up" class="signup-button" />
@@ -427,6 +287,7 @@
         </div>
       </section>
     </footer>
+    <script src="js/single-product-details.js" type="module"></script>
     <script src="js/script.js"></script>
     <script src="js/product_page.js"></script>
   </body>

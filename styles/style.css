@@ -207,19 +207,10 @@ fieldset {
 }
 
 /*shopping basket----------------*/
-
-#basket-icon:checked ~ .basket-items {
-  display: flex;
-  flex-direction: column;
-}
-
-#basket-icon {
-  display: none;
-}
-
 .basket-items {
   display: none;
   position: fixed;
+  flex-direction: column;
   top: 50px;
   right: 0px;
   background-color: #fff;
@@ -444,6 +435,7 @@ footer ul {
 
 .product-card-image {
   justify-self: center;
+  width: 200px;
 }
 
 .selector-wrapper {

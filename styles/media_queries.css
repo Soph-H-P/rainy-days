@@ -239,12 +239,7 @@
   }
 
   .winter-banner {
-    background-image: linear-gradient(
-        to left,
-        rgba(0, 0, 0, 0.1),
-        rgba(0, 0, 0, 0.6)
-      ),
-      url("../images/activity-skiing.jpg");
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)), url("../images/activity-skiing.jpg");
     background-position: right;
     min-height: 35vh;
     padding: 5%;
