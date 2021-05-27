@@ -37,12 +37,12 @@ productPrice.innerHTML = product.price;
 //Size selection-------------------
 let selectedSize = "Medium";
 const sizeSelection = document.querySelectorAll(".size-selection p");
-const productSize = document.querySelector("#product-size");
+const productSize = document.querySelector(".product-size");
 
 const sizeSelectionHandler = () => {
-  sizeSelection.forEach(function (element) {
+  sizeSelection.forEach((itemSize) => {
     let size = "";
-    element.addEventListener("click", function (event) {
+    itemSize.addEventListener("click", function (event) {
       sizeSelection.forEach(function (element) {
         if (element.id === "current-selection") {
           element.id = "";
@@ -70,7 +70,6 @@ const sizeSelectionHandler = () => {
         default:
           break;
       }
-
       productSize.innerHTML = selectedSize;
       windowStorage.setItem("size", selectedSize);
     });
@@ -78,6 +77,7 @@ const sizeSelectionHandler = () => {
 };
 
 sizeSelectionHandler();
+productSize.innerHTML = selectedSize;
 
 //Color selection------------------
 const colourSelection = document.querySelectorAll(".product-view__wrapper img");
