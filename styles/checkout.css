@@ -96,13 +96,37 @@ form select {
   position: sticky;
   top: 150px;
   border: var(--light-button-color) solid 3px;
+  background-color: #FFF;
 }
 
 .summary-image-wrapper {
-  text-align: center;
+  align-self: center;
+  width: 200px;
+}
+
+.summary-image-wrapper img {
+  width: 100%;
 }
 
 .summary-total {
   display: flex;
   justify-content: space-around;
+}
+
+
+#checkout-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: solid 1px var(--light-button-color);
+  padding: 10px;
+  margin: 10px auto;
+}
+
+#checkout-item .basket-item__wrapper {
+  border: none;
+}
+
+.fa-trash {
+  cursor: pointer;
 }

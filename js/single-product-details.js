@@ -1,6 +1,5 @@
 import { productArray } from "./constants/product_list.js";
-import { sizeSelectionHandler } from "./event-handlers/size-selection.js";
-import { colourSelectionHandler } from "./event-handlers/colour-selection.js";
+
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 let productId = params.get("id");
@@ -15,6 +14,8 @@ let product = findProduct();
 
 const heading = document.querySelector("h1");
 heading.innerHTML = product.name;
+const title = document.querySelector("title");
+title.innerHTML = product.name + " | Rainy Days";
 const breadcrumb = document.querySelector("#product-name-breadcrumb");
 breadcrumb.innerHTML = product.name;
 const productImages = document.querySelector(".product-view__wrapper");
@@ -34,12 +35,77 @@ const productPrice = document.querySelector("#price");
 productPrice.innerHTML = product.price;
 
 //Size selection-------------------
+let selectedSize = "Medium";
+const sizeSelection = document.querySelectorAll(".size-selection p");
+const productSize = document.querySelector("#product-size");
+
+const sizeSelectionHandler = () => {
+  sizeSelection.forEach(function (element) {
+    let size = "";
+    element.addEventListener("click", function (event) {
+      sizeSelection.forEach(function (element) {
+        if (element.id === "current-selection") {
+          element.id = "";
+        }
+        event.target.id = "current-selection";
+      });
+      size = event.target.className.replace("size ", "");
+
+      switch (size) {
+        case "xs":
+          selectedSize = "X-Small";
+          break;
+        case "s":
+          selectedSize = "Small";
+          break;
+        case "m":
+          selectedSize = "Medium";
+          break;
+        case "l":
+          selectedSize = "Large";
+          break;
+        case "xl":
+          selectedSize = "X-Large";
+          break;
+        default:
+          break;
+      }
+
+      productSize.innerHTML = selectedSize;
+      windowStorage.setItem("size", selectedSize);
+    });
+  });
+};
+
 sizeSelectionHandler();
 
-//Color selection
-colourSelectionHandler(product);
+//Color selection------------------
+const colourSelection = document.querySelectorAll(".product-view__wrapper img");
+const productColour = document.querySelector("#product-colour");
+const mainProductImage = document.querySelector(".main-product__image");
+let colour = product.colour;
+const colourSelectionHandler = () => {
+  productColour.innerHTML = product.colour;
+  colourSelection.forEach(function (element) {
+    if (element.className === "thumbnail") {
+      element.addEventListener("click", function (event) {
+        colourSelection.forEach(function (element) {
+          if (element.id === "current-selection") {
+            element.id = "";
+          }
+          event.target.id = "current-selection";
+        });
+        colour = event.target.dataset.colour;
+        productColour.innerHTML = colour;
+        mainProductImage.src = event.target.src;
+      });
+    }
+  });
+};
 
-//Accordian menu
+colourSelectionHandler();
+
+//Accordian menu----------------------
 const overview = document.querySelector(".accordian-content-overview");
 overview.innerHTML = product.overview;
 const techSpec = document.querySelector(".accordian-content-tech-spec");
@@ -90,3 +156,80 @@ const getReviews = () => {
 };
 getReviews();
 reviews.innerHTML = reviewHtml;
+
+//BASKET FFUNCITONALITY
+const addButton = document.querySelector("#add-to-basket__button");
+const itemAddCircle = document.querySelector(".item-number");
+const userQuantity = document.querySelector("#user-input-quantity");
+const itemPrice = document.querySelector("#price");
+const numberItemsSpan = document.querySelector("#number-items");
+const priceItemsSpan = document.querySelector("#price-of-items");
+
+itemAddCircle.innerHTML = `<p>${userQuantity.value}</p>`;
+
+userQuantity.addEventListener("change", (event) => {
+  itemAddCircle.innerHTML = `<p>${userQuantity.value}</p>`;
+});
+
+const resetAddItemNumber = () => {
+  const addButtonPosition = addButton.getBoundingClientRect();
+  itemAddCircle.style.opacity = 0;
+  itemAddCircle.style.zIndex = -20;
+  const buttonX = addButtonPosition.left + addButtonPosition.width / 2;
+  const buttonY = addButtonPosition.top + addButtonPosition.height / 2;
+  itemAddCircle.style.top = `${buttonY}px`;
+  itemAddCircle.style.left = `${buttonX}px`;
+};
+
+resetAddItemNumber();
+
+let priceHtml = "";
+let basketProductDetailsHtml;
+if (itemsInBasket >= 1) {
+  basketProductDetailsHtml = JSON.parse(windowStorage.getItem("itemDetails"));
+} else {
+  basketProductDetailsHtml = [];
+}
+
+const handleAddToBasket = () => {
+  const basketPosition = basketIcon.getBoundingClientRect();
+  itemAddCircle.style.opacity = 1;
+  itemAddCircle.style.zIndex = 10000;
+  const x = basketPosition.left + 20;
+  const y = basketPosition.top - 10;
+  itemAddCircle.style.top = `${y}px`;
+  itemAddCircle.style.left = `${x}px`;
+  itemsInBasket += parseInt(userQuantity.value);
+
+  totalPrice += parseInt(itemPrice.innerText) * parseInt(userQuantity.value);
+  priceHtml = totalPrice;
+  numberItemsSpan.innerHTML = itemsInBasket;
+  priceItemsSpan.innerHTML = priceHtml;
+  windowStorage.setItem("quantity", itemsInBasket);
+  windowStorage.setItem("totalPrice", totalPrice);
+  windowStorage.setItem("image", mainProductImage.src);
+  windowStorage.setItem("colour", colour);
+  basketProductDetailsHtml.push(`
+          <div class="basket-item__wrapper">
+            <a href="product_page.html">
+              <img
+                class="product-thumbnail"
+                src="${mainProductImage.src}"
+                alt="${colour} ${product.name} "
+              />
+            </a>
+            <div class="selection">
+              <p id="product-quantity">Quantity: ${parseInt(userQuantity.value)}</p>
+              <p id="product-name">Product: ${product.name}</p>
+              <p id="product-color" >Colour: ${colour}</p>
+              <p id="product-size">Size: ${selectedSize}</p>
+              <p id="product-price">Item Price: £${product.price}.00</p>
+            </div>
+          </div>
+`);
+  windowStorage.setItem("itemDetails", JSON.stringify(basketProductDetailsHtml));
+  setTimeout(checkItems, 3000);
+  setTimeout(resetAddItemNumber, 3000);
+};
+
+addButton.onclick = handleAddToBasket;

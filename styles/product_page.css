@@ -231,34 +231,16 @@ td {
   background-color: var(--mid-button-color);
   justify-content: center;
   z-index: -20;
+  top: 50vh;
+  left: 50vw;
   transition-property: top, left;
-  transition-duration: 3s;
+  transition-duration: 1s;
+  transition-timing-function: ease;
 }
 
-.shopping-basket-container {
-  position: relative;
-}
 
-.item-number p,
-.basket-number p {
-  color: #fff;
-  font-weight: 600;
-  align-self: center;
-}
 
-.basket-summary__wrapper {
-  
-  background: red;
-}
 
-.basket-number {
-  position: absolute;
-  display: flex;
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  background-color: var(--mid-button-color);
-  justify-content: center;
-  top: -10px;
-  left: 20px;
-}
+
+
+
