@@ -95,81 +95,46 @@
               <div>
                 <p class="filter-section-heading">Special offers</p>
 
-                <label for="last-chance"><input type="checkbox" name="last-chance" id="last-chance" />Last chance</label>
+                <label for="last-chance"><input class="filter-checkbox" type="checkbox" name="last-chance" id="last-chance" />Last chance</label>
 
-                <label for="seasonal-offer"><input type="checkbox" name="seasonal-offer" id="seasonal-offer" />Seasonal offers</label>
+                <label for="seasonal-offer"><input class="filter-checkbox" type="checkbox" name="seasonal-offer" id="seasonal-offer" />Seasonal offers</label>
               </div>
               <div>
                 <p class="filter-section-heading">Gender</p>
 
-                <label class="filters-label" for="womens"><input type="checkbox" name="womens" id="womens" />Women's</label>
+                <label class="filters-label" for="womens"><input class="filter-checkbox" type="checkbox" name="womens" id="womens" data-filter="gender" />Women's</label>
 
-                <label class="filters-label" for="mens"><input type="checkbox" name="mens" id="mens" />Men's</label>
+                <label class="filters-label" for="mens"><input class="filter-checkbox" type="checkbox" name="mens" id="mens" data-filter="gender" checked />Men's</label>
 
-                <label class="filters-label" for="unisex"><input type="checkbox" name="unisex" id="unisex" />Unisex</label>
+                <label class="filters-label" for="unisex"><input class="filter-checkbox" type="checkbox" name="unisex" id="unisex" data-filter="gender" checked />Unisex</label>
               </div>
               <div>
                 <p class="filter-section-heading">Season</p>
 
-                <label class="filters-label" for="winter"><input type="checkbox" name="winter" id="winter" />Winter</label>
-                <label class="filters-label" for="spring">
-                  <input type="checkbox" name="spring" id="spring" />
-                  Spring</label
-                >
-                <label class="filters-label" for="summer">
-                  <input type="checkbox" name="summer" id="summer" />
-                  Summer</label
-                >
-                <label class="filters-label" for="autumn">
-                  <input type="checkbox" name="autumn" id="autumn" />
-                  Autumn</label
-                >
+                <label class="filters-label" for="winter"><input class="filter-checkbox" type="checkbox" name="winter" id="winter" data-filter="season" />Winter</label>
+
+                <label class="filters-label" for="spring"> <input class="filter-checkbox" type="checkbox" name="spring" id="spring" data-filter="season" />Spring</label>
+                <label class="filters-label" for="summer"> <input class="filter-checkbox" type="checkbox" name="summer" id="summer" data-filter="season" />Summer</label>
+                <label class="filters-label" for="autumn"> <input class="filter-checkbox" type="checkbox" name="autumn" id="autumn" data-filter="season" />Autumn</label>
               </div>
               <div>
                 <p class="filter-section-heading">Activity</p>
-                <label class="filters-label" for="camping">
-                  <input type="checkbox" name="camping" id="camping" />
-                  Camping</label
-                >
-                <label class="filters-label" for="canoeing">
-                  <input type="checkbox" name="canoeing" id="canoeing" />
-                  Canoeing</label
-                >
-                <label class="filters-label" for="exploring">
-                  <input type="checkbox" name="exploring" id="exploring" />
-                  Exploring</label
-                >
-                <label class="filters-label" for="hiking">
-                  <input type="checkbox" name="hiking" id="hiking" />
-                  Hiking</label
-                >
-                <label class="filters-label" for="skiing">
-                  <input type="checkbox" name="hiking" id="hiking" />
-                  Skiing</label
-                >
+                <label class="filters-label" for="camping"> <input class="filter-checkbox" type="checkbox" name="camping" id="camping" data-filter="activity" />Camping</label>
+                <label class="filters-label" for="canoeing"> <input class="filter-checkbox" type="checkbox" name="canoeing" id="canoeing" data-filter="activity" /> Canoeing</label>
+                <label class="filters-label" for="exploring"> <input class="filter-checkbox" type="checkbox" name="exploring" id="exploring" data-filter="activity" /> Exploring</label>
+                <label class="filters-label" for="hiking"> <input class="filter-checkbox" type="checkbox" name="hiking" id="hiking" data-filter="activity" /> Hiking</label>
+                <label class="filters-label" for="skiing"> <input class="filter-checkbox" type="checkbox" name="skiing" id="skiing" data-filter="activity" /> Skiing</label>
               </div>
               <div>
                 <p class="filter-section-heading">Function</p>
-                <label class="filters-label" for="waterproof">
-                  <input type="checkbox" name="waterproof" id="waterproof" />
-                  Waterproof</label
-                >
-                <label class="filters-label" for="windproof">
-                  <input type="checkbox" name="windproof" id="windproof" />
-                  Windproof</label
-                >
-                <label class="filters-label" for="insulating">
-                  <input type="checkbox" name="insulating" id="insulating" />
-                  Insulating</label
-                >
-                <label class="filters-label" for="sun-protect">
-                  <input type="checkbox" name="sun-protect" id="sun-protect" />
-                  Sun-protection</label
-                >
+                <label class="filters-label" for="waterproof"> <input class="filter-checkbox" type="checkbox" name="waterproof" id="waterproof" data-filter="product-function" /> Waterproof</label>
+                <label class="filters-label" for="windproof"> <input class="filter-checkbox" type="checkbox" name="windproof" id="windproof" data-filter="product-function" /> Windproof</label>
+                <label class="filters-label" for="insulating"> <input class="filter-checkbox" type="checkbox" name="insulating" id="insulating" data-filter="product-function" /> Insulating</label>
+                <label class="filters-label" for="sun-protect"> <input class="filter-checkbox" type="checkbox" name="sun-protect" id="sun-protect" data-filter="product-function" /> Sun-protection</label>
               </div>
             </form>
             <div class="button__wrapper">
-              <a href="mens.html" class="signup-button">Apply</a>
+              <button id="apply-filters" href="mens.html" class="signup-button">Apply Filters</button>
             </div>
           </div>
         </div>
@@ -181,17 +146,16 @@
             <option value="rating">Highest Rating</option>
             <option value="price">Price Low -> High</option>
           </select>
-          <p>13 Items of 13</p>
+          <p class="number-of-items"></p>
         </div>
       </section>
 
       <div class="view-products-grid"></div>
-  
     </main>
 
     <footer>
       <section>
-        <h3>Be informed</h3>
+        <h3>Stay informed</h3>
         <p>For the latest updates and exclusive offers</p>
         <form action="" class="email-signup__form">
           <label class="footer-signup__label" for="signup">Enter email address:</label>
@@ -214,30 +178,18 @@
           <h3>Customer Services</h3>
           <ul>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="">FAQ</a></li>
-            <li><a href="">Returns</a></li>
-            <li><a href="">Size Guide</a></li>
           </ul>
         </div>
         <div>
           <h3>About RainyDays</h3>
           <ul>
             <li><a href="about.html">About Us</a></li>
-            <li><a href="">Sustainability</a></li>
-            <li><a href="">Careers</a></li>
-            <li><a href="">Covid-19</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3>Legal Info</h3>
-          <ul>
-            <li><a href="">Terms & Conditions</a></li>
-            <li><a href="">Privacy Policy</a></li>
           </ul>
         </div>
       </section>
     </footer>
     <script src="js/script.js"></script>
+    <script src="js/components/product-html-creator.js"></script>
     <script src="js/product-details.js" type="module"></script>
     <script src="js/womans.js"></script>
   </body>

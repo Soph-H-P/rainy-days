@@ -1,36 +1,65 @@
 import { productArray } from "./constants/product_list.js";
-
+const numberOfItems = document.querySelector(".number-of-items");
 const productsGrid = document.querySelector(".view-products-grid");
+const filters = document.querySelectorAll(".filter-checkbox");
 
-productArray.forEach((product) => {
-  const html = `
-    <section class="product-card">
-              <div class="product-image-wrapper">
-                <img
-                  class="product-card-image"
-                  src="${product.image}"
-                  alt="${product.colour} ${product.name}"
-                />
-                <i class="far fa-heart fa-1x"></i>
-              </div>
-              <h2>${product.name}</h2>
-              <p>£${product.price}.00</p>
-    
-              <div class="customer-rating">
-                <p>Customer rating:</p>
-                <div class="stars">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="far fa-star"></i>
-                </div>
-              </div>
-              <div class="view-product__button-wrapper">
-                <a id="view-product" class="cta-button" href="./product_page.html?id=${product.id}">View product</a>
-              </div>
-            </section>
-    `;
+let userFilters = [];
+let userCategories = [];
+const checkFilters = () => {
+  userFilters = [];
+  userCategories = [];
+  filters.forEach((filter) => {
+    if (filter.checked) {
+      userCategories.push(filter.dataset.filter);
+      userFilters.push(filter.id);
+    }
+  });
+};
 
-  productsGrid.innerHTML += html;
+let productsToRender = [];
+let individualProductsToRender;
+const productFilterer = (filters, products) => {
+  individualProductsToRender = [];
+  productsToRender = [];
+  for (let i = 0; i < userCategories.length; i++) {
+    products.forEach((product) => {
+      if (product[userCategories[i]] === filters[i]) {
+        productsToRender.push(product.name);
+      }
+    });
+  }
+  function removeDuplicates(array) {
+    return array.filter((item, index) => {
+      return array.indexOf(item) === index;
+    });
+  }
+  individualProductsToRender = removeDuplicates(productsToRender);
+  console.log(individualProductsToRender);
+};
+
+let productHtml = "";
+let numberToView = 0;
+
+const renderProductList = () => {
+  checkFilters();
+  productFilterer(userFilters, productArray);
+  numberToView = 0;
+  productHtml = "";
+  productArray.forEach((product) => {
+    if (individualProductsToRender.includes(product.name)) {
+      productHtml += productHtmlCreator(product);
+      numberToView++;
+    }
+  });
+  numberOfItems.innerHTML = `${numberToView} items of ${numberToView}`;
+  productsGrid.innerHTML = productHtml;
+};
+
+renderProductList();
+
+const applyFiltersButton = document.querySelector("#apply-filters");
+
+applyFiltersButton.addEventListener("click", (event) => {
+  productsGrid.innerHTML = "";
+  renderProductList();
 });

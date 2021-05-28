@@ -233,3 +233,10 @@ const handleAddToBasket = () => {
 };
 
 addButton.onclick = handleAddToBasket;
+
+const productReview = document.querySelector(".customer-rating");
+const reviewCheckbox = document.querySelector("#plus-icon-reviews");
+
+productReview.addEventListener("click", (event) => {
+  reviewCheckbox.checked = true;
+});

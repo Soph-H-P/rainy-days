@@ -1,6 +1,6 @@
 export const productArray = [
   {
-    name: "Lotus Jacket",
+    name: "Womens Lotus Jacket",
     colour: "Lime Green",
     thumbnail: "../../images/jacket-green-xsmall.jpg",
     image: "../../images/jacket-green-small.jpg",
@@ -11,9 +11,9 @@ export const productArray = [
     id: 1,
     price: 120.0,
     season: "spring",
-    gender: "woman",
+    gender: "womens",
     activity: "hiking",
-    function: ["wind", "water"],
+    function: "waterproof",
     offers: "",
     overview: `
         <p>The Lotus Jacket comes in 3 beautiful different colours and is suitable for even the most windy and rainy weather.</p>
@@ -51,7 +51,7 @@ export const productArray = [
     ],
   },
   {
-    name: "Lotus Jacket",
+    name: "Womens Lotus Jacket",
     colour: "Sky Blue",
     thumbnail: "../../images/jacket-blue-xsmall.jpg",
     image: "../../images/jacket-blue-small.jpg",
@@ -62,9 +62,9 @@ export const productArray = [
     id: 2,
     price: 120.0,
     season: "spring",
-    gender: "woman",
-    activity: "hiking",
-    function: ["wind", "water"],
+    gender: "womens",
+    activity: "canoeing",
+    function: "waterproof",
     offers: "",
     overview: `
         <p>The Lotus Jacket comes in 3 beautiful different colours and is suitable for even the most windy and rainy weather.</p>
@@ -102,7 +102,7 @@ export const productArray = [
     ],
   },
   {
-    name: "Lotus Jacket",
+    name: "Womens Lotus Jacket",
     colour: "Rose Pink",
     thumbnail: "../../images/jacket-pink-xsmall.jpg",
     image: "../../images/jacket-pink-small.jpg",
@@ -113,9 +113,9 @@ export const productArray = [
     id: 3,
     price: 120.0,
     season: "spring",
-    gender: "woman",
+    gender: "womens",
     activity: "hiking",
-    function: ["wind", "water"],
+    function: "waterproof",
     offers: "",
     overview: `
         <p>The Lotus Jacket comes in 3 beautiful different colours and is suitable for even the most windy and rainy weather.</p>
@@ -153,7 +153,7 @@ export const productArray = [
     ],
   },
   {
-    name: "Lotus Jacket",
+    name: "Mens Lotus Jacket",
     colour: "Yellow",
     thumbnail: "../../images/mens-lotus-xsmall.jpg",
     image: "../../images/mens-lotus-small.jpg",
@@ -164,9 +164,9 @@ export const productArray = [
     id: 4,
     price: 120.0,
     season: "spring",
-    gender: "men",
+    gender: "mens",
     activity: "hiking",
-    function: ["wind", "water"],
+    function: "waterproof",
     offers: "",
     overview: `
         <p>The Lotus Jacket comes in 3 beautiful different colours and is suitable for even the most windy and rainy weather.</p>
@@ -214,7 +214,7 @@ export const productArray = [
     season: "summer",
     gender: "mens",
     activity: "exploring",
-    function: ["sun-protection"],
+    function: "sun-protect",
     offers: "",
     overview: `
         <p>This is the perfect jacket for those hot sunny days.</p>
@@ -263,9 +263,9 @@ export const productArray = [
     price: 90.0,
     season: "winter",
     gender: "unisex",
-    activity: "exploring",
-    function: ["wind", "insulating"],
-    offers: "",
+    activity: "skiing",
+    function: "insulating",
+    offers: "last-chance",
     overview: `
         <p>Our thickest winter jacket will keep you warm in extreme conditions.</p>
         <p>The hood is designed for maximum warmth on those really icey days.</p>
@@ -310,9 +310,9 @@ export const productArray = [
     id: 7,
     price: 95.0,
     season: "autumn",
-    gender: "woman",
-    activity: "hiking",
-    function: ["wind", "insulation"],
+    gender: "womens",
+    activity: "exploring",
+    function: "insulating",
     offers: "",
     overview: `
         <p>TThe light weight down jacket was designed with autmn in mind.</p>
@@ -357,9 +357,9 @@ export const productArray = [
     id: 8,
     price: 140.0,
     season: "spring",
-    gender: "woman",
+    gender: "womens",
     activity: "hiking",
-    function: ["wind", "water"],
+    function: "windproof",
     offers: "",
     overview: `
         <p>The Rainy Days original is our best selling jacket, and not without reason.</p>
@@ -408,9 +408,9 @@ export const productArray = [
     price: 90.0,
     season: "winter",
     gender: "unisex",
-    activity: "exploring",
-    function: ["wind", "insulating"],
-    offers: "",
+    activity: "skiing",
+    function: "insulating",
+    offers: "last-chance",
     overview: `
         <p>Our thickest winter jacket will keep you warm in extreme conditions.</p>
         <p>The hood is designed for maximum warmth on those really icey days.</p>
@@ -459,9 +459,9 @@ export const productArray = [
     price: 90.0,
     season: "winter",
     gender: "unisex",
-    activity: "exploring",
-    function: ["wind", "insulating"],
-    offers: "",
+    activity: "skiing",
+    function: "insulating",
+    offers: "last-chance",
     overview: `
         <p>Our thickest winter jacket will keep you warm in extreme conditions.</p>
         <p>The hood is designed for maximum warmth on those really icey days.</p>
@@ -508,7 +508,7 @@ export const productArray = [
     season: "summer",
     gender: "mens",
     activity: "exploring",
-    function: ["sun-protection"],
+    function: "sun-protect",
     offers: "",
     overview: `
         <p>This is the perfect jacket for those hot sunny days.</p>
@@ -545,7 +545,7 @@ export const productArray = [
     ],
   },
   {
-    name: "Lotus Jacket",
+    name: "Mens Lotus Jacket",
     colour: "Green",
     thumbnail: "../../images/mens-lotus-green-xsmall.jpg",
     image: "../../images/mens-lotus-green-small.jpg",
@@ -556,9 +556,9 @@ export const productArray = [
     id: 12,
     price: 120.0,
     season: "spring",
-    gender: "men",
+    gender: "mens",
     activity: "hiking",
-    function: ["wind", "water"],
+    function: "waterproof",
     offers: "",
     overview: `
         <p>The Lotus Jacket comes in 3 beautiful different colours and is suitable for even the most windy and rainy weather.</p>
@@ -596,7 +596,7 @@ export const productArray = [
     ],
   },
   {
-    name: "Lotus Jacket",
+    name: "Mens Lotus Jacket",
     colour: "Red",
     thumbnail: "../../images/mens-lotus-red-xsmall.jpg",
     image: "../../images/mens-lotus-red-small.jpg",
@@ -607,9 +607,9 @@ export const productArray = [
     id: 13,
     price: 120.0,
     season: "spring",
-    gender: "men",
-    activity: "hiking",
-    function: ["wind", "water"],
+    gender: "mens",
+    activity: "canoeing",
+    function: "waterproof",
     offers: "",
     overview: `
         <p>The Lotus Jacket comes in 3 beautiful different colours and is suitable for even the most windy and rainy weather.</p>

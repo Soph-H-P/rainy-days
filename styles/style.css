@@ -11,8 +11,10 @@ html {
 body {
   font-family: var(--paragraph-font), Verdana, Geneva, Tahoma, sans-serif;
   margin: 0;
-
+  min-height: 100vh;
   padding-top: 64.88px;
+  position: relative;
+  padding-bottom: 700px;
 }
 
 main {
@@ -25,7 +27,7 @@ h2,
 h3,
 nav a {
   font-family: var(--heading-font), Georgia, "Times New Roman", Times, serif;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
   font-weight: 200;
   color: var(--dark-font-color);
 }
@@ -312,9 +314,9 @@ footer {
   background-color: var(--dark-font-color);
   width: 100%;
   padding: 10px;
-  bottom: 0%;
+  bottom: 0px;
   display: grid;
-  position: relative;
+  position: absolute;
   grid-template-columns: 1fr;
   z-index: 3000;
 }
@@ -354,8 +356,12 @@ footer ul {
   padding: 0.5rem 0;
 }
 
+.footer-links a:hover {
+  color: var(--light-button-color);
+}
+
 .footer-links a {
-  font-size: 1.125rem;
+  font-size: 1.5rem;
 }
 
 /*CTA BUTTON STYLING*/

@@ -27,9 +27,6 @@ main {
   cursor: pointer;
 }
 
-
-
-
 .main-product__image {
   width: 100%;
 }
@@ -198,7 +195,6 @@ td {
   width: 150px;
 }
 
-
 /*CUSTOMER REVIEWS TAB*/
 .customer-review-form {
   border: solid var(--light-button-color) 3px;
@@ -221,6 +217,15 @@ td {
   margin: 0;
 }
 
+.customer-rating {
+  text-decoration: none;
+}
+
+#reviews-tab {
+  padding-top: 150px;
+  margin-top: -150px;
+}
+
 .item-number {
   position: fixed;
   display: flex;
@@ -237,10 +242,3 @@ td {
   transition-duration: 1s;
   transition-timing-function: ease;
 }
-
-
-
-
-
-
-
