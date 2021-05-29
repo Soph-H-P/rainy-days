@@ -241,11 +241,14 @@ const handleAddToBasket = () => {
           </div>
 `);
   windowStorage.setItem("itemDetails", JSON.stringify(basketProductDetailsHtml));
+
   setTimeout(function () {
     basketItems.style.display = "flex";
   }, 1000);
   setTimeout(checkItems, 1000);
   setTimeout(resetAddItemNumber, 1000);
+
+
 };
 
 addButton.onclick = handleAddToBasket;

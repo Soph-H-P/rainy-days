@@ -32,7 +32,7 @@ const checkItems = () => {
       <a class="cta-button checkout-button" href="checkout.html">Proceed to checkout</a>
     </div>
     <div class="cta-checkout button__wrapper">
-    <a class="signup-button continue-button" href="#">Continue Shopping</a>
+    <a class="signup-button continue-button" href="">Continue Shopping</a>
     </div>
 `;
     let basketSummaryHtml = "";
@@ -50,7 +50,7 @@ const checkItems = () => {
       <a class="cta-button checkout-button" href="checkout.html">Proceed to checkout</a>
     </div>
     <div class="cta-checkout button__wrapper">
-    <a class="signup-button continue-button" href="#">Continue Shopping</a>
+    <a class="signup-button continue-button" href="">Continue Shopping</a>
     </div>
     `;
     basketNumber.style.display = "none";
