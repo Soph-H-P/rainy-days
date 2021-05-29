@@ -51,19 +51,6 @@
             <input type="text" />
           </div>
         </div>
-        <div class="heart-container">
-          <label class="fav-box" for="fav-box"><i class="fas fa-heart fa-2x"></i></label>
-          <input type="checkbox" id="fav-box" />
-          <div class="favourites-popup">
-            <p>You haven't got any favourites yet!</p>
-            <div class="button__wrapper">
-              <a href="womens.html" class="cta-button">Discover women's</a>
-            </div>
-            <div class="button__wrapper">
-              <a href="mens.html" class="cta-button">Discover men's</a>
-            </div>
-          </div>
-        </div>
 
         <div class="shopping-basket-container">
           <div class="basket-number">
@@ -71,10 +58,7 @@
           </div>
           <i class="basket-label fas fa-shopping-basket fa-2x"></i>
           <section class="basket-items">
-            <div class="basket-summary__wrapper">
-              
-            </div>
-            
+            <div class="basket-summary__wrapper"></div>
           </section>
         </div>
       </div>
@@ -93,15 +77,8 @@
         <section class="product-view__product-page">
           <div class="product-view__wrapper"></div>
 
-          <a href="#reviews-tab" class="customer-rating">
-            <p>Customer rating:</p>
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="far fa-star"></i>
-            </div>
+          <a href="#reviews-tab" class="customer-rating-link">
+           
           </a>
 
           <div class="size-selection">
@@ -115,8 +92,7 @@
 
         <section class="selection-summary">
           <div class="selection-summary-quantity">
-            <h2>Quantity:</h2>
-
+            <label for="quantity"><h2>Quantity:</h2></label>
             <select name="quantity" id="user-input-quantity">
               <option value="1">1</option>
               <option value="2">2</option>
@@ -220,7 +196,7 @@
                 <label for="comment-box-review">Leave a review...</label>
                 <textarea id="comment-box-review" name="comment-box-review" rows="3" cols=""></textarea>
                 <div class="send-button__wrapper">
-                  <a class="signup-button" href="#">Send</a>
+                  <input type="submit" class="signup-button" value="send"/>
                 </div>
               </form>
             </section>

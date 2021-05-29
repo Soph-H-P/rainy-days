@@ -4,6 +4,8 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 let productId = params.get("id");
 
+//Finding and rendering the correct product
+
 const findProduct = () => {
   for (let i = 0; i < productArray.length; i++) {
     if (productArray[i].id === parseInt(productId)) return productArray[i];
@@ -33,6 +35,13 @@ productImages.innerHTML = productImagesHtml;
 
 const productPrice = document.querySelector("#price");
 productPrice.innerHTML = product.price;
+
+//Rating stars
+const customerRating = document.querySelector(".customer-rating-link");
+
+let averageRating = getRating(product);
+
+customerRating.innerHTML = `<p>Customer rating:<span class="stars"><span class="rating" style="width:${averageRating}em;"></span></span></p>`;
 
 //Size selection-------------------
 let selectedSize = "Medium";
@@ -130,20 +139,13 @@ const reviews = document.querySelector(".customer-reviews");
 let reviewHtml = "";
 const getReviews = () => {
   if (product.reviews.length >= 1) {
-    product.reviews.forEach(function (review) {
+    product.reviews.forEach((review) => {
       reviewHtml += `
         <div class="customer-review">
         <h4>${review.title}</h4>
         <p>${review.review}</p>
         <div class="customer-rating">
-          <p>Customer rating:</p>
-          <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="far fa-star"></i>
-          </div>
+        <p>Customer rating:<span class="stars"><span class="rating" style="width:${review.rating}em;"></span></span></p>
           <p>(${review.rating}/5)</p>
         </div>
       </div>
@@ -156,6 +158,21 @@ const getReviews = () => {
 };
 getReviews();
 reviews.innerHTML = reviewHtml;
+
+const customerReviewForm = document.querySelector(".customer-review-form");
+
+customerReviewForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  event.target.reset();
+  event.target.innerHTML = "<p>Thank you for your review it will be posted shortly</p>";
+});
+
+const productReview = document.querySelector(".customer-rating");
+const reviewCheckbox = document.querySelector("#plus-icon-reviews");
+
+productReview.addEventListener("click", (event) => {
+  reviewCheckbox.checked = true;
+});
 
 //BASKET FFUNCITONALITY
 const addButton = document.querySelector("#add-to-basket__button");
@@ -211,12 +228,8 @@ const handleAddToBasket = () => {
   windowStorage.setItem("colour", colour);
   basketProductDetailsHtml.push(`
           <div class="basket-item__wrapper">
-            <a href="product_page.html">
-              <img
-                class="product-thumbnail"
-                src="${mainProductImage.src}"
-                alt="${colour} ${product.name} "
-              />
+            <a href="product_page.html?id=${product.id}">
+              <img class="product-thumbnail" src="${mainProductImage.src}" alt="${colour} ${product.name}"/>
             </a>
             <div class="selection">
               <p id="product-quantity">Quantity: ${parseInt(userQuantity.value)}</p>
@@ -228,15 +241,11 @@ const handleAddToBasket = () => {
           </div>
 `);
   windowStorage.setItem("itemDetails", JSON.stringify(basketProductDetailsHtml));
-  setTimeout(checkItems, 3000);
-  setTimeout(resetAddItemNumber, 3000);
+  setTimeout(function () {
+    basketItems.style.display = "flex";
+  }, 1000);
+  setTimeout(checkItems, 1000);
+  setTimeout(resetAddItemNumber, 1000);
 };
 
 addButton.onclick = handleAddToBasket;
-
-const productReview = document.querySelector(".customer-rating");
-const reviewCheckbox = document.querySelector("#plus-icon-reviews");
-
-productReview.addEventListener("click", (event) => {
-  reviewCheckbox.checked = true;
-});

@@ -41,7 +41,7 @@ export const productArray = [
       {
         title: "Need more colour options",
         review: "I love this coat functionally it is great, but I would love to see some new colours, specifically something a bit darker. ",
-        rating: 3,
+        rating: 5,
       },
       {
         title: "Love this coat",
@@ -87,12 +87,12 @@ export const productArray = [
       {
         title: "Best coat I have ever had!",
         review: "This is actually the second coat I have bought from here. I loved it so much I had to get another. Never get too cold in the wind. ",
-        rating: 5,
+        rating: 3,
       },
       {
         title: "Need more colour options",
         review: "I love this coat functionally it is great, but I would love to see some new colours, specifically something a bit darker. ",
-        rating: 3,
+        rating: 5,
       },
       {
         title: "Love this coat",
@@ -138,12 +138,12 @@ export const productArray = [
       {
         title: "Best coat I have ever had!",
         review: "This is actually the second coat I have bought from here. I loved it so much I had to get another. Never get too cold in the wind. ",
-        rating: 5,
+        rating: 2,
       },
       {
         title: "Need more colour options",
         review: "I love this coat functionally it is great, but I would love to see some new colours, specifically something a bit darker. ",
-        rating: 3,
+        rating: 4,
       },
       {
         title: "Love this coat",
@@ -189,17 +189,17 @@ export const productArray = [
       {
         title: "Best coat I have ever had!",
         review: "This is actually the second coat I have bought from here. I loved it so much I had to get another. Never get too cold in the wind. ",
-        rating: 5,
+        rating: 2,
       },
       {
         title: "Need more colour options",
         review: "I love this coat functionally it is great, but I would love to see some new colours, specifically something a bit darker. ",
-        rating: 3,
+        rating: 1,
       },
       {
         title: "Love this coat",
         review: "I take it everywhere with me, always prepared for any weather",
-        rating: 4,
+        rating: 2,
       },
     ],
   },
@@ -236,7 +236,7 @@ export const productArray = [
       {
         title: "Best coat I have ever had!",
         review: "This is actually the second coat I have bought from here. I loved it so much I had to get another. Never get too cold in the wind. ",
-        rating: 5,
+        rating: 3,
       },
       {
         title: "Need more colour options",
@@ -292,7 +292,7 @@ export const productArray = [
       {
         title: "Need more colour options",
         review: "I love this coat functionally it is great, but I would love to see some new colours, specifically something a bit darker. ",
-        rating: 3,
+        rating: 5,
       },
       {
         title: "Love this coat",
@@ -381,7 +381,7 @@ export const productArray = [
       {
         title: "Best coat I have ever had!",
         review: "This is actually the second coat I have bought from here. I loved it so much I had to get another. Never get too cold in the wind. ",
-        rating: 5,
+        rating: 3,
       },
       {
         title: "Need more colour options",
@@ -442,7 +442,7 @@ export const productArray = [
       {
         title: "Love this coat",
         review: "I take it everywhere with me, always prepared for any weather",
-        rating: 4,
+        rating: 1,
       },
     ],
   },
@@ -493,7 +493,7 @@ export const productArray = [
       {
         title: "Love this coat",
         review: "I take it everywhere with me, always prepared for any weather",
-        rating: 4,
+        rating: 5,
       },
     ],
   },
@@ -530,7 +530,7 @@ export const productArray = [
       {
         title: "Best coat I have ever had!",
         review: "This is actually the second coat I have bought from here. I loved it so much I had to get another. Never get too cold in the wind. ",
-        rating: 5,
+        rating: 3,
       },
       {
         title: "Need more colour options",
@@ -586,12 +586,12 @@ export const productArray = [
       {
         title: "Need more colour options",
         review: "I love this coat functionally it is great, but I would love to see some new colours, specifically something a bit darker. ",
-        rating: 3,
+        rating: 5,
       },
       {
         title: "Love this coat",
         review: "I take it everywhere with me, always prepared for any weather",
-        rating: 4,
+        rating: 5,
       },
     ],
   },
@@ -637,7 +637,7 @@ export const productArray = [
       {
         title: "Need more colour options",
         review: "I love this coat functionally it is great, but I would love to see some new colours, specifically something a bit darker. ",
-        rating: 3,
+        rating: 1,
       },
       {
         title: "Love this coat",

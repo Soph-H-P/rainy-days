@@ -51,19 +51,7 @@
             <input type="text" />
           </div>
         </div>
-        <div class="heart-container">
-          <label class="fav-box" for="fav-box"><i class="fas fa-heart fa-2x"></i></label>
-          <input type="checkbox" id="fav-box" />
-          <div class="favourites-popup">
-            <p>You haven't got any favourites yet!</p>
-            <div class="button__wrapper">
-              <a href="womens.html" class="cta-button">Discover women's</a>
-            </div>
-            <div class="button__wrapper">
-              <a href="mens.html" class="cta-button">Discover men's</a>
-            </div>
-          </div>
-        </div>
+
         <div class="shopping-basket-container">
           <div class="basket-number">
             <p id="items-in-basket"></p>
@@ -107,8 +95,8 @@
           <div class="email-us">
             <p>When you sign up to our email list. Enter email address below:</p>
             <form action="" class="email-signup__form">
-              <label for="signup">Enter email address:</label>
-              <div class="cta-signup-wrapper">
+              <label class="signup__label" for="signup">Enter email address:</label>
+              <div class="signup-wrapper">
                 <input type="email" id="signup" />
                 <input type="submit" value="sign up" class="signup-button" />
               </div>
@@ -131,9 +119,8 @@
         <h3>Stay informed</h3>
         <p>For the latest updates and exclusive offers</p>
         <form action="" class="email-signup__form">
+          <label class="footer-signup__label" for="signup">Enter email address:</label>
           <div class="signup-wrapper">
-            <label class="footer-signup__label" for="signup">Enter email address:</label>
-
             <input type="email" id="signup" />
             <input type="submit" value="sign up" class="signup-button" />
           </div>

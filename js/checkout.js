@@ -18,15 +18,17 @@ if (!itemsInBasket) {
   </div>`;
 }
 
+console.log(JSON.parse(windowStorage.getItem("itemDetails")));
+
 const bins = document.querySelectorAll(".fa-trash");
 
 for (let i = 0; i < bins.length; i++) {
   bins[i].addEventListener("click", (event) => {
     event.target.parentNode.parentNode.removeChild(event.target.parentNode);
   });
-
-  paymentButton.innerHTML = `Pay £${windowStorage.getItem("totalPrice")} <i class="fas fa-lock"></i>`;
 }
+
+paymentButton.innerHTML = `Pay £${windowStorage.getItem("totalPrice")} <i class="fas fa-lock"></i>`;
 
 paymentButton.addEventListener("click", () => {
   windowStorage.clear();

@@ -34,7 +34,6 @@ const productFilterer = (filters, products) => {
     });
   }
   individualProductsToRender = removeDuplicates(productsToRender);
-  console.log(individualProductsToRender);
 };
 
 let productHtml = "";
