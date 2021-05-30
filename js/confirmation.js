@@ -14,7 +14,6 @@ for (let i = 0; i < productArray.length; i++) {
                   src="${productArray[i].image}"
                   alt="${productArray[i].colour} ${productArray[i].name}"
                 />
-                <i class="far fa-heart fa-1x"></i>
               </div>
               <h2>${productArray[i].name}</h2>
               <p>£${productArray[i].price}.00</p>
