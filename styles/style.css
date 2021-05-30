@@ -457,6 +457,7 @@ footer ul {
 
 #card-hover {
   text-decoration: none;
+  width: 100%;
 }
 
 .product-card:hover {
@@ -466,8 +467,9 @@ footer ul {
 .product-image-wrapper {
   width: 100%;
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 3fr;
   gap: 1px;
+  justify-items: center;
 }
 
 .product-image-wrapper i {
