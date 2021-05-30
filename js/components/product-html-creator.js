@@ -2,6 +2,7 @@ const productHtmlCreator = (product) => {
   let averageRating = getRating(product);
 
   let html = `<section class="product-card">
+  <a id="card-hover" href="./product_page.html?id=${product.id}">
                 <div class="product-image-wrapper">
                   <img
                     class="product-card-image"
@@ -20,6 +21,7 @@ const productHtmlCreator = (product) => {
                 <div class="view-product__button-wrapper">
                   <a id="view-product" class="cta-button" href="./product_page.html?id=${product.id}">View product</a>
                 </div>
+                </a>
               </section>
       `;
   return html;

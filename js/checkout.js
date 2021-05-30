@@ -18,8 +18,6 @@ if (!itemsInBasket) {
   </div>`;
 }
 
-console.log(JSON.parse(windowStorage.getItem("itemDetails")));
-
 const bins = document.querySelectorAll(".fa-trash");
 
 for (let i = 0; i < bins.length; i++) {

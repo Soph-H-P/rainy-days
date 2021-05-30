@@ -455,6 +455,14 @@ footer ul {
   position: relative;
 }
 
+#card-hover {
+  text-decoration: none;
+}
+
+.product-card:hover {
+  box-shadow: 2px 2px 5px var(--dark-font-color);
+}
+
 .product-image-wrapper {
   width: 100%;
   display: grid;

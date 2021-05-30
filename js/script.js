@@ -32,7 +32,7 @@ const checkItems = () => {
       <a class="cta-button checkout-button" href="checkout.html">Proceed to checkout</a>
     </div>
     <div class="cta-checkout button__wrapper">
-    <a class="signup-button continue-button" href="">Continue Shopping</a>
+    <a class="signup-button continue-button" href="#">Continue Shopping</a>
     </div>
 `;
     let basketSummaryHtml = "";
@@ -50,7 +50,7 @@ const checkItems = () => {
       <a class="cta-button checkout-button" href="checkout.html">Proceed to checkout</a>
     </div>
     <div class="cta-checkout button__wrapper">
-    <a class="signup-button continue-button" href="">Continue Shopping</a>
+    <a class="signup-button continue-button" href="#">Continue Shopping</a>
     </div>
     `;
     basketNumber.style.display = "none";
@@ -58,6 +58,10 @@ const checkItems = () => {
     totalPrice = 0;
     basketSummary.innerHTML += basketHtml;
   }
+  const continueButton = document.querySelector(".continue-button");
+  continueButton.addEventListener("click", function () {
+    basketItems.style.display = "none";
+  });
 };
 
 checkItems();
@@ -70,11 +74,6 @@ basketLabel.addEventListener("click", function () {
   }
 });
 
-const continueButton = document.querySelector(".continue-button");
-
-continueButton.addEventListener("click", function () {
-  basketItems.style.display = "none";
-});
 
 //Handling the email signup buttons
 const emailSignupForms = document.querySelectorAll(".email-signup__form");
@@ -107,3 +106,5 @@ const getRating = (product) => {
   averageRating = (averageRating / numberOfReviews).toFixed(2);
   return averageRating;
 };
+
+const numberItemsSpan = document.querySelector("#number-items");

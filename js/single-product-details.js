@@ -167,19 +167,12 @@ customerReviewForm.addEventListener("submit", (event) => {
   event.target.innerHTML = "<p>Thank you for your review it will be posted shortly</p>";
 });
 
-const productReview = document.querySelector(".customer-rating");
-const reviewCheckbox = document.querySelector("#plus-icon-reviews");
-
-productReview.addEventListener("click", (event) => {
-  reviewCheckbox.checked = true;
-});
-
 //BASKET FFUNCITONALITY
 const addButton = document.querySelector("#add-to-basket__button");
 const itemAddCircle = document.querySelector(".item-number");
 const userQuantity = document.querySelector("#user-input-quantity");
 const itemPrice = document.querySelector("#price");
-const numberItemsSpan = document.querySelector("#number-items");
+
 const priceItemsSpan = document.querySelector("#price-of-items");
 
 itemAddCircle.innerHTML = `<p>${userQuantity.value}</p>`;
@@ -202,6 +195,7 @@ resetAddItemNumber();
 
 let priceHtml = "";
 let basketProductDetailsHtml;
+let quantityOfItems = [];
 if (itemsInBasket >= 1) {
   basketProductDetailsHtml = JSON.parse(windowStorage.getItem("itemDetails"));
 } else {
@@ -232,23 +226,27 @@ const handleAddToBasket = () => {
               <img class="product-thumbnail" src="${mainProductImage.src}" alt="${colour} ${product.name}"/>
             </a>
             <div class="selection">
-              <p id="product-quantity">Quantity: ${parseInt(userQuantity.value)}</p>
+              <p id="product-quantity">Quantity: <span id="single-item-quantity">${parseInt(userQuantity.value)}</span></p>
               <p id="product-name">Product: ${product.name}</p>
-              <p id="product-color" >Colour: ${colour}</p>
+              <p id="product-color">Colour: ${colour}</p>
               <p id="product-size">Size: ${selectedSize}</p>
-              <p id="product-price">Item Price: £${product.price}.00</p>
+              <p id="product-price">Item Price: £<span id="single-item-price">${product.price}</span>.00</p>
             </div>
           </div>
 `);
   windowStorage.setItem("itemDetails", JSON.stringify(basketProductDetailsHtml));
-
+  quantityOfItems.push(userQuantity.value);
+  windowStorage.setItem("quantityOfItems", JSON.stringify(quantityOfItems));
   setTimeout(function () {
     basketItems.style.display = "flex";
   }, 1000);
   setTimeout(checkItems, 1000);
   setTimeout(resetAddItemNumber, 1000);
-
-
 };
 
 addButton.onclick = handleAddToBasket;
+
+const reviewCheckbox = document.querySelector("#plus-icon-reviews");
+customerRating.addEventListener("click", (event) => {
+  reviewCheckbox.checked = true;
+});

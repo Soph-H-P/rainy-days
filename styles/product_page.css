@@ -43,6 +43,7 @@ main {
 .size-selection {
   display: flex;
   justify-content: center;
+  margin: 30px auto;
 }
 
 .size {
@@ -221,6 +222,11 @@ td {
   text-decoration: none;
   display: flex;
   justify-content: center;
+}
+
+.customer-rating-link p {
+  font-size: 1rem;
+  margin: 0px auto;
 }
 
 #reviews-tab {

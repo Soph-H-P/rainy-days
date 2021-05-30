@@ -4,6 +4,7 @@ import { productArray } from "./constants/product_list.js";
 const randomItem = Math.floor(Math.random() * productArray.length);
 
 for (let i = 0; i < productArray.length; i++) {
+  let averageReview = getRating(productArray[i]);
   if (i === randomItem) {
     interestingItems.innerHTML = `
     <section class="product-card">
@@ -19,14 +20,9 @@ for (let i = 0; i < productArray.length; i++) {
               <p>£${productArray[i].price}.00</p>
     
               <div class="customer-rating">
-                <p>Customer rating:</p>
-                <div class="stars">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="far fa-star"></i>
-                </div>
+        <p>Customer rating:<span class="stars"><span class="rating" style="width:${averageReview}em;"></span></span></p>
+          <p>(${averageReview}/5)</p>
+        </div>
               </div>
               <div class="view-product__button-wrapper">
                 <a id="view-product" class="cta-button" href="./product_page.html?id=${productArray[i].id}">View product</a>
