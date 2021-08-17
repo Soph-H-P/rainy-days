@@ -1,52 +1,71 @@
 import { productArray } from "./constants/product_list.js";
+
 const numberOfItems = document.querySelector(".number-of-items");
 const productsGrid = document.querySelector(".view-products-grid");
 const filters = document.querySelectorAll(".filter-checkbox");
 
+let productsURL =
+  "https://www.soph-web-dev.eu/rainy-days/wp-json/wc/store/products?per_page=15&orderby=price&order=asc";
+
+
+
+const fetchAllProducts = async (url) => {
+  try {
+    const response = await fetch(url);
+    const results = await response.json();
+
+    return results;
+  } catch (error) {
+    productsGrid.innerHTML = `<p class="error" >Unfortunatly we seem to be having some issues getting the product list, we appologise for any inconvenience.</p>`;
+    console.log(error);
+  }
+};
+
+const productsList = await fetchAllProducts(productsURL);
+
 let userFilters = [];
-let userCategories = [];
 const checkFilters = () => {
   userFilters = [];
-  userCategories = [];
   filters.forEach((filter) => {
     if (filter.checked) {
-      userCategories.push(filter.dataset.filter);
       userFilters.push(filter.id);
     }
   });
 };
 
-let productsToRender = [];
 let individualProductsToRender;
+
 const productFilterer = (filters, products) => {
   individualProductsToRender = [];
-  productsToRender = [];
-  for (let i = 0; i < userCategories.length; i++) {
-    products.forEach((product) => {
-      if (product[userCategories[i]] === filters[i]) {
-        productsToRender.push(product.name);
-      }
+
+  products.forEach((product) => {
+    let productCategories = [];
+    let productCategory = "";
+    product.categories.forEach((category) => {
+      productCategory = category.name;
+      productCategories.push(category.slug);
     });
-  }
-  function removeDuplicates(array) {
-    return array.filter((item, index) => {
-      return array.indexOf(item) === index;
-    });
-  }
-  individualProductsToRender = removeDuplicates(productsToRender);
+    let included = filters.some((filter) => productCategories.includes(filter));
+    if (included) {
+      individualProductsToRender.push(product.name);
+    }
+  });
 };
 
 let productHtml = "";
 let numberToView = 0;
 
-const renderProductList = () => {
+const renderNewProductList = () => {
   checkFilters();
-  productFilterer(userFilters, productArray);
+  productFilterer(userFilters, productsList);
+
   numberToView = 0;
   productHtml = "";
-  productArray.forEach((product) => {
+  
+
+  productsList.forEach((product) => {
     if (individualProductsToRender.includes(product.name)) {
-      productHtml += productHtmlCreator(product);
+      productHtml += productHtmlCreator(product, productArray);
       numberToView++;
     }
   });
@@ -54,11 +73,17 @@ const renderProductList = () => {
   productsGrid.innerHTML = productHtml;
 };
 
-renderProductList();
+if (productsList) {
+  renderNewProductList();
+}
 
 const applyFiltersButton = document.querySelector("#apply-filters");
 
 applyFiltersButton.addEventListener("click", (event) => {
   productsGrid.innerHTML = "";
-  renderProductList();
+  if (productsList) {
+    renderNewProductList();
+  }
 });
+
+
