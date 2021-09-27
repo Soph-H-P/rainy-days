@@ -5,7 +5,7 @@ const productsGrid = document.querySelector(".view-products-grid");
 const filters = document.querySelectorAll(".filter-checkbox");
 
 let productsURL =
-  "https://www.soph-web-dev.eu/rainy-days/wp-json/wc/store/products?per_page=15&orderby=price&order=asc";
+  "https://www.soph-web-dev.eu/rainydays/wp-json/wc/store/products?per_page=15&orderby=price&order=asc";
 
 
 
@@ -13,7 +13,7 @@ const fetchAllProducts = async (url) => {
   try {
     const response = await fetch(url);
     const results = await response.json();
-
+console.log(results)
     return results;
   } catch (error) {
     productsGrid.innerHTML = `<p class="error" >Unfortunatly we seem to be having some issues getting the product list, we appologise for any inconvenience.</p>`;
@@ -64,6 +64,7 @@ const renderNewProductList = () => {
   
 
   productsList.forEach((product) => {
+    console.log(product.name)
     if (individualProductsToRender.includes(product.name)) {
       productHtml += productHtmlCreator(product, productArray);
       numberToView++;

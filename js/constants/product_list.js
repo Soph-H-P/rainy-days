@@ -1,7 +1,7 @@
 export const productArray = [
   {
     name: "Womens Lotus Jacket Green",
-    id: 15,
+    id: 12,
     tech: {
       fabric: "../../images/membrane.svg",
       description: `<p>Inspired by nature our unique waterproof fabric is both extremely water repellent and breathable. Like the lotus leaf, beads of water will simply run away from you.</p>
@@ -36,7 +36,7 @@ export const productArray = [
   },
   {
     name: "Womens Lotus Jacket Blue",
-    id: 38,
+    id: 18,
     tech: {
       fabric: "../../images/membrane.svg",
       description: `<p>Inspired by nature our unique waterproof fabric is both extremely water repellent and breathable. Like the lotus leaf, beads of water will simply run away from you.</p>
@@ -71,7 +71,7 @@ export const productArray = [
   },
   {
     name: "Womens Lotus Jacket Rose",
-    id: 37,
+    id: 19,
     tech: {
       fabric: "../../images/membrane.svg",
       description: `<p>Inspired by nature our unique waterproof fabric is both extremely water repellent and breathable. Like the lotus leaf, beads of water will simply run away from you.</p>
@@ -106,7 +106,7 @@ export const productArray = [
   },
   {
     name: "Mens Lotus Jacket Yellow",
-    id: 39,
+    id: 20,
     tech: {
       fabric: "../../images/membrane.svg",
       description: `<p>Inspired by nature our unique waterproof fabric is both extremely water repellent and breathable. Like the lotus leaf, beads of water will simply run away from you.</p>
@@ -141,7 +141,7 @@ export const productArray = [
   },
   {
     name: "Max Cool Yellow",
-    id: 43,
+    id: 26,
     tech: {
       fabric: "../../images/membrane.svg",
       description: `<p>Inspired by nature our unique waterproof fabric is both extremely water repellent and breathable. Like the lotus leaf, beads of water will simply run away from you.</p>
@@ -176,7 +176,7 @@ export const productArray = [
   },
   {
     name: "Mountain Puffer Tangarine",
-    id: 18,
+    id: 30,
     tech: {
       fabric: "../../images/membrane.svg",
       description: `<p>Inspired by nature our unique waterproof fabric is both extremely water repellent and breathable. Like the lotus leaf, beads of water will simply run away from you.</p>
@@ -211,7 +211,7 @@ export const productArray = [
   },
   {
     name: "Light Down",
-    id: 19,
+    id: 36,
     tech: {
       fabric: "../../images/membrane.svg",
       description: `<p>Inspired by nature our unique waterproof fabric is both extremely water repellent and breathable. Like the lotus leaf, beads of water will simply run away from you.</p>
@@ -246,7 +246,7 @@ export const productArray = [
   },
   {
     name: "Rainy Days Original",
-    id: 20,
+    id: 38,
     tech: {
       fabric: "../../images/membrane.svg",
       description: `<p>Inspired by nature our unique waterproof fabric is both extremely water repellent and breathable. Like the lotus leaf, beads of water will simply run away from you.</p>
@@ -281,7 +281,7 @@ export const productArray = [
   },
   {
     name: "Mountain Puffer Burgundy",
-    id: 42,
+    id: 35,
     tech: {
       fabric: "../../images/membrane.svg",
       description: `<p>Inspired by nature our unique waterproof fabric is both extremely water repellent and breathable. Like the lotus leaf, beads of water will simply run away from you.</p>
@@ -316,7 +316,7 @@ export const productArray = [
   },
   {
     name: "Mountain Puffer Yellow",
-    id: 41,
+    id: 34,
     tech: {
       fabric: "../../images/membrane.svg",
       description: `<p>Inspired by nature our unique waterproof fabric is both extremely water repellent and breathable. Like the lotus leaf, beads of water will simply run away from you.</p>
@@ -351,7 +351,7 @@ export const productArray = [
   },
   {
     name: "Max Cool Blue",
-    id: 17,
+    id: 29,
     tech: {
       fabric: "../../images/membrane.svg",
       description: `<p>Inspired by nature our unique waterproof fabric is both extremely water repellent and breathable. Like the lotus leaf, beads of water will simply run away from you.</p>
@@ -386,7 +386,7 @@ export const productArray = [
   },
   {
     name: "Mens Lotus Jacket Green",
-    id: 16,
+    id: 24,
     tech: {
       fabric: "../../images/membrane.svg",
       description: `<p>Inspired by nature our unique waterproof fabric is both extremely water repellent and breathable. Like the lotus leaf, beads of water will simply run away from you.</p>
@@ -421,7 +421,7 @@ export const productArray = [
   },
   {
     name: "Mens Lotus Jacket Red",
-    id: 40,
+    id: 25,
     tech: {
       fabric: "../../images/membrane.svg",
       description: `<p>Inspired by nature our unique waterproof fabric is both extremely water repellent and breathable. Like the lotus leaf, beads of water will simply run away from you.</p>

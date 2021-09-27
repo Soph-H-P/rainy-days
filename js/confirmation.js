@@ -2,7 +2,7 @@ const interestingItems = document.querySelector(".other-interesting-items");
 import { productArray } from "./constants/product_list.js";
 
 let productsURL =
-  "https://www.soph-web-dev.eu/rainy-days/wp-json/wc/store/products?per_page=15&orderby=price&order=asc";
+  "https://www.soph-web-dev.eu/rainydays/wp-json/wc/store/products?per_page=15&orderby=price&order=asc";
 
 const fetchAllProducts = async (url) => {
   try {
@@ -22,7 +22,7 @@ const randomItem = Math.floor(Math.random() * productsList.length);
 
 for (let i = 0; i < productsList.length; i++) {
   let averageReview = getRating(productArray[i]);
-  console.log(productsList[i].prices.price.slice(0, -2))
+  console.log(productsList[i].prices.price);
   if (i === randomItem) {
     interestingItems.innerHTML = `
     <section class="product-card">
@@ -34,7 +34,7 @@ for (let i = 0; i < productsList.length; i++) {
                 />
               </div>
               <h2>${productsList[i].name}</h2>
-              <p>£${productsList[i].prices.price.slice(0, -2)}.00</p>
+              <p>£${productsList[i].prices.price}.00</p>
     
               <div class="customer-rating">
         <p>Customer rating:<span class="stars"><span class="rating" style="width:${averageReview}em;"></span></span></p>
@@ -42,7 +42,9 @@ for (let i = 0; i < productsList.length; i++) {
         </div>
               </div>
               <div class="view-product__button-wrapper">
-                <a id="view-product" class="cta-button" href="./product_page.html?id=${productsList[i].id}">View product</a>
+                <a id="view-product" class="cta-button" href="./product_page.html?id=${
+                  productsList[i].id
+                }">View product</a>
               </div>
             </section>
     `;

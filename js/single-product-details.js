@@ -5,8 +5,7 @@ const params = new URLSearchParams(queryString);
 let productId = params.get("id");
 
 //Finding and rendering the correct product
-const productsURL =
-  "https://www.soph-web-dev.eu/rainy-days/wp-json/wc/store/products?per_page=15";
+const productsURL = "https://www.soph-web-dev.eu/rainydays/wp-json/wc/store/products?per_page=15";
 
 const fetchAllProducts = async () => {
   try {
@@ -61,7 +60,7 @@ const findImages = () => {
 findImages();
 productImages.innerHTML = productImagesHtml;
 const productPrice = document.querySelector("#price");
-productPrice.innerHTML = product.prices.price.slice(0, -2);
+productPrice.innerHTML = product.prices.price;
 
 //Rating stars
 const customerRating = document.querySelector(".customer-rating-link");
@@ -191,8 +190,7 @@ const customerReviewForm = document.querySelector(".customer-review-form");
 customerReviewForm.addEventListener("submit", (event) => {
   event.preventDefault();
   event.target.reset();
-  event.target.innerHTML =
-    "<p>Thank you for your review it will be posted shortly</p>";
+  event.target.innerHTML = "<p>Thank you for your review it will be posted shortly</p>";
 });
 
 //BASKET FFUNCITONALITY
@@ -251,9 +249,9 @@ const handleAddToBasket = () => {
   basketProductDetailsHtml.push(`
           <div class="basket-item__wrapper">
             <a href="product_page.html?id=${product.id}">
-              <img class="product-thumbnail" src="${
-                mainProductImage.src
-              }" alt="${colour} ${product.name}"/>
+              <img class="product-thumbnail" src="${mainProductImage.src}" alt="${colour} ${
+    product.name
+  }"/>
             </a>
             <div class="selection">
               <p id="product-quantity">Quantity: <span id="single-item-quantity">${parseInt(
@@ -262,17 +260,11 @@ const handleAddToBasket = () => {
               <p id="product-name">Product: ${product.name}</p>
               <p id="product-color">Colour: ${colour}</p>
               <p id="product-size">Size: ${selectedSize}</p>
-              <p id="product-price">Item Price: £<span id="single-item-price">${product.prices.price.slice(
-                0,
-                -2
-              )}</span>.00</p>
+              <p id="product-price">Item Price: £<span id="single-item-price">${product.prices.price}</span>.00</p>
             </div>
           </div>
 `);
-  windowStorage.setItem(
-    "itemDetails",
-    JSON.stringify(basketProductDetailsHtml)
-  );
+  windowStorage.setItem("itemDetails", JSON.stringify(basketProductDetailsHtml));
   quantityOfItems.push(userQuantity.value);
   windowStorage.setItem("quantityOfItems", JSON.stringify(quantityOfItems));
   setTimeout(function () {
