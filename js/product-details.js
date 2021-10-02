@@ -1,5 +1,8 @@
 import { productArray } from "./constants/product_list.js";
-
+const queryString = document.location.search;
+const params = new URLSearchParams(queryString);
+let searchTerm = params.get("search");
+const searchTermUrl = `https://www.soph-web-dev.eu/rainydays/wp-json/wc/store/products?per_page=15&search=${searchTerm}`;
 const numberOfItems = document.querySelector(".number-of-items");
 const productsGrid = document.querySelector(".view-products-grid");
 const filters = document.querySelectorAll(".filter-checkbox");
@@ -7,13 +10,11 @@ const filters = document.querySelectorAll(".filter-checkbox");
 let productsURL =
   "https://www.soph-web-dev.eu/rainydays/wp-json/wc/store/products?per_page=15&orderby=price&order=asc";
 
-
-
 const fetchAllProducts = async (url) => {
+  productsGrid.innerHTML = `<p>Loading..</p>`;
   try {
     const response = await fetch(url);
     const results = await response.json();
-console.log(results)
     return results;
   } catch (error) {
     productsGrid.innerHTML = `<p class="error" >Unfortunatly we seem to be having some issues getting the product list, we appologise for any inconvenience.</p>`;
@@ -21,7 +22,19 @@ console.log(results)
   }
 };
 
-const productsList = await fetchAllProducts(productsURL);
+let productsList;
+
+if (searchTerm) {
+  const searchSpan = document.querySelector(".search-term");
+  const searchTitle = document.querySelector(".search-title");
+  searchSpan.innerHTML = `"${searchTerm}"`;
+  productsList = await fetchAllProducts(searchTermUrl);
+  if (productsList.length === 0) {
+    searchTitle.innerHTML = `Unfortunatly There were no search results for ${searchTerm}.`;
+  }
+} else {
+  productsList = await fetchAllProducts(productsURL);
+}
 
 let userFilters = [];
 const checkFilters = () => {
@@ -61,10 +74,8 @@ const renderNewProductList = () => {
 
   numberToView = 0;
   productHtml = "";
-  
 
   productsList.forEach((product) => {
-    console.log(product.name)
     if (individualProductsToRender.includes(product.name)) {
       productHtml += productHtmlCreator(product, productArray);
       numberToView++;
@@ -86,5 +97,3 @@ applyFiltersButton.addEventListener("click", (event) => {
     renderNewProductList();
   }
 });
-
-

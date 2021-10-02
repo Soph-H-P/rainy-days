@@ -175,13 +175,11 @@ fieldset {
   z-index: 2000;
 }
 
-#search-box:checked ~ .search-input {
-  display: inline-block;
+.search-input.open {
+  display: block;
 }
 
-#search-box {
-  display: none;
-}
+
 
 /*shopping basket----------------*/
 

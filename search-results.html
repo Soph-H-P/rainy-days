@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Browse our range of women's outdoor jackets." />
+    <meta name="description" content="Browse our range of outdoor jackets." />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;500&display=swap"
@@ -11,10 +11,10 @@
     />
     <link rel="shortcut icon" href="images/red-cross.png" type="image/png" />
     <link rel="stylesheet" href="styles/style.css" />
-    <link rel="stylesheet" href="styles/womens.css" />
+    <link rel="stylesheet" href="styles/jackets.css" />
     <link rel="stylesheet" href="styles/media_queries.css" />
     <script src="https://kit.fontawesome.com/297ba3a9d9.js" crossorigin="anonymous"></script>
-    <title>Women's | RainyDays</title>
+    <title>Search Results | RainyDays</title>
   </head>
   <body>
     <header>
@@ -29,17 +29,16 @@
         <nav>
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a class="active" href="womens.html">Women's</a></li>
-            <li><a href="mens.html">Men's</a></li>
+            <li><a class="active" href="jackets.html">Jackets</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
         <div class="search-container">
-          <label class="search-label" for="search-box"><i class="fas fa-search fa-2x"></i></label>
-          <input type="checkbox" id="search-box" />
+          <label class="search-label" for="search__input"><i class="fas fa-search fa-2x"></i></label>
+          
           <div class="search-input">
-            <input type="text" />
+            <input id="search__input" type="text" />
           </div>
         </div>
 
@@ -60,9 +59,9 @@
         <a class="back-button" href="index.html">Back</a>
       </div>
 
-      <h1>Women's Jackets</h1>
+      <h1 class="search-title">Search Results for <span class="search-term"></span></h1>
       <a href="index.html" class="breadcrumb">Home </a>
-      <a href="womens.html" class="breadcrumb">Women's Jackets </a>
+      <a href="jackets.html" class="breadcrumb">Jackets </a>
 
       <section class="filters_sortby__section">
         <div class="filters-container">
@@ -93,6 +92,7 @@
                     name="mens"
                     id="mens"
                     data-filter="gender"
+                    checked
                   />Men's</label
                 >
 

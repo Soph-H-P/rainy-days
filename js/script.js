@@ -74,7 +74,6 @@ basketLabel.addEventListener("click", function () {
   }
 });
 
-
 //Handling the email signup buttons
 const emailSignupForms = document.querySelectorAll(".email-signup__form");
 
@@ -108,3 +107,33 @@ const getRating = (product) => {
 };
 
 const numberItemsSpan = document.querySelector("#number-items");
+
+const searchButton = document.querySelector(".search-label");
+const searchContainer = document.querySelector(".search-input");
+const searchInput = document.querySelector("#search__input");
+
+searchButton.addEventListener("click", (e) => {
+  if (searchContainer.classList.contains("open")) {
+    searchContainer.classList.remove("open");
+  } else {
+    searchContainer.classList.add("open");
+  }
+});
+
+//search function
+const addSearchFunction = () => {
+  searchInput.addEventListener("keyup", (e) => {
+    const searchInput = e.target.value;
+    const key = e.key;
+    if (key === "Enter" && e.target.value.length > 0) {
+      window.location.href = `/search-results.html?search=${searchInput}`;
+    }
+
+    if (key === "Escape") {
+      e.target.blur()
+      searchContainer.classList.remove("open");
+    };
+  });
+};
+
+addSearchFunction();

@@ -2,7 +2,6 @@ const productHtmlCreator = (product, productArray) => {
   const foundValue = productArray.filter((obj) => {
     return obj.name === product.name;
   });
-console.log(product.prices.price)
   let averageRating = getRating(foundValue[0]);
   const productPrice = product.prices.price;
   let html = `<section class="product-card">
