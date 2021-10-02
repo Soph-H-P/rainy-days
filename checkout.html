@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Checkout here and purchase the jacket of a lifetime." />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="images/red-cross.png" type="image/png" />
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/checkout.css" />
     <link rel="stylesheet" href="styles/media_queries.css" />
@@ -18,7 +22,9 @@
         <a href="index.html">
           <img class="logo" src="images/logo.png" alt="RainyDays Logo" />
         </a>
-        <label class="hamburger-label" for="hamburger-menu"><i class="fas fa-bars fa-2x"></i></label>
+        <label class="hamburger-label" for="hamburger-menu"
+          ><i class="fas fa-bars fa-2x"></i
+        ></label>
         <input type="checkbox" id="hamburger-menu" />
         <nav>
           <ul>
@@ -26,6 +32,7 @@
             <li><a href="womens.html">Women's</a></li>
             <li><a href="mens.html">Men's</a></li>
             <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
         <div class="search-container">
@@ -61,13 +68,23 @@
               <h2>Delivery options</h2>
               <fieldset>
                 <label id="delivery-address-label" for="delivery-option-free">
-                  <input type="radio" id="delivery-option-free" name="delivery" value="standard-delivery" />
+                  <input
+                    type="radio"
+                    id="delivery-option-free"
+                    name="delivery"
+                    value="standard-delivery"
+                  />
 
                   Standard delivery (3-5 working days) - Free
                 </label>
 
                 <label id="delivery-address-label" for="delivery-option-express">
-                  <input type="radio" id="delivery-option-express" name="delivery" value="express-delivery" />
+                  <input
+                    type="radio"
+                    id="delivery-option-express"
+                    name="delivery"
+                    value="express-delivery"
+                  />
                   Express delivery (1-2 working days) - £4.50
                 </label>
               </fieldset>
@@ -77,15 +94,37 @@
               <fieldset>
                 <div class="choose-payment">
                   <label for="credit-card">
-                    <input type="radio" value="card" id="credit-card" name="payment" class="payment__radio-button" />
-                    <img class="payment-method__image" src="images/card.png" alt="visa and mastercard logo" />
+                    <input
+                      type="radio"
+                      value="card"
+                      id="credit-card"
+                      name="payment"
+                      class="payment__radio-button"
+                    />
+                    <img
+                      class="payment-method__image"
+                      src="images/card.png"
+                      alt="visa and mastercard logo"
+                    />
                   </label>
                   <label for="paypal">
-                    <input type="radio" value="paypal" id="paypal" name="payment" class="payment__radio-button" />
+                    <input
+                      type="radio"
+                      value="paypal"
+                      id="paypal"
+                      name="payment"
+                      class="payment__radio-button"
+                    />
                     <img class="payment-method__image" src="images/paypal.png" alt="paypal logo" />
                   </label>
                   <label for="vipps">
-                    <input type="radio" value="vipps" id="vipps" name="payment" class="payment__radio-button" />
+                    <input
+                      type="radio"
+                      value="vipps"
+                      id="vipps"
+                      name="payment"
+                      class="payment__radio-button"
+                    />
                     <img class="payment-method__image" src="images/vipps.png" alt="vipps logo" />
                   </label>
                 </div>
@@ -123,7 +162,9 @@
               </fieldset>
               <div class="delivery-address-wrapper">
                 <h2>Delivery Address</h2>
-                <label id="delivery-address-label" for="address">My billing and delivery address are the same</label>
+                <label id="delivery-address-label" for="address"
+                  >My billing and delivery address are the same</label
+                >
                 <input type="checkbox" id="delivery-address-checkbox" checked />
                 <div class="delivery-address-form">
                   <fieldset>

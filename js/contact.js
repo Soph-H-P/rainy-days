@@ -80,6 +80,7 @@ emailInput.addEventListener("focusout", validateEmail);
 emailInput.addEventListener("keyup", handleKeyUpEmail);
 
 const handleKeyUpComment = () => {
+successMessage.style.display = "none"
   if (checkEmail() && checkName()) {
     submitButton.disabled = false;
   } else {
@@ -97,14 +98,37 @@ const validateForm = () => {
   }
 };
 
-const handleSubmit = (event) => {
+const handleSubmit = async (event) => {
+  const sending = document.querySelector(".sending");
   event.preventDefault();
+  sending.style.display = "inline";
   if (validateForm()) {
-    form.reset();
-    submitButton.disabled = true;
-    successMessage.style.display = "block";
-    emailInput.style.borderBottom = "none";
-    nameInput.style.borderBottom = "none";
+    const formData = event.target;
+    const sendFormUrl = formData.action;
+    const method = formData.method;
+    const body = new FormData(formData);
+    try {
+      const response = await fetch(sendFormUrl, {
+        method,
+        body,
+      });
+      response.ok
+        ? (form.reset(),
+          (emailInput.style.borderBottom = "none"),
+          (nameInput.style.borderBottom = "none"),
+          (submitButton.disabled = true),
+          (successMessage.style.display = "block"),
+          successMessage.scrollIntoView({ behavior: "smooth" }),
+          (sending.style.display = "none"))
+        : (successMessage.innerHTML = "Message cannot be sent at this time");
+    } catch (error) {
+      submitButton.disabled = false;
+      successMessage.style.display = "block";
+      successMessage.innerHTML =
+        "<p>Messaging not possible at this time please try again later</p>";
+      successMessage.style.backgroundColor = "var(--mid-button-color)";
+      console.log(error);
+    }
   }
 };
 

@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Contact us by phone, email or chat." />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="images/red-cross.png" type="image/png" />
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/contact.css" />
     <link rel="stylesheet" href="styles/media_queries.css" />
-      <script src="https://kit.fontawesome.com/297ba3a9d9.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/297ba3a9d9.js" crossorigin="anonymous"></script>
     <title>Contact | RainyDays</title>
   </head>
   <body>
@@ -18,7 +22,9 @@
         <a href="index.html">
           <img class="logo" src="images/logo.png" alt="RainyDays Logo" />
         </a>
-        <label class="hamburger-label" for="hamburger-menu"><i class="fas fa-bars fa-2x"></i></label>
+        <label class="hamburger-label" for="hamburger-menu"
+          ><i class="fas fa-bars fa-2x"></i
+        ></label>
         <input type="checkbox" id="hamburger-menu" />
         <nav>
           <ul>
@@ -26,6 +32,7 @@
             <li><a href="womens.html">Women's</a></li>
             <li><a href="mens.html">Men's</a></li>
             <li><a href="about.html">About</a></li>
+            <li><a class="active" href="contact.html">Contact</a></li>
           </ul>
         </nav>
         <div class="search-container">
@@ -57,17 +64,45 @@
         <div class="contact-methods">
           <section class="contact-page__wrapper contact-email-section">
             <h3>Email us</h3>
-            <form class="contact-email-form" action="">
-              <p class="success-message"><i class="far fa-check-circle"></i>Your message has been sent. Typical response time is 1-2 working days.</p>
-              <label for="name">Name<input type="text" id="name" placeholder="John Doe" /></label>
-              <p class="error-message" id="name-error"><i class="fas fa-exclamation-circle"></i>Please enter your name</p>
+            <form
+              class="contact-email-form"
+              action="https://soph-web-dev.eu/rainydays/wp-json/contact-form-7/v1/contact-forms/40/feedback"
+              method="post"
+            >
+              <p class="success-message">
+                <i class="far fa-check-circle"></i>Your message has been sent. Typical response time
+                is 1-2 working days.
+              </p>
+              <label for="name"
+                >Name<input type="text" id="name" name="your-name" placeholder="John Doe"
+              /></label>
+              <p class="error-message" id="name-error">
+                <i class="fas fa-exclamation-circle"></i>Please enter your name
+              </p>
 
-              <label for="email">Email<input type="email" id="email" placeholder="johndoe@example.com" /></label>
-              <p class="error-message" id="email-error"><i class="fas fa-exclamation-circle"></i>Please enter a valid email</p>
+              <label for="email"
+                >Email<input
+                  type="email"
+                  name="your-email"
+                  id="email"
+                  placeholder="johndoe@example.com"
+              /></label>
+              <p class="error-message" id="email-error">
+                <i class="fas fa-exclamation-circle"></i>Please enter a valid email
+              </p>
 
-              <label for="comment">Comment<textarea name="comment" id="comment" cols="29" rows="10"></textarea></label>
-
-              <input type="submit" name="submit" class="signup-button email-form-button" id="submit" value="Send" disabled="true" />
+              <label for="comment"
+                >Comment<textarea name="your-message" id="comment" cols="29" rows="10"></textarea>
+              </label>
+              <p class="sending">Sending...</p>
+              <input
+                type="submit"
+                name="submit"
+                class="signup-button email-form-button"
+                id="submit"
+                value="Send"
+                disabled="true"
+              />
             </form>
           </section>
           <section class="contact-page__wrapper contact-details-section">
