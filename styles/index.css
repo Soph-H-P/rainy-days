@@ -35,11 +35,13 @@ div.hero-cta.cta-mens {
   background-size: cover;
 }
 .cta-womens {
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url("../images/activity-woman-hiking-small.jpg");
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)),
+    url("../images/activity-woman-hiking-small.jpg");
 }
 
 .cta-mens {
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url("../images/activity-man-hiking-small.jpg");
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)),
+    url("../images/activity-man-hiking-small.jpg");
 }
 
 .slogan-wrapper {
@@ -71,7 +73,8 @@ div.hero-cta.cta-mens {
 /*WINTER BANNER*/
 
 .winter-banner {
-  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../images/activity-skiing.jpg");
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)),
+    url("../images/activity-skiing.jpg");
   background-position: right;
   background-repeat: no-repeat;
   background-size: cover;

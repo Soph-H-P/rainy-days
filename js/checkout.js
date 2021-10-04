@@ -1,7 +1,6 @@
 const orderSummary = document.querySelector(".order-summary__wrapper");
 const paymentButton = document.querySelector(".payment-button");
 
-
 const renderBasketItems = () => {
   for (let i = 0; i < basketSummaryItems.length; i++) {
     orderSummary.innerHTML += basketSummaryItems[i];
@@ -17,8 +16,6 @@ const renderBasket = () => {
   const bins = document.querySelectorAll(".order-summary__wrapper .checkout-trash");
   addBinEventListeners(bins);
 };
-
-
 
 if (!itemsInBasket) {
   orderSummary.innerHTML = `<h3>Your basket is empty</h3>`;

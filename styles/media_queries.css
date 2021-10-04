@@ -38,9 +38,6 @@
   .view-products-grid {
     margin: 20px 100px;
   }
-
-
-
 }
 
 @media (min-width: 600px) and (max-width: 700px) {
@@ -167,9 +164,9 @@
   }
 
   .buttons_container {
-    justify-content:right
+    justify-content: right;
   }
-  
+
   .buttons_container i {
     padding-right: 50px;
   }
@@ -257,7 +254,8 @@
   }
 
   .winter-banner {
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)), url("../images/activity-skiing.jpg");
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)),
+      url("../images/activity-skiing.jpg");
     background-position: right;
     min-height: 35vh;
     padding: 5%;

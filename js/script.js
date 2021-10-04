@@ -75,7 +75,6 @@ const checkItems = () => {
     JSON.parse(windowStorage.getItem("itemDetails")).forEach((item) => {
       basketSummaryHtml += item;
     });
-    
 
     basketSummary.innerHTML = basketSummaryHtml + basketHtml;
     itemsInBasketP.innerHTML = parseInt(itemsInBasket);
@@ -184,27 +183,25 @@ let viewportWidth = window.innerWidth;
 let isDesktop = viewportWidth >= 800 ? true : false;
 
 const menuButton = document.querySelector(".hamburger-button");
-const navMenu =  document.querySelector(".navigation");
+const navMenu = document.querySelector(".navigation");
 
 window.addEventListener("resize", () => {
   const newViewportWidth = window.innerWidth;
   if (newViewportWidth >= 800 && viewportWidth < 800) {
     isDesktop = true;
     viewportWidth = newViewportWidth;
-    console.log("desktop")
-    menuButton.style.display = "none"
+    menuButton.style.display = "none";
   } else if (newViewportWidth < 800 && viewportWidth >= 800) {
     isDesktop = false;
     viewportWidth = newViewportWidth;
-    console.log("mobile")
-    menuButton.style.display = "block"
+    menuButton.style.display = "block";
   }
 });
 
 menuButton.addEventListener("click", () => {
-if(navMenu.classList.contains("open")) {
-  navMenu.classList.remove("open")
-} else {
-  navMenu.classList.add("open")
-}
-})
+  if (navMenu.classList.contains("open")) {
+    navMenu.classList.remove("open");
+  } else {
+    navMenu.classList.add("open");
+  }
+});

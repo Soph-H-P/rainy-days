@@ -41,9 +41,7 @@ for (let i = 0; i < productsList.length; i++) {
         </div>
               </div>
               <div class="view-product__button-wrapper">
-                <a id="view-product" class="cta-button" href="./product_page.html?id=${
-                  productsList[i].id
-                }">View product</a>
+                <a id="view-product" class="cta-button" href="./product_page.html?id=${productsList[i].id}">View product</a>
               </div>
             </section>
     `;

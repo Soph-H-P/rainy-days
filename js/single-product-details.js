@@ -287,3 +287,19 @@ const reviewCheckbox = document.querySelector("#plus-icon-reviews");
 customerRating.addEventListener("click", (event) => {
   reviewCheckbox.checked = true;
 });
+
+//Image zoom and pan
+
+const image = document.querySelector(".main-product__image");
+
+image.addEventListener("mouseover", (event) => {
+  event.target.style.transform = "scale(2)";
+});
+
+image.addEventListener("mouseout", (event) => {
+  event.target.style.transform = "scale(1)";
+});
+
+image.addEventListener("mousemove", (event) => {
+  event.target.style.transformOrigin = `${event.pageX + 50}px ${event.pageY - 300}px`;
+});

@@ -16,6 +16,7 @@ main {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto 1fr;
   padding: 0 5%;
+  overflow: hidden;
 }
 
 .main-product__image {
@@ -29,6 +30,11 @@ main {
 
 .main-product__image {
   width: 100%;
+}
+
+.main-product__image:hover {
+  width: unset;
+  max-width: 150%;
 }
 
 #current-selection {
@@ -249,4 +255,8 @@ td {
   transition-property: top, left;
   transition-duration: 1s;
   transition-timing-function: ease;
+}
+
+.main-product__image:hover {
+  padding: 50px;
 }

@@ -80,7 +80,7 @@ emailInput.addEventListener("focusout", validateEmail);
 emailInput.addEventListener("keyup", handleKeyUpEmail);
 
 const handleKeyUpComment = () => {
-successMessage.style.display = "none"
+  successMessage.style.display = "none";
   if (checkEmail() && checkName()) {
     submitButton.disabled = false;
   } else {

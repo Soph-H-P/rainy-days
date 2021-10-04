@@ -96,7 +96,7 @@ form select {
   position: sticky;
   top: 150px;
   border: var(--light-button-color) solid 3px;
-  background-color: #FFF;
+  background-color: #fff;
 }
 
 .summary-image-wrapper {
@@ -112,4 +112,3 @@ form select {
   display: flex;
   justify-content: space-around;
 }
-

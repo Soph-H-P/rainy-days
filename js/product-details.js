@@ -1,11 +1,37 @@
 import { productArray } from "./constants/product_list.js";
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
-let searchTerm = params.get("search");
+const searchTerm = params.get("search");
+const jacketGender = params.get("jacket");
+const season = params.get("season");
 const searchTermUrl = `https://www.soph-web-dev.eu/rainydays/wp-json/wc/store/products?per_page=15&search=${searchTerm}`;
 const numberOfItems = document.querySelector(".number-of-items");
 const productsGrid = document.querySelector(".view-products-grid");
 const filters = document.querySelectorAll(".filter-checkbox");
+
+if (jacketGender) {
+  document.querySelector("h1").innerHTML = `${jacketGender} Jackets`;
+  const mensCheckbox = document.querySelector("#mens");
+  const womensCheckbox = document.querySelector("#womens");
+  if (jacketGender === "mens") {
+    mensCheckbox.checked = true;
+    womensCheckbox.checked = false;
+  } else {
+    mensCheckbox.checked = false;
+    womensCheckbox.checked = true;
+  }
+}
+if (season) {
+  document.querySelector("h1").innerHTML = `${season} Jackets`;
+  const winterCheckbox = document.querySelector("#winter");
+  const womensCheckbox = document.querySelector("#womens");
+  const mensCheckbox = document.querySelector("#mens");
+  const unisexCheckbox = document.querySelector("#unisex");
+  mensCheckbox.checked = false;
+  womensCheckbox.checked = false;
+  unisexCheckbox.checked = false;
+  winterCheckbox.checked = true;
+}
 
 let productsURL =
   "https://www.soph-web-dev.eu/rainydays/wp-json/wc/store/products?per_page=15&orderby=price&order=asc";
