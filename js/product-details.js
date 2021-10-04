@@ -37,7 +37,10 @@ let productsURL =
   "https://www.soph-web-dev.eu/rainydays/wp-json/wc/store/products?per_page=15&orderby=price&order=asc";
 
 const fetchAllProducts = async (url) => {
-  productsGrid.innerHTML = `<p>Loading..</p>`;
+  productsGrid.innerHTML = `
+  <div class="raindrop one"></div>
+  <div class="raindrop two"></div>
+  <div class="raindrop three"></div>`;
   try {
     const response = await fetch(url);
     const results = await response.json();
@@ -121,5 +124,16 @@ applyFiltersButton.addEventListener("click", (event) => {
   productsGrid.innerHTML = "";
   if (productsList) {
     renderNewProductList();
+  }
+});
+
+const filterButton = document.querySelector(".signup-button.filters");
+
+filterButton.addEventListener("click", (event) => {
+  const filtersMenu = document.querySelector(".filters-menu");
+  if (filtersMenu.classList.contains("open")) {
+    filtersMenu.classList.remove("open");
+  } else {
+    filtersMenu.classList.add("open");
   }
 });

@@ -295,7 +295,7 @@ nav.open {
 
 .buttons_container {
   display: flex;
-  width: 300px;
+  width: 200px;
   justify-content: space-around;
 }
 
@@ -539,4 +539,46 @@ footer ul {
 
 .pink-selector {
   background-color: #fd8096;
+}
+
+/*Loader*/
+
+.raindrop {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  top: 0px;
+  margin: 0 auto;
+  background: var(--link-color);
+  border-radius: 100%;
+  animation: loadingRain 2s infinite cubic-bezier(1, 0, 0.91, 0.19);
+}
+
+.raindrop.one {
+  left: 0%;
+}
+.raindrop.two {
+  left: -80%;
+  top: 20px;
+  animation: loadingRain 2.4s infinite cubic-bezier(1, 0, 0.91, 0.19);
+}
+.raindrop.three {
+  left: 20%;
+  animation: loadingRain 1.8s infinite cubic-bezier(1, 0, 0.91, 0.19);
+}
+.raindrop::before {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  top: -17px;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 30px solid var(--link-color);
+}
+
+@keyframes loadingRain {
+  to {
+    top: 300px;
+  }
 }

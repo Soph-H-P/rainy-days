@@ -260,3 +260,7 @@ td {
 .main-product__image:hover {
   padding: 50px;
 }
+
+.loading_wrapper {
+  height: 300px;
+}

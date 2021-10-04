@@ -56,7 +56,7 @@
   transition: left 1s;
 }
 
-#filter-menu:checked ~ .filters-menu {
+.filters-menu.open {
   left: 0px;
 }
 
