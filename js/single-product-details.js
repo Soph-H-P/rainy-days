@@ -247,7 +247,8 @@ const handleAddToBasket = () => {
   windowStorage.setItem("image", mainProductImage.src);
   windowStorage.setItem("colour", colour);
   basketProductDetailsHtml.push(`
-          <div class="basket-item__wrapper">
+  <div id="checkout-item">
+  <div class="basket-item__wrapper">
             <a href="product_page.html?id=${product.id}">
               <img class="product-thumbnail" src="${mainProductImage.src}" alt="${colour} ${
     product.name
@@ -260,9 +261,13 @@ const handleAddToBasket = () => {
               <p id="product-name">Product: ${product.name}</p>
               <p id="product-color">Colour: ${colour}</p>
               <p id="product-size">Size: ${selectedSize}</p>
-              <p id="product-price">Item Price: £<span id="single-item-price">${product.prices.price}</span>.00</p>
+              <p id="product-price">Item Price: £<span id="single-item-price">${
+                product.prices.price
+              }</span>.00</p>
             </div>
           </div>
+  <i class="fas fa-trash checkout-trash fa-2x"></i>
+</div>     
 `);
   windowStorage.setItem("itemDetails", JSON.stringify(basketProductDetailsHtml));
   quantityOfItems.push(userQuantity.value);
@@ -274,7 +279,9 @@ const handleAddToBasket = () => {
   setTimeout(resetAddItemNumber, 1000);
 };
 
-addButton.onclick = handleAddToBasket;
+addButton.addEventListener("click", () => {
+  handleAddToBasket();
+});
 
 const reviewCheckbox = document.querySelector("#plus-icon-reviews");
 customerRating.addEventListener("click", (event) => {

@@ -10,8 +10,13 @@ const basketNumber = document.querySelector(".basket-number");
 const basketItems = document.querySelector(".basket-items");
 const itemsInBasketP = document.querySelector("#items-in-basket");
 const basketSummary = document.querySelector(".basket-summary__wrapper");
-
+let basketSummaryItems = JSON.parse(windowStorage.getItem("itemDetails"));
 //Displaying the correct items in the basket
+
+const findValue = (currentItem, start, end) => {
+  const result = currentItem.match(new RegExp(start + "(.*)" + end));
+  return result[1];
+};
 
 let basketHtml = `
 <h3 class="number-items"><span id="number-items">${itemsInBasket}</span> items in basket:</h3>
@@ -22,6 +27,37 @@ let basketHtml = `
   >
 </div>
 `;
+
+const addBinEventListeners = (bins) => {
+  for (let i = 0; i < bins.length; i++) {
+    bins[i].addEventListener("click", (event) => {
+      const clickedItem = event.target.parentElement.childNodes[1].innerHTML;
+      const currentColour = findValue(clickedItem, "Colour: ", "</p>");
+      const currentSize = findValue(clickedItem, "Size: ", "</p>");
+      const currentProduct = findValue(clickedItem, "Product: ", "</p>");
+      const currentQuantity = parseInt(findValue(clickedItem, `item-quantity">`, "</span>"));
+      const currentPrice = parseInt(findValue(clickedItem, `single-item-price">`, "</span>"));
+      basketSummaryItems = JSON.parse(windowStorage.getItem("itemDetails"));
+      const found = basketSummaryItems.find((item) => {
+        if (
+          item.includes(currentColour) &&
+          item.includes(currentSize) &&
+          item.includes(currentProduct) &&
+          item.includes(currentQuantity)
+        ) {
+          return item;
+        }
+      });
+
+      basketSummaryItems.splice(basketSummaryItems.indexOf(found), 1);
+      windowStorage.setItem("quantity", (itemsInBasket -= currentQuantity));
+      windowStorage.setItem("totalPrice", (totalPrice -= currentPrice * currentQuantity));
+
+      windowStorage.setItem("itemDetails", JSON.stringify(basketSummaryItems));
+      window.location.href = window.location.href;
+    });
+  }
+};
 
 const checkItems = () => {
   if (itemsInBasket >= 1) {
@@ -39,6 +75,8 @@ const checkItems = () => {
     JSON.parse(windowStorage.getItem("itemDetails")).forEach((item) => {
       basketSummaryHtml += item;
     });
+    
+
     basketSummary.innerHTML = basketSummaryHtml + basketHtml;
     itemsInBasketP.innerHTML = parseInt(itemsInBasket);
     basketNumber.style.display = "flex";
@@ -62,9 +100,13 @@ const checkItems = () => {
   continueButton.addEventListener("click", function () {
     basketItems.style.display = "none";
   });
+  const bins = document.querySelectorAll(".checkout-trash");
+  addBinEventListeners(bins);
 };
 
 checkItems();
+
+basketNumber.addEventListener("change", checkItems);
 
 basketLabel.addEventListener("click", function () {
   if (basketItems.style.display === "flex") {
@@ -130,10 +172,39 @@ const addSearchFunction = () => {
     }
 
     if (key === "Escape") {
-      e.target.blur()
+      e.target.blur();
       searchContainer.classList.remove("open");
-    };
+    }
   });
 };
 
 addSearchFunction();
+
+let viewportWidth = window.innerWidth;
+let isDesktop = viewportWidth >= 800 ? true : false;
+
+const menuButton = document.querySelector(".hamburger-button");
+const navMenu =  document.querySelector(".navigation");
+
+window.addEventListener("resize", () => {
+  const newViewportWidth = window.innerWidth;
+  if (newViewportWidth >= 800 && viewportWidth < 800) {
+    isDesktop = true;
+    viewportWidth = newViewportWidth;
+    console.log("desktop")
+    menuButton.style.display = "none"
+  } else if (newViewportWidth < 800 && viewportWidth >= 800) {
+    isDesktop = false;
+    viewportWidth = newViewportWidth;
+    console.log("mobile")
+    menuButton.style.display = "block"
+  }
+});
+
+menuButton.addEventListener("click", () => {
+if(navMenu.classList.contains("open")) {
+  navMenu.classList.remove("open")
+} else {
+  navMenu.classList.add("open")
+}
+})

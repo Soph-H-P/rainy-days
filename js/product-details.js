@@ -30,7 +30,7 @@ if (searchTerm) {
   searchSpan.innerHTML = `"${searchTerm}"`;
   productsList = await fetchAllProducts(searchTermUrl);
   if (productsList.length === 0) {
-    searchTitle.innerHTML = `Unfortunatly There were no search results for ${searchTerm}.`;
+    searchTitle.innerHTML = `Unfortunatly There were no search results for "${searchTerm}".`;
   }
 } else {
   productsList = await fetchAllProducts(productsURL);

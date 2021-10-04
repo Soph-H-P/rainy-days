@@ -22,7 +22,6 @@ const randomItem = Math.floor(Math.random() * productsList.length);
 
 for (let i = 0; i < productsList.length; i++) {
   let averageReview = getRating(productArray[i]);
-  console.log(productsList[i].prices.price);
   if (i === randomItem) {
     interestingItems.innerHTML = `
     <section class="product-card">

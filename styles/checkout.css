@@ -113,20 +113,3 @@ form select {
   justify-content: space-around;
 }
 
-
-#checkout-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  border: solid 1px var(--light-button-color);
-  padding: 10px;
-  margin: 10px auto;
-}
-
-#checkout-item .basket-item__wrapper {
-  border: none;
-}
-
-.fa-trash {
-  cursor: pointer;
-}

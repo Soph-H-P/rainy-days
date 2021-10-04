@@ -22,11 +22,7 @@
         <a href="index.html">
           <img class="logo" src="images/logo.png" alt="RainyDays Logo" />
         </a>
-        <label class="hamburger-label" for="hamburger-menu"
-          ><i class="fas fa-bars fa-2x"></i
-        ></label>
-        <input type="checkbox" id="hamburger-menu" />
-        <nav>
+        <nav class="navigation">
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a class="active" href="jackets.html">Jackets</a></li>
@@ -35,24 +31,30 @@
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
-        <div class="search-container">
-          <label class="search-label" for="search__input"
-            ><i class="fas fa-search fa-2x"></i
-          ></label>
+        <div class="buttons_container">
+          <button class="hamburger-button" for="hamburger-menu">
+            <i class="fas fa-bars fa-2x"></i>
+          </button>
 
-          <div class="search-input">
-            <input id="search__input" type="text" />
-          </div>
-        </div>
+          <div class="search-container">
+            <button class="search-label" for="search__input">
+              <i class="fas fa-search fa-2x"></i>
+            </button>
 
-        <div class="shopping-basket-container">
-          <div class="basket-number">
-            <p id="items-in-basket"></p>
+            <div class="search-input">
+              <input id="search__input" type="text" />
+            </div>
           </div>
-          <i class="basket-label fas fa-shopping-basket fa-2x"></i>
-          <section class="basket-items">
-            <div class="basket-summary__wrapper"></div>
-          </section>
+
+          <div class="shopping-basket-container">
+            <div class="basket-number">
+              <p id="items-in-basket"></p>
+            </div>
+            <i class="basket-label fas fa-shopping-basket fa-2x"></i>
+            <section class="basket-items">
+              <div class="basket-summary__wrapper"></div>
+            </section>
+          </div>
         </div>
       </div>
     </header>
